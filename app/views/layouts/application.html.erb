@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<!--  <head>
+    <title>Madera</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
+  </body>
+</html>
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %></title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  
+  <body>
+    <!-- <ul class="nav nav-tabs">
+      <div class="col-md-8"><%= image_tag("logo.jpg", :alt => "logo madera", height:"40px") %></div>
+      <li><a href="#">Menu</a></li>
+      <li><a href="#">Crée un Projet</a></li>
+      <li><a href="#">Maison Type</a></li>
+      <li><a href="#">Inscription</a></li>
+    </ul> -->
+    
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <div class="col-md-8"><%= image_tag("logo.jpg", :alt => "logo madera", height:"60px") %></div>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+          <li><a href="/pages/home">Menu</a></li>
+          <li><a href="#">Créer un Projet</a></li>
+          <li><a href="#">Maison Type</a></li>
+          <li><a href="#">Inscription</a></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
+    
+      <section class="round">
+        <%= yield %>
+      </section>
+  </body>
+</html>
