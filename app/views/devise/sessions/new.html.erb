@@ -21,7 +21,7 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :login %><br />
-    <%= f.text_field :login, autofocus: true %>
+    <%= f.text_field :login, autofocus: true, input_html: { class: "form-control"} %>
   </div>
 
   <div class="field">

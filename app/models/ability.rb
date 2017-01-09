@@ -9,7 +9,7 @@ class Ability
         can :manage, :all
         can :access, :rails_admin   # grant access to rails_admin
         can :dashboard 
-       else if user.is_commercial?
+       else 
           can :read, :all
        end
     
