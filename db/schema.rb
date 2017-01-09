@@ -10,7 +10,72 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170109134832) do
+ActiveRecord::Schema.define(version: 20170109154834) do
+
+  create_table "calculation_rules", force: :cascade do |t|
+    t.string "woodFrameConception"
+  end
+
+  create_table "cctps", force: :cascade do |t|
+    t.string "cctpcharacteristics"
+  end
+
+  create_table "claddings", force: :cascade do |t|
+    t.integer "thicknessCladdings"
+  end
+
+  create_table "clients", force: :cascade do |t|
+    t.string  "clientName"
+    t.string  "firstNameClient"
+    t.integer "streetNumber"
+    t.string  "streetName"
+    t.integer "pc"
+    t.string  "cityName"
+  end
+
+  create_table "components", force: :cascade do |t|
+    t.string "componentName"
+    t.string "componentNature"
+    t.float  "componentSection"
+    t.float  "componentThickness"
+    t.float  "componentLength"
+    t.float  "componentWidth"
+  end
+
+  create_table "family_components", force: :cascade do |t|
+    t.string "familyComponentName"
+  end
+
+  create_table "insulatings", force: :cascade do |t|
+    t.string "insulatingName"
+    t.float  "insulatingThickness"
+  end
+
+  create_table "order_quote_clients", force: :cascade do |t|
+    t.string "stateOrder"
+    t.float  "priceTotal"
+    t.string "stateExpedition"
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.string  "paymentStep"
+    t.integer "sumToUnlock"
+  end
+
+  create_table "project_modular_houses", force: :cascade do |t|
+    t.string "projectName"
+  end
+
+  create_table "scale_modular_houses", force: :cascade do |t|
+    t.string "scaleName"
+    t.string "exteriorFinish"
+    t.string "coverType"
+    t.string "woodWorkingQuality"
+  end
+
+  create_table "unite_uses", force: :cascade do |t|
+    t.string "unitUseName"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
