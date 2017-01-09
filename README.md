@@ -23,8 +23,10 @@ Things you may want to cover:
 
 * ...
 
-* 8080 8081 8082
+* Les ports disponibles sont: 8080 8081 8082
 * 
-* maildev -w 8081 -v
+* Pour avoir accès Maildev : maildev -w 8081 -v
+* 
+* Accès site
 * https://madera-zhaitan.c9users.io/
 * 
