@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170109154834) do
+ActiveRecord::Schema.define(version: 20170110082640) do
 
   create_table "calculation_rules", force: :cascade do |t|
     t.string "woodFrameConception"
@@ -51,6 +51,25 @@ ActiveRecord::Schema.define(version: 20170109154834) do
     t.float  "insulatingThickness"
   end
 
+  create_table "modulus", force: :cascade do |t|
+    t.string  "modulusName"
+    t.string  "modulusNature"
+    t.float   "modulusHeight"
+    t.float   "modulusLength"
+    t.integer "mdSection"
+    t.float   "mdHeight"
+    t.float   "mdLength"
+    t.integer "maSection"
+    t.float   "maHeight"
+    t.float   "maLength"
+    t.integer "maeSection"
+    t.float   "maeHeight"
+    t.float   "maeLength"
+    t.integer "masSection"
+    t.float   "masHeight"
+    t.float   "masLength"
+  end
+
   create_table "order_quote_clients", force: :cascade do |t|
     t.string "stateOrder"
     t.float  "priceTotal"
@@ -64,6 +83,10 @@ ActiveRecord::Schema.define(version: 20170109154834) do
 
   create_table "project_modular_houses", force: :cascade do |t|
     t.string "projectName"
+  end
+
+  create_table "providers", force: :cascade do |t|
+    t.string "providerName"
   end
 
   create_table "scale_modular_houses", force: :cascade do |t|
@@ -98,6 +121,9 @@ ActiveRecord::Schema.define(version: 20170109154834) do
     t.string   "firstname",              default: "", null: false
     t.string   "lastname",               default: "", null: false
     t.string   "role",                   default: "", null: false
+    t.integer  "failed_attempts",        default: 0,  null: false
+    t.string   "unlock_token"
+    t.datetime "locked_at"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
