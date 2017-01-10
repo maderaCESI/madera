@@ -1,0 +1,32 @@
+<h1>Les clients</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Prenom</td>
+            <td>Nom</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        <% @clients.each do |client| %>
+        <tr>
+            <td><%= client.id %></td>
+            <td><%= client.firstNameClient %></td>
+            <td><%= client.clientName %></td>
+            <td>
+                <a href="<%= edit_client_path(client.id) %>" class="btn btn-primary">Editer</a>
+                <a href="<%= client_path(client.id) %>" class="btn btn-danger" data-confirm="Etes sur sûr ?" data-method="delete">Supprimer</a>
+            
+            </td>
+            
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<p>
+    <a href="<%= new_client_path %>" class="btn btn-success">Nouveau client</a>
+</p>
+

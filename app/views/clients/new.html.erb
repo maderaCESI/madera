@@ -1,0 +1,38 @@
+<h1>Nouveau client</h1>
+
+<%= form_for @client do |f| %>
+<div class="form-group">
+    <%= f.label :firstNameClient %><br />
+    <%= f.text_field :firstNameClient, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :clientName %><br />
+    <%= f.text_field :clientName, class: 'form-control'%>
+</div>
+
+<div class="form-group">
+    <%= f.label :streetNumber %><br />
+    <%= f.text_field :streetNumber, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :streetNam %><br />
+    <%= f.text_field :streetName, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :pc %><br />
+    <%= f.text_field :pc, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :cityName %><br />
+    <%= f.text_field :cityName, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <button class="btn btn-primary", type="submit">Créer le client</button>
+</div>
+
+<% end %>

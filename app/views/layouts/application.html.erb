@@ -26,11 +26,13 @@
             <% if current_user.role =='admin' %>
               <li><a href="/admin">Administration</a></li>
             <% end %>
-            <% if current_page?('/pages/home') %>
-              <li><a href="/pages/home">Menu</a></li>
+            <% if !current_page?(authenticated_root_path) %>
+              <li><a href="<%= authenticated_root_path %> ">Menu</a></li>
             <% end %>
             <li><a href="#">Créer un Projet</a></li>
-            <li><a href="#">Maison Type</a></li>
+            <% if user_signed_in? %>
+              <li><%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete %></li>
+            <% end %>
           <% end %>
         </ul>
       </div>

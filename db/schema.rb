@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170110082640) do
+ActiveRecord::Schema.define(version: 20170110140201) do
 
   create_table "calculation_rules", force: :cascade do |t|
     t.string "woodFrameConception"
@@ -82,7 +82,9 @@ ActiveRecord::Schema.define(version: 20170110082640) do
   end
 
   create_table "project_modular_houses", force: :cascade do |t|
-    t.string "projectName"
+    t.string  "projectName"
+    t.integer "client_id"
+    t.index ["client_id"], name: "index_project_modular_houses_on_client_id"
   end
 
   create_table "providers", force: :cascade do |t|

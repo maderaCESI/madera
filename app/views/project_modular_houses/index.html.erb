@@ -1,0 +1,30 @@
+<h1>Les projets</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Nom du projet</td>
+            <td>ID du client</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        <% @projets.each do |projet| %>
+        <tr>
+            <td><%= projet.id %></td>
+            <td><%= projet.projectName %></td>
+            <td><%= projet.client_id %></td>
+            <td>
+                <a href="<%= edit_project_modular_house_path(projet.id) %>" class="btn btn-primary">Editer</a>
+                <a href="<%= project_modular_house_path(projet.id) %>" class="btn btn-danger" data-confirm="Etes sur sûr ?" data-method="delete">Supprimer</a>
+            </td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<p>
+    <a href="<%= new_project_modular_house_path %>" class="btn btn-success">Nouveau projet</a>
+</p>
+

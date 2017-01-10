@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   
+  #Les ressources
+  resources :clients
+  resources :project_modular_houses
+  
+  
   #Rails_Admin
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   
@@ -16,9 +21,5 @@ Rails.application.routes.draw do
     end
   end
   
-  
-  #Autres
-  get 'home/private'
-
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

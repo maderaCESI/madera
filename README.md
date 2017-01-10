@@ -30,3 +30,14 @@ Things you may want to cover:
 * Accès site
 * https://madera-zhaitan.c9users.io/
 * 
+* Models table :
+*  calculation_rule --> régle de calcul
+*  cladding --> bardage
+*  component --> composant
+*  insulating --> isolant
+*  modulus --> modules
+*  order_quote_client --> Commande devis client
+*  project_modular_house --> projet maisons modulaires
+*  provider --> fournisseur
+*  unite use --> unite d'usage
+*  scale_modular_house --> gamme maisons modularies
