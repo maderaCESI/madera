@@ -9382,3 +9382,528 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 55ms (Views: 53.1ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 85.233.216.37 at 2017-01-10 07:47:34 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (184.2ms)
+Completed 200 OK in 528ms (Views: 509.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-10 07:48:52 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KHfhVAvLTfonUwq4bXFNZtcw3d0COCieFo5oBGkEeAEkPvuliZWJHIbX5dxfJ9iH6C6o+P0F12QEGqyywA2g0Q==", "user"=>{"login"=>"romrom72", "password"=>"[FILTERED]"}, "commit"=>"Connexion"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'romrom72' OR lower(email) = 'romrom72') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-10 07:48:52 UTC], ["last_sign_in_at", 2017-01-09 19:48:36 UTC], ["current_sign_in_ip", "85.233.216.37"], ["sign_in_count", 9], ["updated_at", 2017-01-10 07:48:52 UTC], ["id", 1]]
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 201ms (ActiveRecord: 12.6ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-10 07:48:53 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 85.233.216.37 at 2017-01-10 07:49:23 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "calculation_rules"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "cctps"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "claddings"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "clients"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "components"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "family_components"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "insulatings"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "order_quote_clients"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "payments"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "project_modular_houses"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "scale_modular_houses"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "unite_uses"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (92.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/layouts/rails_admin/_navigation.html.haml (10.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (14.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/layouts/rails_admin/pjax.html.haml (3.6ms)
+Completed 200 OK in 685ms (Views: 310.3ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/admin" for 85.233.216.37 at 2017-01-10 07:49:24 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "calculation_rules"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "cctps"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "claddings"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "clients"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "components"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "family_components"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "insulatings"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "order_quote_clients"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "payments"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "project_modular_houses"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "scale_modular_houses"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "unite_uses"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (47.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/layouts/rails_admin/_navigation.html.haml (9.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (25.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/layouts/rails_admin/pjax.html.haml (3.6ms)
+Completed 200 OK in 225ms (Views: 202.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 85.233.216.37 at 2017-01-10 07:49:36 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (88.4ms)
+Completed 200 OK in 114ms (Views: 103.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/user/new?_pjax=%5Bdata-pjax-container%5D" for 85.233.216.37 at 2017-01-10 07:49:44 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_datetime.html.haml (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_datetime.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_datetime.html.haml (0.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_datetime.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_datetime.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_datetime.html.haml (0.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_submit_buttons.html.haml (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (57.5ms)
+Completed 200 OK in 76ms (Views: 68.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/admin/user/new" for 85.233.216.37 at 2017-01-10 07:50:25 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oPq0J0GkTniajlaf2yoxhO+K+45TVm3+E2LC8hA6rT7kI8EszPxt5gxbs3KlzS4TyNjQlI2+saJ0OrG3vi+W7w==", "user"=>{"email"=>"test@test.fr", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "username"=>"test", "reset_password_sent_at"=>"[FILTERED]", "remember_created_at"=>"", "sign_in_count"=>"0", "current_sign_in_at"=>"", "last_sign_in_at"=>"", "current_sign_in_ip"=>"", "last_sign_in_ip"=>"", "confirmation_token"=>"", "confirmed_at"=>"", "confirmation_sent_at"=>"", "unconfirmed_email"=>"", "firstname"=>"test", "lastname"=>"test", "role"=>""}, "return_to"=>"https://madera-zhaitan.c9users.io/admin/user", "_save"=>"", "model_name"=>"user"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."firstname") = LOWER(?) LIMIT ?[0m  [["firstname", "test"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."lastname") = LOWER(?) LIMIT ?[0m  [["lastname", "test"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.fr"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "current_sign_in_ip", "last_sign_in_ip", "confirmation_token", "unconfirmed_email", "created_at", "updated_at", "firstname", "lastname") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "test@test.fr"], ["encrypted_password", "$2a$11$Ggr0/froBqLWp7whwtFB.uutgWnaYNdc9J1a4kgJAU2PbJ4CaVhsS"], ["username", "test"], ["current_sign_in_ip", ""], ["last_sign_in_ip", ""], ["confirmation_token", ""], ["unconfirmed_email", ""], ["created_at", 2017-01-10 07:50:25 UTC], ["updated_at", 2017-01-10 07:50:25 UTC], ["firstname", "test"], ["lastname", "test"]]
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (1.0ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 180.9ms
+Sent mail to test@test.fr (210.5ms)
+Date: Tue, 10 Jan 2017 07:50:26 +0000
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: test@test.fr
+Message-ID: <587492421f9a1_83a2366184635c8@zhaitan-madera-4212424.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Bienvenue test@test.fr!</p>
+
+<p>Vous pouvez confirmer votre compte en cliquant sur le lien si dessous:</p>
+
+<p><a href="https://madera-zhaitan.c9users.io/users/confirmation?confirmation_token=">Confirmer mon compte</a></p>
+
+Redirected to https://madera-zhaitan.c9users.io/admin/user
+Completed 302 Found in 1060ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/admin/user" for 85.233.216.37 at 2017-01-10 07:50:26 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (46.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/layouts/rails_admin/_navigation.html.haml (8.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (14.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/layouts/rails_admin/pjax.html.haml (6.6ms)
+Completed 200 OK in 192ms (Views: 183.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/confirmation?confirmation_token=" for 85.233.216.37 at 2017-01-10 07:50:35 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["confirmation_token", ""], ["LIMIT", 1]]
+  Rendering devise/confirmations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/confirmations/new.html.erb within layouts/application (6.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 54.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/user/6/edit?_pjax=%5Bdata-pjax-container%5D" for 85.233.216.37 at 2017-01-10 07:50:59 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_datetime.html.haml (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_datetime.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_datetime.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_datetime.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_datetime.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_datetime.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_submit_buttons.html.haml (4.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (53.2ms)
+Completed 200 OK in 74ms (Views: 66.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 85.233.216.37 at 2017-01-10 07:51:13 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (46.4ms)
+Completed 200 OK in 63ms (Views: 54.8ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Started GET "/admin/user/new?_pjax=%5Bdata-pjax-container%5D" for 85.233.216.37 at 2017-01-10 07:52:21 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_datetime.html.haml (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_datetime.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_datetime.html.haml (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_datetime.html.haml (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_datetime.html.haml (0.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_submit_buttons.html.haml (5.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (103.5ms)
+Completed 200 OK in 124ms (Views: 116.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 85.233.216.37 at 2017-01-10 07:53:09 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (51.6ms)
+Completed 200 OK in 69ms (Views: 60.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/user/6/delete?_pjax=%5Bdata-pjax-container%5D" for 85.233.216.37 at 2017-01-10 07:53:12 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#delete as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/delete.html.haml within layouts/rails_admin/pjax
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_delete_notice.html.haml (3.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/delete.html.haml within layouts/rails_admin/pjax (9.4ms)
+Completed 200 OK in 32ms (Views: 23.2ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/admin/user/6/delete" for 85.233.216.37 at 2017-01-10 07:53:15 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#delete as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bhX9PUflzKX+jKdZTx46RYmJFYXMRfmXBKOiEIDmJo8qzIg2yr3vO2hZQrQx+SXSrts+nxKtJctj+9FVLvMdXg==", "return_to"=>"https://madera-zhaitan.c9users.io/admin/user", "model_name"=>"user", "id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (64.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 6]]
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/admin/user
+Completed 302 Found in 85ms (ActiveRecord: 74.3ms)
+
+
+Started GET "/admin/user" for 85.233.216.37 at 2017-01-10 07:53:16 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (46.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/layouts/rails_admin/_navigation.html.haml (9.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (17.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/layouts/rails_admin/pjax.html.haml (7.6ms)
+Completed 200 OK in 213ms (Views: 205.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/user/new?_pjax=%5Bdata-pjax-container%5D" for 85.233.216.37 at 2017-01-10 08:03:40 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_datetime.html.haml (4.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_datetime.html.haml (0.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_datetime.html.haml (0.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/_submit_buttons.html.haml (6.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (64.8ms)
+Completed 200 OK in 132ms (Views: 98.5ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/admin/user/new" for 85.233.216.37 at 2017-01-10 08:04:11 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b/s3+XdVioJWfY3e6RFlH7LDaOXiyP7Yuxp4XMLNBaArIkLy+g2pHMCoaDOX9nqIlZFD/zwgIoTcQgsZbNg+cQ==", "user"=>{"email"=>"test@test.fr", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "username"=>"test", "reset_password_sent_at"=>"[FILTERED]", "remember_created_at"=>"", "sign_in_count"=>"0", "current_sign_in_at"=>"", "last_sign_in_at"=>"", "current_sign_in_ip"=>"", "last_sign_in_ip"=>"", "confirmation_token"=>"", "confirmed_at"=>"", "confirmation_sent_at"=>"", "unconfirmed_email"=>"", "firstname"=>"test", "lastname"=>"test", "role"=>"test"}, "return_to"=>"https://madera-zhaitan.c9users.io/admin/user", "_save"=>"", "model_name"=>"user"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."firstname") = LOWER(?) LIMIT ?[0m  [["firstname", "test"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."lastname") = LOWER(?) LIMIT ?[0m  [["lastname", "test"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.fr"], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "current_sign_in_ip", "last_sign_in_ip", "confirmation_token", "unconfirmed_email", "created_at", "updated_at", "firstname", "lastname", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "test@test.fr"], ["encrypted_password", "$2a$11$cyrobk4gjRK0UwWepnFuqeqvZvUPxpp7.12gIBbKa20YMiI6N3pvS"], ["username", "test"], ["current_sign_in_ip", ""], ["last_sign_in_ip", ""], ["confirmation_token", ""], ["unconfirmed_email", ""], ["created_at", 2017-01-10 08:04:11 UTC], ["updated_at", 2017-01-10 08:04:11 UTC], ["firstname", "test"], ["lastname", "test"], ["role", "test"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/admin/user
+Completed 302 Found in 178ms (ActiveRecord: 12.1ms)
+
+
+Started GET "/admin/user" for 85.233.216.37 at 2017-01-10 08:04:11 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (54.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/layouts/rails_admin/_navigation.html.haml (11.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (28.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/bundler/gems/rails_admin-ae2962ca9e2e/app/views/layouts/rails_admin/pjax.html.haml (8.5ms)
+Completed 200 OK in 260ms (Views: 250.5ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/users/sign_out" for 85.233.216.37 at 2017-01-10 08:04:23 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"E4P4q37/m542QWZsr4ScntBj15ZAGB5J/S4k/qY7kKBXWo2g86e4AKCUg4HRY4MJ9zH8jJ7wwhWadle7CC6rcQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-10 08:04:24 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 200ms (Views: 198.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-10 08:04:29 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NE05toon18LbETaM5DfZ0k6lfEP4hEjrMgapEhclgth80HYKa39Shk3J0p7rtE9njVKb6TikYEbgr9btcOB7zA==", "user"=>{"login"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Connexion"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'test' OR lower(email) = 'test') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-10 08:04:29 UTC], ["last_sign_in_at", 2017-01-10 08:04:29 UTC], ["current_sign_in_ip", "85.233.216.37"], ["sign_in_count", 1], ["updated_at", 2017-01-10 08:04:29 UTC], ["id", 7]]
+  [1m[35m (10.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 171ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-10 08:04:29 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 85.233.216.37 at 2017-01-10 08:04:38 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Xsl+e1+NcS0cX1rv5nz8A8Jk0sdPndeZP5XhiIljl9Qhy5gFDw89IpedWOKrVtisn7ArSP/OOJrgO4Wt/8ZvKA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-10 08:04:38 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-10 08:04:47 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ECL2dR4LvjGop9Ydy9T1pxKgQQYxWaqLUB/PM4C0yxPz8pAXSFMpXMdpgnJdxLxctJWeHf5X+RCLPaJ2s4V6cg==", "user"=>{"login"=>"romrom72", "password"=>"[FILTERED]"}, "commit"=>"Connexion"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'romrom72' OR lower(email) = 'romrom72') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-10 08:04:47 UTC], ["last_sign_in_at", 2017-01-10 07:48:52 UTC], ["last_sign_in_ip", "85.233.216.37"], ["sign_in_count", 10], ["updated_at", 2017-01-10 08:04:47 UTC], ["id", 1]]
+  [1m[35m (11.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 171ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-10 08:04:47 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 189ms (Views: 188.1ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 85.233.216.37 at 2017-01-10 08:04:56 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jZf3Goa1Sa+F3bRliX0HdZqegj4s0/M+By5bEuY3yfPyqECAhVumlXNo7U/e32snrz8gIdS9R1C1OAFsN21vTw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-10 08:04:57 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-10 08:05:03 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TY9NnB9mkfhs8oALQGSmubKcmA649Td0iwrklKjG96x2FLNAoEuldZjeUX21FVf6D2K4Ghjy9QVFKk0X66HrFg==", "user"=>{"login"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Connexion"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'test' OR lower(email) = 'test') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-10 08:05:03 UTC], ["last_sign_in_ip", "85.233.216.37"], ["sign_in_count", 2], ["updated_at", 2017-01-10 08:05:03 UTC], ["id", 7]]
+  [1m[35m (16.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 178ms (ActiveRecord: 17.6ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-10 08:05:04 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 93ms (Views: 91.9ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 85.233.216.37 at 2017-01-10 08:05:11 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jO7HFCAgZgw2dmZ/Aid4Ye+QbQ1aaqouu5JgHn0mkrQ/w8jw3PBg/aTKfa142VbmlEUgelyv/OrxppcyId3KAA=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-10 08:05:12 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 39ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+

@@ -17,8 +17,8 @@ class User < ApplicationRecord
   
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :confirmable
+  devise :database_authenticatable,
+         :recoverable, :rememberable, :trackable, :validatable
          
          
   def self.find_first_by_auth_conditions(warden_conditions)
