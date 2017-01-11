@@ -39,27 +39,31 @@
       </div>
   </nav>
   <section class="round">
-    <% if flash[:success] %>
+    <%= yield %>
+  </section>
+    
+    <div class="footer">
+      <% if flash[:success] %>
         <div class="alert alert-success">
-          <%= flash[:success] %>
+          <p class="success"><%= success %></p>
         </div>
     <% end %>
     <% if flash[:danger] %>
         <div class="alert alert-danger">
-          <%= flash[:danger] %>
+          <p class="danger"><%= danger %></p>
         </div>
     <% end %>
-    <%= yield %>
-    <% if flash[:notice] %>
-      <div class="alert alert-success">
-        <p class="notice"><%= notice %></p>
-      </div>
-    <% end %>
-    <% if flash[:alert] %>
-      <div class="alert alert-danger">
-        <p class="alert"><%= alert %></p>
-      </div>
-    <% end %>
-  </section>
+      
+      <% if flash[:notice] %>
+        <div class="alert alert-success">
+          <p class="notice"><%= notice %></p>
+        </div>
+      <% end %>
+      <% if flash[:alert] %>
+        <div class="alert alert-danger">
+          <p class="alert"><%= alert %></p>
+        </div>
+      <% end %>
+    </div>
   </body>
 </html>

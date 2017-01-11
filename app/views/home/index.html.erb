@@ -1,13 +1,33 @@
-<h1><%= current_user.firstname %> bienvenue chez Madera</h1>
+<h1>Bienvenue chez Madera, <%= current_user.firstname %></h1>
 
 <% if current_user.role == 'admin' %>
-
-    <p>test</p>
-
+    
+<a href=" <%= clients_path %>" class="btn btn-primary">Les clients</a>
+<a href=" <%= providers_path %>" class="btn btn-primary">Les fournisseurs</a>
+			<li>
+				<img src="http://s16.postimg.org/a3bn204w5/messages.png">
+				<span class="title">Messages</span> 
+			</li>
+			<li>
+				<img src="http://s30.postimg.org/wfshvw6s1/events.png">
+				<span class="title">Events</span> 
+			</li>
+			
 <% else %>
-
-    <a href=" <%= clients_path %>" class="btn btn-primary">Les clients</a>
-    <a href=" <%= project_modular_houses_path %>" class="btn btn-primary">Les projets</a>
-    <a href=" <%= providers_path %>" class="btn btn-primary">Les fournisseurs</a>
-
+    <div id="panel">
+		<ul class="menu">
+			<li>
+				<a href=" <%= project_modular_houses_path %>"><img src="http://s8.postimg.org/chqdmmoo5/all_posts.png"></a>
+				<span class="title">Les projets</span>
+			</li>
+			<li>
+				<a href=" <%= clients_path %>"><img src="http://s28.postimg.org/ma9mhuywt/new_post.png"></a>
+				<span class="title">Nouveau Client</span> 
+			</li>
+			<li>
+				<a href=" <%= providers_path %>"><img src="http://s28.postimg.org/ma9mhuywt/new_post.png"></a>
+				<span class="title">Nouveau fournisseurs</span> 
+            </li>
+		</ul>
+	</div>
 <% end %>

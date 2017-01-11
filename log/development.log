@@ -15878,3 +15878,1977 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 179ms (Views: 178.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/clients" for 85.233.216.37 at 2017-01-11 12:46:33 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 156ms (Views: 154.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 85.233.216.37 at 2017-01-11 12:52:38 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6Pdt4FdC28Xx/p6ZZoiyz7fCxT6pEE+nV8qtYMQwCpAm1pTDVhdyimPVk1kNOQALItySWG8cJq+hSfmT3EQoMg=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 8ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 12:52:39 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 333ms (Views: 331.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 12:52:48 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cVThNrwzY2FXcv0KiwB/5p6b448z7xUTZTAYx3Tm2FYOlvdsM2J8XTjDOtKGXkPfjWvjH1bWaeYn6Rryj2HfWg==", "user"=>{"login"=>"romrom72", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'romrom72' OR lower(email) = 'romrom72') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-11 12:52:48 UTC], ["last_sign_in_at", 2017-01-11 08:34:27 UTC], ["sign_in_count", 23], ["updated_at", 2017-01-11 12:52:48 UTC], ["id", 1]]
+  [1m[35m (11.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 170ms (ActiveRecord: 12.2ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 12:52:48 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 12:54:15 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 12:56:17 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 149ms (Views: 147.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 12:56:42 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 149ms (Views: 147.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 12:57:01 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 155ms (Views: 153.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 12:58:03 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.1) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.1) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddProjectmodularhouseToClients (20170111125705)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "clients" ADD "projectModularHouse" reference[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170111125705"]]
+  [1m[35m (11.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_project_modular_houses_on_client_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_project_modular_houses_on_client_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_username' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_username' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddProjectmodularhouseToClients (20170111125705)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aclients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "clientName" varchar, "firstNameClient" varchar, "streetNumber" integer, "streetName" varchar, "pc" integer, "cityName" varchar, "phonenumber" varchar, "email" varchar, "projectModularHouse" )[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aclients" ("id","clientName","firstNameClient","streetNumber","streetName","pc","cityName","phonenumber","email","projectModularHouse")
+                     SELECT "id","clientName","firstNameClient","streetNumber","streetName","pc","cityName","phonenumber","email","projectModularHouse" FROM "clients"[0m
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE "clients"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "clients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "clientName" varchar, "firstNameClient" varchar, "streetNumber" integer, "streetName" varchar, "pc" integer, "cityName" varchar, "phonenumber" varchar, "email" varchar)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "clients" ("id","clientName","firstNameClient","streetNumber","streetName","pc","cityName","phonenumber","email")
+                     SELECT "id","clientName","firstNameClient","streetNumber","streetName","pc","cityName","phonenumber","email" FROM "aclients"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aclients"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170111125705"]]
+  [1m[35m (11.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_project_modular_houses_on_client_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_project_modular_houses_on_client_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_username' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_username' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:00:01 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.1) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.1) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.4ms)
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:00:15 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.1) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.1) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.6ms)
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:01:19 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.1) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.1) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.2ms)
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:01:40 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 239ms (Views: 234.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:02:06 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:03:55 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 140ms (Views: 138.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:04:24 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 226ms (Views: 225.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:04:47 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 204ms (Views: 202.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:05:06 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 304ms (Views: 302.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:05:48 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:06:19 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 250ms (Views: 248.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:06:47 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 221ms (Views: 220.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:07:14 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 273ms (Views: 272.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:07:33 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 144ms (Views: 143.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:07:56 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 202ms (Views: 201.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:08:14 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 282ms (Views: 280.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:08:27 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 415ms (Views: 414.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:08:46 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:09:14 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 278ms (Views: 276.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:10:16 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 157ms (Views: 156.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:10:51 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 184ms (Views: 183.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:11:26 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 195ms (Views: 193.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:11:52 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 154ms (Views: 153.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:12:49 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 142ms (Views: 141.3ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 85.233.216.37 at 2017-01-11 13:13:39 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Go5X0dCoUg2P5YcA6lqm+zImOQVsrxUCiF+0cakzwH6uZKtLfno96R4bQTorbWalJAdpwK9sREZilBU7VwQqOw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:13:39 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 53ms (Views: 51.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 13:16:57 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pcmZibUdgKC8DDgZt7AvxiCm4pNd/yvfEUl6REWCHju+c1gXA1BPjnM2f0PqEsWDgKKCGlMtmRiTlrjaIQ9Eig==", "user"=>{"login"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'test' OR lower(email) = 'test') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-11 13:16:58 UTC], ["last_sign_in_at", 2017-01-11 12:34:43 UTC], ["sign_in_count", 16], ["updated_at", 2017-01-11 13:16:58 UTC], ["id", 7]]
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 185ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:16:58 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 79ms (Views: 77.4ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 85.233.216.37 at 2017-01-11 13:21:28 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"N/MrkY0RK72KmDZ+iiYeX0K/+Qs2bxGEstYc4ecrONYhs5ykmtigvnOfo2iOPzowZ5vfDSyAbDD17xecFb7STg=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 7ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:21:30 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 109ms (Views: 106.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 13:21:49 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6Jgeysp1AKyLY2+xrkw1abS92faQIY4Go5S9FDUdq8hEoZUyG1e0LorFjIAHsjXOTpbVK0qYA/45JutLouRqvg==", "user"=>{"login"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'test' OR lower(email) = 'test') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-11 13:21:49 UTC], ["last_sign_in_at", 2017-01-11 13:16:58 UTC], ["sign_in_count", 17], ["updated_at", 2017-01-11 13:21:49 UTC], ["id", 7]]
+  [1m[35m (18.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 185ms (ActiveRecord: 19.5ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:21:50 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 68ms (Views: 66.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:30:34 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 96ms (Views: 95.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:31:16 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 85ms (Views: 83.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/project_modular_houses" for 85.233.216.37 at 2017-01-11 13:34:14 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProjectModularHousesController#index as HTML
+  Rendering project_modular_houses/index.html.erb within layouts/application
+  [1m[36mProjectModularHouse Load (0.6ms)[0m  [1m[34mSELECT "project_modular_houses".* FROM "project_modular_houses"[0m
+  Rendered project_modular_houses/index.html.erb within layouts/application (12.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 100ms (Views: 89.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:34:18 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:37:04 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 92ms (Views: 90.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 13:37:09 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x3BmPcskfWBXnmZpHa0zq5teMSggdu1Kec6ipZd/llDq7zIyTFSHNtdSendn3yPf02eYBQKCz/EfNR40fjE+ig==", "user"=>{"login"=>"blacksilence@live.fr", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'blacksilence@live.fr' OR lower(email) = 'blacksilence@live.fr') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x3BmPcskfWBXnmZpHa0zq5teMSggdu1Kec6ipZd/llDq7zIyTFSHNtdSendn3yPf02eYBQKCz/EfNR40fjE+ig==", "user"=>{"login"=>"blacksilence@live.fr", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 210ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 13:38:11 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rfYzOGnCNPYWq8B1iZ3UeksoHMuhyrbSgSardetZy0qAaWc37rLOoJZn3Gvz78QOAxG15oM+lGnn3RfkAhdjkA==", "user"=>{"login"=>"blacksilence@live.fr", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'blacksilence@live.fr' OR lower(email) = 'blacksilence@live.fr') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.3ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rfYzOGnCNPYWq8B1iZ3UeksoHMuhyrbSgSardetZy0qAaWc37rLOoJZn3Gvz78QOAxG15oM+lGnn3RfkAhdjkA==", "user"=>{"login"=>"blacksilence@live.fr", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 214ms (Views: 58.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:38:12 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 50ms (Views: 49.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 85.233.216.37 at 2017-01-11 13:38:15 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 175ms (Views: 172.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/project_modular_houses" for 85.233.216.37 at 2017-01-11 13:38:17 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProjectModularHousesController#index as HTML
+  Rendering project_modular_houses/index.html.erb within layouts/application
+  [1m[36mProjectModularHouse Load (0.2ms)[0m  [1m[34mSELECT "project_modular_houses".* FROM "project_modular_houses"[0m
+  Rendered project_modular_houses/index.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 50ms (Views: 47.9ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/sign_out" for 85.233.216.37 at 2017-01-11 13:38:24 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wjNJmDk6zpYkT50+iUdsNQx4XIKrj8yPRdpxF62Y6iFhvHcJMuYBtVkTpxGHQEPqftQCi9/JnTtSH8VnXmyOqw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 33ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:38:24 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 217ms (Views: 215.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 13:38:31 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6VBPkx4CxSmzrLSTJyVaNqcL9JL59sCZRS2JVcKFU7mo4i1e4nnMFBQJQjpT3vMuWE+ux7tadZ0EYPUrzfoSWw==", "user"=>{"login"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'test' OR lower(email) = 'test') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-11 13:38:31 UTC], ["last_sign_in_at", 2017-01-11 13:21:49 UTC], ["sign_in_count", 18], ["updated_at", 2017-01-11 13:38:31 UTC], ["id", 7]]
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 182ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:38:32 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 201ms (Views: 199.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:40:08 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 74ms (Views: 72.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/project_modular_houses" for 85.233.216.37 at 2017-01-11 13:40:14 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProjectModularHousesController#index as HTML
+  Rendering project_modular_houses/index.html.erb within layouts/application
+  [1m[36mProjectModularHouse Load (0.2ms)[0m  [1m[34mSELECT "project_modular_houses".* FROM "project_modular_houses"[0m
+  Rendered project_modular_houses/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:40:18 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 13:40:29 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ltpRt3EXh1YJIFXHdssYxidATv42MeCrU75xHNtPXPa7RQW49md9AInsSdkMuQiyb3nn0xTFwhA1Rc2NMgH0LA==", "user"=>{"login"=>"blacksilence@live.fr", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'blacksilence@live.fr' OR lower(email) = 'blacksilence@live.fr') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.3ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ltpRt3EXh1YJIFXHdssYxidATv42MeCrU75xHNtPXPa7RQW49md9AInsSdkMuQiyb3nn0xTFwhA1Rc2NMgH0LA==", "user"=>{"login"=>"blacksilence@live.fr", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 210ms (Views: 64.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (13.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 13:41:22 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ySHOyVdpJ3YSp8AHkFlrAcxcaJXjo25FoXgeQKGZQUHkvprG0BndIJJr3BnqK3t1hGXBuMFXTP7Hg6LRSNfpmw==", "user"=>{"login"=>"blacksilence@live.fr", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (14.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'blacksilence@live.fr' OR lower(email) = 'blacksilence@live.fr') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 401 Unauthorized in 24ms (ActiveRecord: 14.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ySHOyVdpJ3YSp8AHkFlrAcxcaJXjo25FoXgeQKGZQUHkvprG0BndIJJr3BnqK3t1hGXBuMFXTP7Hg6LRSNfpmw==", "user"=>{"login"=>"blacksilence@live.fr", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 249ms (Views: 99.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 13:41:34 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sDq23suQuuh5qD/TTDol1UulkqMwmDzw95k+pPJraKOdpeLRTOBAvvlkI802SDWhA5w7jhJsHkuRYoI1GyXAeQ==", "user"=>{"login"=>"Blacksilence", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (9.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'blacksilence' OR lower(email) = 'blacksilence') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-11 13:41:34 UTC], ["last_sign_in_at", 2017-01-11 13:41:34 UTC], ["current_sign_in_ip", "85.233.216.37"], ["last_sign_in_ip", "85.233.216.37"], ["sign_in_count", 1], ["updated_at", 2017-01-11 13:41:34 UTC], ["id", 5]]
+  [1m[35m (21.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 254ms (ActiveRecord: 31.5ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:41:35 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (7.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 69ms (Views: 65.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/project_modular_houses" for 85.233.216.37 at 2017-01-11 13:44:46 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProjectModularHousesController#index as HTML
+  Rendering project_modular_houses/index.html.erb within layouts/application
+  [1m[36mProjectModularHouse Load (0.3ms)[0m  [1m[34mSELECT "project_modular_houses".* FROM "project_modular_houses"[0m
+  Rendered project_modular_houses/index.html.erb within layouts/application (33.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 173ms (Views: 138.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 86.65.52.244 at 2017-01-11 13:50:57 +0000
+Cannot render console from 86.65.52.244! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 100ms (Views: 99.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 86.65.52.244 at 2017-01-11 13:51:04 +0000
+Cannot render console from 86.65.52.244! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+aV8QyhmKXzH3L1kB5t/0n6LFmcU5P7jT4rRvDhV2fTfLMziAgKi9Tth7VY7uKrr8xepG7MS0aP43uB0dud4gQ==", "user"=>{"login"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'test' OR lower(email) = 'test') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "failed_attempts" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["failed_attempts", 1], ["updated_at", 2017-01-11 13:51:04 UTC], ["id", 7]]
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 401 Unauthorized in 192ms (ActiveRecord: 12.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+aV8QyhmKXzH3L1kB5t/0n6LFmcU5P7jT4rRvDhV2fTfLMziAgKi9Tth7VY7uKrr8xepG7MS0aP43uB0dud4gQ==", "user"=>{"login"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 198ms (Views: 51.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 86.65.52.244 at 2017-01-11 13:51:13 +0000
+Cannot render console from 86.65.52.244! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZpkM1uN8jvwyQbXJAv1wiBYAMDmn9bomuMr33McdtcNAELx3yRgFdc785fs+3qWxm5yPRQADlWYPnsYUia8Utg==", "user"=>{"login"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZpkM1uN8jvwyQbXJAv1wiBYAMDmn9bomuMr33McdtcNAELx3yRgFdc785fs+3qWxm5yPRQADlWYPnsYUia8Utg==", "user"=>{"login"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 86.65.52.244 at 2017-01-11 13:51:16 +0000
+Cannot render console from 86.65.52.244! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oAzGFgxy6NRhYXO3e+GqftmlcBnCWyNJdTW1BMo9x/2GhXa3JhZjXZ3cI4VHwn9HVDnPZWWtDAnCYYTMhI9miA==", "user"=>{"login"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'test' OR lower(email) = 'test') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "users" SET "failed_attempts" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["failed_attempts", 0], ["updated_at", 2017-01-11 13:51:16 UTC], ["id", 7]]
+  [1m[35m (11.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 19], ["current_sign_in_at", 2017-01-11 13:51:16 UTC], ["last_sign_in_at", 2017-01-11 13:38:31 UTC], ["current_sign_in_ip", "86.65.52.244"], ["updated_at", 2017-01-11 13:51:16 UTC], ["id", 7]]
+  [1m[35m (9.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 197ms (ActiveRecord: 23.3ms)
+
+
+Started GET "/" for 86.65.52.244 at 2017-01-11 13:51:16 +0000
+Cannot render console from 86.65.52.244! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/project_modular_houses" for 86.65.52.244 at 2017-01-11 13:51:31 +0000
+Cannot render console from 86.65.52.244! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProjectModularHousesController#index as HTML
+  Rendering project_modular_houses/index.html.erb within layouts/application
+  [1m[36mProjectModularHouse Load (0.2ms)[0m  [1m[34mSELECT "project_modular_houses".* FROM "project_modular_houses"[0m
+  Rendered project_modular_houses/index.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 46ms (Views: 44.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/providers" for 86.65.52.244 at 2017-01-11 13:51:38 +0000
+Cannot render console from 86.65.52.244! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProvidersController#index as HTML
+  Rendering providers/index.html.erb within layouts/application
+  [1m[36mProvider Load (0.3ms)[0m  [1m[34mSELECT "providers".* FROM "providers"[0m
+  Rendered providers/index.html.erb within layouts/application (13.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 291ms (Views: 281.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/clients" for 86.65.52.244 at 2017-01-11 13:51:38 +0000
+Cannot render console from 86.65.52.244! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (13.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 67.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/providers" for 86.65.52.244 at 2017-01-11 13:51:42 +0000
+Cannot render console from 86.65.52.244! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProvidersController#index as HTML
+  Rendering providers/index.html.erb within layouts/application
+  [1m[36mProvider Load (0.3ms)[0m  [1m[34mSELECT "providers".* FROM "providers"[0m
+  Rendered providers/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 223ms (Views: 220.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:55:03 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 89ms (Views: 88.1ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 85.233.216.37 at 2017-01-11 13:57:52 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"A71jLSnbiQftsMHfAV868Gpx+s1A0aGhg0UTXnjNjBebhOKerK6VqUHtLvIUh8TC3kdkoStEXu4GTPfpfkJYvA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:57:52 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 120ms (Views: 118.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 13:57:56 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HLxEF4CJzAnQ8pbjSMnA8YbGG/c9FoAH6xK1YNozqg/iVlpyKHb47Q5/LXQjetdNIuPPPPzGCDqUFjW3Myxvfw==", "user"=>{"login"=>"blacksilence@live.fr", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'blacksilence@live.fr' OR lower(email) = 'blacksilence@live.fr') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HLxEF4CJzAnQ8pbjSMnA8YbGG/c9FoAH6xK1YNozqg/iVlpyKHb47Q5/LXQjetdNIuPPPPzGCDqUFjW3Myxvfw==", "user"=>{"login"=>"blacksilence@live.fr", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 191ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 13:58:11 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6v7u8k3jBtL4Bf5nhQGJjifnY4NQFgHcXlbG9KBLZ5IUFPCX5RwyNiaIRfDusp4yg8K3SJHGieEhUkYjSVSi4g==", "user"=>{"login"=>"Blacksilence", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'blacksilence' OR lower(email) = 'blacksilence') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (33.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-11 13:58:11 UTC], ["sign_in_count", 2], ["updated_at", 2017-01-11 13:58:11 UTC], ["id", 5]]
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 205ms (ActiveRecord: 44.2ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 13:58:12 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 39ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:02:49 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 175ms (Views: 173.8ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 85.233.216.37 at 2017-01-11 14:02:51 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"e4l8kgrawb57/LvHKiQY1W0n17pn55DDVnatYwsAQTStup2UUuS2RD/AOhhSk9Bi+/z+754M5ZkRrh2svlmdEg=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:02:52 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 175ms (Views: 174.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 14:02:55 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3e26euXlj+Y+dQdCdY3nUMyrxKlpUSi25xZGIRAK4tpddfPPEh++LLgrL5LLJo5JkPCRL04ccpue5kmYptZWJw==", "user"=>{"login"=>"blacksilence@live.fr", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'blacksilence@live.fr' OR lower(email) = 'blacksilence@live.fr') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3e26euXlj+Y+dQdCdY3nUMyrxKlpUSi25xZGIRAK4tpddfPPEh++LLgrL5LLJo5JkPCRL04ccpue5kmYptZWJw==", "user"=>{"login"=>"blacksilence@live.fr", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 196ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 14:03:05 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1uCRzB3lJYiqLBg8W2q96SlbwMq3HFtDULPZZ1KqGnpWeNh56h8UQixyMOzlwdTwdQCVTJBRAW4pQ9be5Hauhw==", "user"=>{"login"=>"Blacksilence", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'blacksilence' OR lower(email) = 'blacksilence') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-11 14:03:05 UTC], ["last_sign_in_at", 2017-01-11 13:58:11 UTC], ["sign_in_count", 3], ["updated_at", 2017-01-11 14:03:05 UTC], ["id", 5]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 171ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:03:06 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 50ms (Views: 49.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:03:25 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 118ms (Views: 116.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 14:03:31 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9Upruyx/WGpPBhl1j/h8LUo5kAaKMhD1lEFAfBJw7a77deZboJGCj7YjreMxjLol9xXXujNvHM234tTPZKE9kA==", "user"=>{"login"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'test' OR lower(email) = 'test') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-11 14:03:31 UTC], ["last_sign_in_at", 2017-01-11 13:51:16 UTC], ["current_sign_in_ip", "85.233.216.37"], ["last_sign_in_ip", "86.65.52.244"], ["sign_in_count", 20], ["updated_at", 2017-01-11 14:03:31 UTC], ["id", 7]]
+  [1m[35m (9.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 170ms (ActiveRecord: 10.9ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:03:31 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:04:16 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 142ms (Views: 140.7ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 85.233.216.37 at 2017-01-11 14:04:23 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5Evu+OOvTHDLN3t93zhJS+etb+arHMdthmEnLP/+6C5hKnjYBSdS77eXaQjFTkZ7x/7jKdK71wnJNfua+/Mgew=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:04:23 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 123ms (Views: 122.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 14:04:34 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fcZiXsSbxmo50GOeckhJNJqld7C3cCXx6db3jeWXUAPrdBWZpnQFBW/cO+v6qgVWkhrmHCfkS/gGhuGWAOSLKA==", "user"=>{"login"=>"Blacksilence", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'blacksilence' OR lower(email) = 'blacksilence') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-11 14:04:34 UTC], ["last_sign_in_at", 2017-01-11 14:03:05 UTC], ["sign_in_count", 4], ["updated_at", 2017-01-11 14:04:34 UTC], ["id", 5]]
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 170ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:04:35 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 86.65.52.244 at 2017-01-11 14:04:45 +0000
+Cannot render console from 86.65.52.244! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 42ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 85.233.216.37 at 2017-01-11 14:05:04 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Xwv/DVgO88vPyGw3hZCe/K3/HArikjOvn4JLMid4CoAtb1NF+VcLPZN5aIZNDQUUtCr224MZtRfwKxhxXRvVfw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:05:05 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 66ms (Views: 65.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:05:12 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 62ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:05:31 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 66ms (Views: 65.4ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 85.233.216.37 at 2017-01-11 14:05:34 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GPBZZgyCY8OUbaUH9hsK7G+ZPnqNqa6E/7P79zzye5etthDMMBmmYRuCaiEsg+BdKI5J/ia0pFwn01kS6X0cXA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:05:34 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 212ms (Views: 210.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 14:05:38 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lu0PEdeLfcS7B0h/iEq/VRvmLDAD75Ly88OzK09+Lq7gJpfXv/nlOMYyGAvDI1l0UtfQkRRpEtjz83eildSYcg==", "user"=>{"login"=>"Blacksilence", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'blacksilence' OR lower(email) = 'blacksilence') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-11 14:05:39 UTC], ["last_sign_in_at", 2017-01-11 14:04:34 UTC], ["sign_in_count", 5], ["updated_at", 2017-01-11 14:05:39 UTC], ["id", 5]]
+  [1m[35m (11.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 172ms (ActiveRecord: 13.4ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:05:39 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 40ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:06:07 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 203ms (Views: 201.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 14:06:34 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QgI2iPv32mmeBSwKqbKDwTI8ud/9EVL2wChju1enuiBT/UN771UL7EDDvUoyNf4hVry/gf/2NgmtQMxzqVQs7g==", "user"=>{"login"=>"Blacksilence", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'blacksilence' OR lower(email) = 'blacksilence') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-11 14:06:34 UTC], ["last_sign_in_at", 2017-01-11 14:05:39 UTC], ["sign_in_count", 6], ["updated_at", 2017-01-11 14:06:34 UTC], ["id", 5]]
+  [1m[35m (11.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 181ms (ActiveRecord: 12.9ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:06:34 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 53ms (Views: 51.9ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 85.233.216.37 at 2017-01-11 14:07:14 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"luj6ZchLLUa2ewTq1s7wdLv61G4Aby5EhJ6EM9bYR9QJ0jlUB2TZcuOfy5X8Smoo6cSZR8rWZhirNpUMPb1liA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:07:16 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 51ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 14:07:35 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ou4nB75TyY830gCeAy5pZfdqo8HlAy29SglJTgDCqq2Hgitvatm2A3ZOztWOpCo1KPEcEs72LdwiTREGv9XP/w==", "user"=>{"login"=>"romrom72", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'romrom72' OR lower(email) = 'romrom72') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "failed_attempts" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["failed_attempts", 1], ["updated_at", 2017-01-11 14:07:35 UTC], ["id", 1]]
+  [1m[35m (15.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 401 Unauthorized in 183ms (ActiveRecord: 16.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ou4nB75TyY830gCeAy5pZfdqo8HlAy29SglJTgDCqq2Hgitvatm2A3ZOztWOpCo1KPEcEs72LdwiTREGv9XP/w==", "user"=>{"login"=>"romrom72", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 218ms (Views: 68.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 14:07:40 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zB+UbybWkscXOndpb+EVsLhCNyF/RDMPd+OluqGqWt5xc5gH8lztS1amuSLia1bgZ9mI8lSxM24fp/3yHr0/jA==", "user"=>{"login"=>"romrom72", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'romrom72' OR lower(email) = 'romrom72') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "failed_attempts" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["failed_attempts", 0], ["updated_at", 2017-01-11 14:07:40 UTC], ["id", 1]]
+  [1m[35m (11.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 24], ["current_sign_in_at", 2017-01-11 14:07:40 UTC], ["last_sign_in_at", 2017-01-11 12:52:48 UTC], ["updated_at", 2017-01-11 14:07:40 UTC], ["id", 1]]
+  [1m[35m (11.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 187ms (ActiveRecord: 25.6ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:07:41 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:07:54 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 87ms (Views: 85.8ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 85.233.216.37 at 2017-01-11 14:07:57 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ykCVOtp8LYFd/M52wveinYzcNs04h7nZDggQerNYnUW3WX02Utccfjc978wN0gAYdiHPzKdy+2aRqoZr47AjgA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:07:58 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:08:30 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 37ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 14:08:31 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u7UUvl8MOSRhEiratzrb14F1WPYteWI9Chsa1YbqNse8lQFyhxDtgNn7PSx4XwDxiaQ5ivKci7Iuw+qCd4R+uw==", "user"=>{"login"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'test' OR lower(email) = 'test') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-11 14:08:31 UTC], ["last_sign_in_at", 2017-01-11 14:03:31 UTC], ["last_sign_in_ip", "85.233.216.37"], ["sign_in_count", 21], ["updated_at", 2017-01-11 14:08:31 UTC], ["id", 7]]
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 171ms (ActiveRecord: 11.6ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:08:32 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 85.233.216.37 at 2017-01-11 14:08:34 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"oL/Ki9mS1N7BpqmhdXrifjt3DLTmBeyuxg+Y7iBQiuIoUdlaOZ77cpYAVTGuYOqKekZDnCEI5fY8/1/IkFhvIw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:08:35 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 68ms (Views: 67.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 14:08:50 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4zFnx7zOoZCjYqJbhigvOoPr187XnzXaroj5HoNYEAnxrVY58ww+KPaz/xnT9FyeUGdEHndPnhzapfdl/oaEVw==", "user"=>{"login"=>"Blacksilence", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'blacksilence' OR lower(email) = 'blacksilence') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-11 14:08:50 UTC], ["last_sign_in_at", 2017-01-11 14:06:34 UTC], ["sign_in_count", 7], ["updated_at", 2017-01-11 14:08:50 UTC], ["id", 5]]
+  [1m[35m (11.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 173ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:08:50 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 85.233.216.37 at 2017-01-11 14:09:04 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UoBOJXW9XKjw5Q0MzlLidqWSm3s7KcQh5hITqZGc59kggYNxrRaDHytGvz8iDLdZPe5UjsVkSH2oCN6gD1lm7w=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:09:04 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 66ms (Views: 64.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 80.12.33.35 at 2017-01-11 14:09:12 +0000
+Cannot render console from 80.12.33.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 145ms (Views: 144.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 37.157.228.106 at 2017-01-11 14:09:13 +0000
+Cannot render console from 37.157.228.106! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 37.157.228.106 at 2017-01-11 14:09:24 +0000
+Cannot render console from 37.157.228.106! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 85.233.216.37 at 2017-01-11 14:09:36 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"v3bvSBsM5ryIE4QQHW7BRRxFNY+8Yns2i7Nl3OBIfTCwYWm9vMe58VMun9gWYP4f+zyqF98smSQqbqtajnZg0g=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 14:09:37 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HUfUJG4U0EEqszlolAiE3PCgmeeZry4lRKRxjnMXFx+WQFfwzBhIorbA453umYFq3ctJdkBAN1zVZ+OESPqU0w==", "user"=>{"login"=>"Blacksilence", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'blacksilence' OR lower(email) = 'blacksilence') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-11 14:09:38 UTC], ["last_sign_in_at", 2017-01-11 14:08:50 UTC], ["sign_in_count", 8], ["updated_at", 2017-01-11 14:09:38 UTC], ["id", 5]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 170ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:09:38 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.2ms)
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:09:38 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 52ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 85.233.216.37 at 2017-01-11 14:09:44 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qZT2GVz+AEmYdYjG0ilD+Sm4VWppjPU1zq+QdyZwbF1zSQ9giYRjpFRjt9qnpygxzAMqt63ttusIrn7BImZL1A=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:09:44 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 45ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 80.12.33.35 at 2017-01-11 14:09:52 +0000
+Cannot render console from 80.12.33.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tN1U9Dhn5oc2/4CzMVkpYXtgJOXUccbmcylBstgJgbFR1iYV/0/P9gHk2rHLOdeErN2GXO53bIqCSLPwH3m32Q==", "user"=>{"login"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'test' OR lower(email) = 'test') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-11 14:09:53 UTC], ["last_sign_in_at", 2017-01-11 14:08:31 UTC], ["current_sign_in_ip", "80.12.33.35"], ["sign_in_count", 22], ["updated_at", 2017-01-11 14:09:53 UTC], ["id", 7]]
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 170ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/" for 80.12.33.35 at 2017-01-11 14:09:53 +0000
+Cannot render console from 80.12.33.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 80.12.33.35 at 2017-01-11 14:10:08 +0000
+Cannot render console from 80.12.33.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 72ms (Views: 70.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 80.12.33.35 at 2017-01-11 14:10:18 +0000
+Cannot render console from 80.12.33.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Redirected to https://madera-zhaitan.c9users.io/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 80.12.33.35 at 2017-01-11 14:10:19 +0000
+Cannot render console from 80.12.33.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 182ms (Views: 180.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 80.12.33.35 at 2017-01-11 14:10:46 +0000
+Cannot render console from 80.12.33.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 50ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 85.233.216.37 at 2017-01-11 14:10:51 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JGZpOMOR+maUxALLMZbMCNkBy1EMG+yEhrgJ0E7pTleii3+gAnShAEIyRN/o5D3uQSFPq9qgqmV6vtVZvm31Ww=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:10:51 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 45ms (Views: 44.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:13:26 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 82ms (Views: 80.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 14:13:30 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SQ1BrsSOIHtfrM6m+cFryOVyJdbaWXVMOy/bztslcS8gHOYb2WSPTsH8AFjoX9EDRKlVk0rScg9k+xWt2rzOYA==", "user"=>{"login"=>"Blacksilence", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'blacksilence' OR lower(email) = 'blacksilence') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-11 14:13:31 UTC], ["last_sign_in_at", 2017-01-11 14:09:38 UTC], ["sign_in_count", 9], ["updated_at", 2017-01-11 14:13:31 UTC], ["id", 5]]
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 172ms (ActiveRecord: 11.3ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:13:31 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 85.233.216.37 at 2017-01-11 14:13:53 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6FAKkG/sT9038goSZynbaOMbUqaidQbmYPeqbJ1HhNP8Xvk7RIDY12iAgNw6KsLBE/uhVqK+4hstxYOyFBsTcg=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:13:53 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 52ms (Views: 51.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:14:32 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 64ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 14:14:36 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wgejW6xjC28Jz9lWzIYc7j1HhlAEYQzxEkqqf39xElxppAWxI2YNU8Sk8f0HQoYyVzcI75i4M2tyhegUXTEdDQ==", "user"=>{"login"=>"Blacksilence", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'blacksilence' OR lower(email) = 'blacksilence') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-11 14:14:37 UTC], ["last_sign_in_at", 2017-01-11 14:13:31 UTC], ["sign_in_count", 10], ["updated_at", 2017-01-11 14:14:37 UTC], ["id", 5]]
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 172ms (ActiveRecord: 13.5ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:14:37 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 103ms (Views: 102.1ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 85.233.216.37 at 2017-01-11 14:14:42 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Jk956+fwbJCZiEs0oAsCmuKqkNH/+1nPosRAAwbR12qO886JJJAUV1ll/ZbQ/8Lw3Gxprz7zHkxFirJB5t3J9Q=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:14:42 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 14:15:08 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"scgFakBATWI3IbN5nj2bnWleBgkMnq3XLMmIFS0utlbbh6+rPq4DQ16snnplG37AKtCv7VEGLJMOnf1pMm4mSQ==", "user"=>{"login"=>"Blacksilence", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'blacksilence' OR lower(email) = 'blacksilence') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-11 14:15:08 UTC], ["last_sign_in_at", 2017-01-11 14:14:37 UTC], ["sign_in_count", 11], ["updated_at", 2017-01-11 14:15:08 UTC], ["id", 5]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 173ms (ActiveRecord: 13.2ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:15:08 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/project_modular_houses" for 85.233.216.37 at 2017-01-11 14:15:14 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProjectModularHousesController#index as HTML
+  Rendering project_modular_houses/index.html.erb within layouts/application
+  [1m[36mProjectModularHouse Load (0.2ms)[0m  [1m[34mSELECT "project_modular_houses".* FROM "project_modular_houses"[0m
+  Rendered project_modular_houses/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 211ms (Views: 208.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/clients/1" for 85.233.216.37 at 2017-01-11 14:15:35 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  Rendered clients/show.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 205ms (Views: 200.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:15:52 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 199ms (Views: 198.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/providers" for 85.233.216.37 at 2017-01-11 14:15:56 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProvidersController#index as HTML
+  Rendering providers/index.html.erb within layouts/application
+  [1m[36mProvider Load (0.3ms)[0m  [1m[34mSELECT "providers".* FROM "providers"[0m
+  Rendered providers/index.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 162ms (Views: 158.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/clients" for 85.233.216.37 at 2017-01-11 14:15:57 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 50.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/clients/4/edit" for 85.233.216.37 at 2017-01-11 14:16:03 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ClientsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering clients/edit.html.erb within layouts/application
+  Rendered clients/edit.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 195ms (Views: 190.7ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/clients/4" for 85.233.216.37 at 2017-01-11 14:16:24 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ClientsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wn5xS+gZBZdRLrb61PtfG96BQIDg+qhoeghxgLH4ivUeq+7CN+tDipWTus6Ntrz/DcY2oklqHpPCnoz7K06dcw==", "client"=>{"firstNameClient"=>"Gauthier", "clientName"=>"De Villele", "phonenumber"=>"0243546587", "email"=>"Gauthier@Gauthier.fr", "streetNumber"=>"3", "streetName"=>"rue des chamoix", "pc"=>"37890", "cityName"=>"Tours"}, "id"=>"4"}
+  [1m[36mClient Load (0.4ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[33mUPDATE "clients" SET "clientName" = ? WHERE "clients"."id" = ?[0m  [["clientName", "De Villele"], ["id", 4]]
+  [1m[35m (16.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/clients
+Completed 302 Found in 107ms (ActiveRecord: 19.5ms)
+
+
+Started GET "/clients" for 85.233.216.37 at 2017-01-11 14:16:24 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 56.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:17:01 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 60ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 14:17:12 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H/C0Ygq1UDWMpWFy2rMHOyMIiuh8J3Xfd6zlFi4/OIJwapotq13ZGOeRAJaulukChPucRUGDD45REf+VPV3lzg==", "user"=>{"login"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'test' OR lower(email) = 'test') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-11 14:17:12 UTC], ["last_sign_in_at", 2017-01-11 14:09:53 UTC], ["current_sign_in_ip", "85.233.216.37"], ["last_sign_in_ip", "80.12.33.35"], ["sign_in_count", 23], ["updated_at", 2017-01-11 14:17:12 UTC], ["id", 7]]
+  [1m[35m (10.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 179ms (ActiveRecord: 11.4ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:17:13 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:17:56 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 108ms (Views: 107.4ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 85.233.216.37 at 2017-01-11 14:17:58 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"drFJFZ79L4D27uJxjSea45/H8x+5OMenMv8pE1EUEkYyZNacQQ9pnTJT7kXUankHTICFPRCocVyKadRoy6IFwA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:17:58 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 85.233.216.37 at 2017-01-11 14:18:02 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oodHpRM0pYjBklNOyvF0BVrGaQT+HD6m9IvV2SRy0H5eRTS8fHJyuVdiL0WmFThuFpouHAGeF4giaK42eYiLEA==", "user"=>{"login"=>"Blacksilence", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'blacksilence' OR lower(email) = 'blacksilence') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-11 14:18:02 UTC], ["last_sign_in_at", 2017-01-11 14:15:08 UTC], ["sign_in_count", 12], ["updated_at", 2017-01-11 14:18:02 UTC], ["id", 5]]
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://madera-zhaitan.c9users.io/
+Completed 302 Found in 175ms (ActiveRecord: 13.7ms)
+
+
+Started GET "/" for 85.233.216.37 at 2017-01-11 14:18:03 +0000
+Cannot render console from 85.233.216.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
