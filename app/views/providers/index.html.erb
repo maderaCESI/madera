@@ -1,0 +1,30 @@
+<h1>Liste des fournisseurs</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Nom du fournisseur</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        <% @providers.each do |provider| %>
+        <tr>
+            <td><%= provider.id %></td>
+            <td><%= provider.providerName %></td>
+            <td>
+                <a href="<%= edit_provider_path(provider.id) %>" class="btn btn-primary">Editer</a>
+                <a href="<%= provider_path(provider.id) %>" class="btn btn-danger" data-confirm="Etes sur sûr ?" data-method="delete">Supprimer</a>
+            
+            </td>
+            
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<p>
+    <a href="<%= new_provider_path %>" class="btn btn-success">Nouveau fournisseur</a>
+</p>
+

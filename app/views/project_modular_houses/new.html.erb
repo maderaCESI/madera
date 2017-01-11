@@ -2,17 +2,17 @@
 
 <%= form_for @projet do |f| %>
 <div class="form-group">
-    <%= f.label :projectName %><br />
+    <%= f.label :projectName, 'Nom du projet :' %><br />
     <%= f.text_field :projectName, class: 'form-control' %>
 </div>
 
 <div class="form-group">
-    <%= f.label :client_id %><br />
+    <%= f.label :client_id, 'Client : ' %><br />
     <%= f.collection_select :client_id, Client.all, :id, :clientName%>
 </div>
 
 <div class="form-group">
-    <button class="btn btn-primary", type="submit">Créer le client</button>
+    <button class="btn btn-primary", type="submit">Créer le projet</button>
 </div>
 
 <% end %>

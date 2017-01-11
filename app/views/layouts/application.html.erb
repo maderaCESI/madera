@@ -29,7 +29,7 @@
             <% if !current_page?(authenticated_root_path) %>
               <li><a href="<%= authenticated_root_path %> ">Menu</a></li>
             <% end %>
-            <li><a href="#">Créer un Projet</a></li>
+            <li><a href="<%= project_modular_houses_path %>">Créer un Projet</a></li>
             <% if user_signed_in? %>
               <li><%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete %></li>
             <% end %>
@@ -39,9 +39,27 @@
       </div>
   </nav>
   <section class="round">
+    <% if flash[:success] %>
+        <div class="alert alert-success">
+          <%= flash[:success] %>
+        </div>
+    <% end %>
+    <% if flash[:danger] %>
+        <div class="alert alert-danger">
+          <%= flash[:danger] %>
+        </div>
+    <% end %>
     <%= yield %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% if flash[:notice] %>
+      <div class="alert alert-success">
+        <p class="notice"><%= notice %></p>
+      </div>
+    <% end %>
+    <% if flash[:alert] %>
+      <div class="alert alert-danger">
+        <p class="alert"><%= alert %></p>
+      </div>
+    <% end %>
   </section>
   </body>
 </html>

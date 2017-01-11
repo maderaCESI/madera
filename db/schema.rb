@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170110140201) do
+ActiveRecord::Schema.define(version: 20170111090727) do
 
   create_table "calculation_rules", force: :cascade do |t|
     t.string "woodFrameConception"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 20170110140201) do
     t.string  "streetName"
     t.integer "pc"
     t.string  "cityName"
+    t.string  "phonenumber"
+    t.string  "email"
   end
 
   create_table "components", force: :cascade do |t|
@@ -88,7 +90,13 @@ ActiveRecord::Schema.define(version: 20170110140201) do
   end
 
   create_table "providers", force: :cascade do |t|
-    t.string "providerName"
+    t.string  "providerName"
+    t.integer "streetNumber"
+    t.string  "streetName"
+    t.integer "pc"
+    t.string  "cityName"
+    t.string  "phonenumber"
+    t.string  "email"
   end
 
   create_table "scale_modular_houses", force: :cascade do |t|

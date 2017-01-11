@@ -12,7 +12,7 @@ class ClientsController < ApplicationController
         @client = Client.find(params[:id])
         @client.update(client_params)
         
-        redirect_to clients_path
+        redirect_to clients_path, success: 'Le client a bien été modifier'
     end
     
     def destroy
@@ -31,13 +31,13 @@ class ClientsController < ApplicationController
     
     def create
         @client = Client.create(client_params)
-        redirect_to clients_path
+        redirect_to clients_path, success: 'Le client a bien été crée'
     end
     
     private
     
      def client_params
-         params.require(:client).permit(:clientName, :firstNameClient, :streetNumber, :streetName, :pc, :cityName)
+         params.require(:client).permit(:clientName, :firstNameClient, :streetNumber, :streetName, :pc, :cityName, :phonenumber, :email)
      end
     
     

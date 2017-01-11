@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   #Les ressources
   resources :clients
   resources :project_modular_houses
+  resources :providers
   
   
   #Rails_Admin

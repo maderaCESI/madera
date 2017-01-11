@@ -11,13 +11,13 @@ class ProjectModularHousesController < ApplicationController
     @projet = ProjectModularHouse.find(params[:id])
     @projet.update(projet_params)
         
-    redirect_to project_modular_houses_path
+    redirect_to project_modular_houses_path, success: 'Le projet a bien été modifié'
   end
   
   def destroy
     @projet = ProjectModularHouse.find(params[:id])
     @projet.destroy
-    redirect_to project_modular_houses_path
+    redirect_to project_modular_houses_path, success: 'Le projet a bien été supprimé'
   end
 
   def new
@@ -30,7 +30,7 @@ class ProjectModularHousesController < ApplicationController
 
   def create
     @projet = ProjectModularHouse.create(projet_params)
-    redirect_to project_modular_houses_path
+    redirect_to project_modular_houses_path, success: 'Le projet a bien été crée'
   end
   
   private
