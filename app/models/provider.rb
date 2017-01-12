@@ -1,3 +1,3 @@
 class Provider < ActiveRecord::Base
-    has_many :Component
+    has_many :components
 end

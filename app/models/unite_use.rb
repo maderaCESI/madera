@@ -1,4 +1,4 @@
 class UniteUse < ActiveRecord::Base
-    has_many :Modulus
-    has_many :Component
+    has_many :modulus
+    has_many :components
 end

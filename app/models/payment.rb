@@ -1,3 +1,3 @@
 class Payment < ActiveRecord::Base
-    has_many :Order_quote_client
+    has_many :order_quote_clients
 end

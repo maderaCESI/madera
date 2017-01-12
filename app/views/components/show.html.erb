@@ -1,2 +1,9 @@
-<h1>Components#show</h1>
-<p>Find me in app/views/components/show.html.erb</p>
+<h1><%= @component.componentName %></h1>
+
+<%= @component.componentNature %>
+<%= @component.provider_id %>
+<%= @component.unitUse_id %>
+<%= @component.modulus.ids %>
+<p>
+    <a href="<%= components_path %>" class ="btn btn-info">revenir</a>
+</p>

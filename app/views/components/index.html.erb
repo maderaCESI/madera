@@ -1,2 +1,31 @@
-<h1>Components#index</h1>
-<p>Find me in app/views/components/index.html.erb</p>
+<h1>Les composants</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Nom du composant</td>
+            <td>Nature du composant</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        <% @components.each do |component| %>
+        <tr>
+            <td><%= component.id %></td>
+            <td><%= component.componentName %></td>
+            <td><%= component.componentNature %></td>
+            <td>
+                <a href="<%= component_path(component.id) %>" class="btn btn-info">Détails</a>
+                <a href="<%= edit_component_path(component.id) %>" class="btn btn-primary">Editer</a>
+                <a href="<%= component_path(component.id) %>" class="btn btn-danger" data-confirm="Etes sur sûr ?" data-method="delete">Supprimer</a>
+            </td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<p>
+    <a href="<%= new_component_path %>" class="btn btn-success">Nouveau Composant</a>
+</p>
+

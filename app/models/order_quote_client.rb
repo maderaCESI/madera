@@ -1,4 +1,4 @@
 class OrderQuoteClient < ActiveRecord::Base
-    has_and_belongs_to_many :Project_modular_houses
-    belongs_to :sPayment
+    has_and_belongs_to_many :project_modular_houses
+    belongs_to :payment
 end

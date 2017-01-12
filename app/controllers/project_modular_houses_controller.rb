@@ -1,6 +1,6 @@
 class ProjectModularHousesController < ApplicationController
   def index
-    @projets = ProjectModularHouse.all
+    @projets = ProjectModularHouse.includes(:client, :user).all
   end
 
   def show

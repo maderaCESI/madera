@@ -1,3 +1,3 @@
 class Client < ActiveRecord::Base
-    has_many :Project_modular_house
+    has_many :project_modular_houses
 end

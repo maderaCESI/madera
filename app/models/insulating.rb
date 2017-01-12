@@ -1,3 +1,3 @@
 class Insulating < ActiveRecord::Base
-    has_many :Modulus
+    has_many :modulus
 end

@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   
-  has_many :Project_modular_house
+  has_many :project_modular_houses
   
   attr_accessor :login
   validates :firstname, presence: true, 

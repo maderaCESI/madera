@@ -1,2 +1,3 @@
-class ModulusScaleModularHouse < ApplicationRecord
+class ModulusScaleModularHouse < ActiveRecord::Base
+
 end
