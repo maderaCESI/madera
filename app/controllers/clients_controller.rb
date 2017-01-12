@@ -31,7 +31,7 @@ class ClientsController < ApplicationController
     
     def create
         @client = Client.create(client_params)
-        redirect_to clients_path, success: 'Le client a bien été crée'
+        redirect_to clients_path, success: 'Le client a bien été créé'
     end
     
     private

@@ -36,7 +36,7 @@ class ProjectModularHousesController < ApplicationController
   private
   
   def projet_params
-    params.require(:project_modular_house).permit(:projectName, :client_id)
+    params.require(:project_modular_house).permit(:projectName, :client_id, :user_id)
     
   end
 end
