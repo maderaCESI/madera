@@ -31,6 +31,7 @@ Things you may want to cover:
 * https://madera-zhaitan.c9users.io/
 * 
 * Models table :
+*  cctp --> caractérique
 *  calculation_rule --> régle de calcul
 *  cladding --> bardage
 *  component --> composant
