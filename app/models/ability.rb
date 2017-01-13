@@ -5,15 +5,18 @@ class Ability
     
     user ||= User.new
        if user.is_admin?
-        puts "======"
+        puts "====== ADMIN"
         can :manage, :all
         can :access, :rails_admin   # grant access to rails_admin
         can :dashboard 
        elsif user.is_commercial? 
-          can :read, :all
+          puts "====== commercial"
+          # can :manage, [Client, etc], {user_id: user.id}
+          can :manage, :all
         else
+          puts "====== etude"
+          # can :manage, [Client, etc]
           can :read, :all
-        end
        end
     
     # Define abilities for the passed in user here. For example:

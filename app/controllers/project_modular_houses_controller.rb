@@ -1,4 +1,7 @@
 class ProjectModularHousesController < ApplicationController
+  
+  authorize_resource
+  
   def index
     @projets = ProjectModularHouse.includes(:client, :user, :scale_modular_house).all
   end

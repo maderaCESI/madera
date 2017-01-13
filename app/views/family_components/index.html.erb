@@ -1,4 +1,4 @@
-<h1>Les familles</h1>
+<h1>Liste des familles</h1>
 
 <table class="table">
     <thead>
@@ -14,8 +14,8 @@
             <td><%= fC.id %></td>
             <td><%= fC.familyComponentName %></td>
             <td>
-                <a href="<%= edit_family_component_path(fC.id) %>" class="btn btn-primary">Editer</a>
-                <a href="<%= family_component_path(fC.id) %>" class="btn btn-danger" data-confirm="Etes sur sûr ?" data-method="delete">Supprimer</a>
+                <a href="<%= edit_family_component_path(fC.id) %>" class="fa fa-pencil fa-2x"></a>
+                <a href="<%= family_component_path(fC.id) %>" class="fa fa-trash fa-2x" data-confirm="Etes sur sûr ?" data-method="delete"></a>
             </td>
         </tr>
         <% end %>
@@ -23,6 +23,6 @@
 </table>
 
 <p>
-    <a href="<%= new_family_component_path %>" class="btn btn-success">Nouvelle famille</a>
+    <a href="<%= new_family_component_path %>" class="btn btn-success fa fa-plus-circle"> Ajouter une nouvelle famille</a>
 </p>
 

@@ -1,4 +1,4 @@
-<h1>Les gammes</h1>
+<h1>Liste des gammes</h1>
 
 <table class="table">
     <thead>
@@ -20,9 +20,9 @@
             <td><%= scaleModularHouse.coverType %></td>
             <td><%= scaleModularHouse.woodWorkingQuality %></td>
             <td>
-                <a href="<%= scale_modular_house_path(scaleModularHouse.id) %>" class="btn btn-info">Détails</a>
-                <a href="<%= edit_scale_modular_house_path(scaleModularHouse.id) %>" class="btn btn-primary">Editer</a>
-                <a href="<%= scale_modular_houses_path(scaleModularHouse.id) %>" class="btn btn-danger" data-confirm="Etes sur sûr ?" data-method="delete">Supprimer</a>
+                <a href="<%= scale_modular_house_path(scaleModularHouse.id) %>" class="fa fa-eye fa-2x"></a>
+                <a href="<%= edit_scale_modular_house_path(scaleModularHouse.id) %>" class="fa fa-pencil fa-2x"></a>
+                <a href="<%= scale_modular_houses_path(scaleModularHouse.id) %>" class="fa fa-trash fa-2x" data-confirm="Etes sur sûr ?" data-method="delete"></a>
             </td>
         </tr>
         <% end %>
@@ -30,6 +30,6 @@
 </table>
 
 <p>
-    <a href="<%= new_scale_modular_house_path %>" class="btn btn-success">Nouvelle gamme</a>
+    <a href="<%= new_scale_modular_house_path %>" class="btn btn-success fa fa-plus-circle"> Ajouter un nouvelle gamme</a>
 </p>
 

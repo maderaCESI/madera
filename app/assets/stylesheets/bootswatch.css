@@ -3119,8 +3119,8 @@ fieldset[disabled] .btn-default.focus {
 }
 .btn-primary {
   color: #ffffff;
-  background-color: #eb6864;
-  border-color: #eb6864;
+  background-color: #00995F;
+  border-color: #00995F;
 }
 .btn-primary:focus,
 .btn-primary.focus {
@@ -3347,8 +3347,8 @@ fieldset[disabled] .btn-warning.focus {
 }
 .btn-danger {
   color: #ffffff;
-  background-color: #f57a00;
-  border-color: #f57a00;
+  background-color: #D20915;
+  border-color: #D20915;
 }
 .btn-danger:focus,
 .btn-danger.focus {
