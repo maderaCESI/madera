@@ -1,2 +1,13 @@
-<h1>FamilyComponents#new</h1>
-<p>Find me in app/views/family_components/new.html.erb</p>
+<h1>Nouvelle famille</h1>
+
+<%= form_for @family_component do |f| %>
+<div class="form-group">
+    <%= f.label :familyComponentName, 'Nom de la famille :' %><br />
+    <%= f.text_field :familyComponentName, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <button class="btn btn-primary", type="submit">Créer la famille</button>
+</div>
+
+<% end %>

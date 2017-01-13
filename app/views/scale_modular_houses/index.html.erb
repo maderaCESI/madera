@@ -1,2 +1,35 @@
-<h1>ScaleModularHouses#index</h1>
-<p>Find me in app/views/scale_modular_houses/index.html.erb</p>
+<h1>Les gammes</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Nom de la gamme</td>
+            <td>Finition extérieur</td>
+            <td>Surface</td>
+            <td>Qualité</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        <% @scaleModularHouses.each do |scaleModularHouse| %>
+        <tr>
+            <td><%= scaleModularHouse.id %></td>
+            <td><%= scaleModularHouse.scaleName %></td>
+            <td><%= scaleModularHouse.exteriorFinish %></td>
+            <td><%= scaleModularHouse.coverType %></td>
+            <td><%= scaleModularHouse.woodWorkingQuality %></td>
+            <td>
+                <a href="<%= scale_modular_house_path(scaleModularHouse.id) %>" class="btn btn-info">Détails</a>
+                <a href="<%= edit_scale_modular_house_path(scaleModularHouse.id) %>" class="btn btn-primary">Editer</a>
+                <a href="<%= scale_modular_houses_path(scaleModularHouse.id) %>" class="btn btn-danger" data-confirm="Etes sur sûr ?" data-method="delete">Supprimer</a>
+            </td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<p>
+    <a href="<%= new_scale_modular_house_path %>" class="btn btn-success">Nouvelle gamme</a>
+</p>
+

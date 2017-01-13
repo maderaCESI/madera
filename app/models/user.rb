@@ -41,5 +41,9 @@ class User < ApplicationRecord
     self.role == 'commercial'
   end
   
+  def is_etude?
+    self.role == 'etude'
+  end
+  
 end
 

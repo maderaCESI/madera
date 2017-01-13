@@ -9,8 +9,11 @@ class Ability
         can :manage, :all
         can :access, :rails_admin   # grant access to rails_admin
         can :dashboard 
-       else 
-          can :manage, :all
+       elsif user.is_commercial? 
+          can :read, :all
+        else
+          can :read, :all
+        end
        end
     
     # Define abilities for the passed in user here. For example:

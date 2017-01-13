@@ -1,2 +1,28 @@
-<h1>FamilyComponents#index</h1>
-<p>Find me in app/views/family_components/index.html.erb</p>
+<h1>Les familles</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Nom de la famille</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        <% @family_components.each do |fC| %>
+        <tr>
+            <td><%= fC.id %></td>
+            <td><%= fC.familyComponentName %></td>
+            <td>
+                <a href="<%= edit_family_component_path(fC.id) %>" class="btn btn-primary">Editer</a>
+                <a href="<%= family_component_path(fC.id) %>" class="btn btn-danger" data-confirm="Etes sur sûr ?" data-method="delete">Supprimer</a>
+            </td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<p>
+    <a href="<%= new_family_component_path %>" class="btn btn-success">Nouvelle famille</a>
+</p>
+

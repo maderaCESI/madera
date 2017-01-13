@@ -17,8 +17,8 @@
             <td><%= component.id %></td>
             <td><%= component.componentName %></td>
             <td><%= component.componentNature %></td>
-            <td><%= component.family_component_id %></td>
-            <td><%= component.provider_id %></td>
+            <td><%= component.family_component.familyComponentName %></td>
+            <td><%= component.provider.providerName %></td>
             <td>
                 <a href="<%= component_path(component.id) %>" class="btn btn-info">Détails</a>
                 <a href="<%= edit_component_path(component.id) %>" class="btn btn-primary">Editer</a>

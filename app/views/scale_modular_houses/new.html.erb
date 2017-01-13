@@ -1,2 +1,28 @@
-<h1>ScaleModularHouses#new</h1>
-<p>Find me in app/views/scale_modular_houses/new.html.erb</p>
+<h1>Nouvelle gamme</h1>
+
+<%= form_for @scaleModularHouse do |f| %>
+<div class="form-group">
+    <%= f.label :scaleName, 'Nom de la gamme :' %><br />
+    <%= f.text_field :scaleName, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :exteriorFinish, 'Finition extérieur :' %><br />
+    <%= f.text_field :exteriorFinish, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :coverType, 'Surface :' %><br />
+    <%= f.text_field :coverType, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :woodWorkingQuality, 'Qualité :' %><br />
+    <%= f.text_field :woodWorkingQuality, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <button class="btn btn-primary", type="submit">Créer la gamme</button>
+</div>
+
+<% end %>

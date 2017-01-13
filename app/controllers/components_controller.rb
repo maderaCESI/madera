@@ -1,6 +1,6 @@
 class ComponentsController < ApplicationController
   def index
-    @components = Component.includes(:provider, :unite_use, :family_components).all
+    @components = Component.all
   end
 
   def show
