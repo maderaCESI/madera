@@ -256,3 +256,48 @@ body {
 	top: 0;
 	left: 0;
 }
+
+
+
+
+/*******   Nouvelles tuilles    *******/
+
+.yolo {
+  background-color: #2c618f;
+	width: 375px;
+	height: 250px; 
+  margin: 5px;
+  float: left;
+} 
+
+.yolo img {
+	display: block;
+	width: 20%;
+	margin: 85px auto 0;
+	-moz-transition: margin 0.5s;
+	-webkit-transition: margin 0.5s;
+	transition: margin 0.5s;
+}
+
+.yolo .title {
+	display: block;
+	width: 100%;
+	height: auto;
+	font-family: 'Esteban', serif;
+	font-size: 25px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 60px;
+	position: static;
+}
+
+.yolo :hover, .yolo:focus{
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.2)), to(rgba(255,255,255,0)));
+  background-image: -webkit-linear-gradient(top, rgba(255,255,255,.2), rgba(255,255,255,0));
+  background-image: -moz-linear-gradient(top, rgba(255,255,255,.2), rgba(255,255,255,0));
+  background-image: -ms-linear-gradient(top, rgba(255,255,255,.2), rgba(255,255,255,0));
+  background-image: -o-linear-gradient(top, rgba(255,255,255,.2), rgba(255,255,255,0));
+  background-image: linear-gradient(top, rgba(255,255,255,.2), rgba(255,255,255,0));
+}
+
+/**************************************/

@@ -3,32 +3,47 @@
 <% if current_user.role == 'admin' %>
 
 <% else %>
-    <div id="panel">
-		<ul class="menu">
-			<li>
+<div class="row"></div>
+<div class="container">
+   <div class="row">
+		<div class="col-md-4">
+			<div class="yolo">
 				<a href=" <%= project_modular_houses_path %>"><img src="http://s8.postimg.org/chqdmmoo5/all_posts.png"></a>
 				<span class="title">Projets</span>
-			</li>
-			<li>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="yolo">
 				<a href=" <%= clients_path %>"><img src="http://s28.postimg.org/ma9mhuywt/new_post.png"></a>
 				<span class="title">Clients</span> 
-			</li>
-			<li>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="yolo">
 				<a href=" <%= providers_path %>"><img src="http://s28.postimg.org/ma9mhuywt/new_post.png"></a>
-				<span class="title">Fournisseurs</span> 
-            </li>
-            <li>
+				<span class="title">Fournisseurs</span>
+			</div>
+        </div>
+    </div>
+    <div class="row">       
+        <div class="col-md-4">
+        	<div class="yolo">
 				<a href=" <%= components_path %>"><img src="http://s28.postimg.org/ma9mhuywt/new_post.png"></a>
 				<span class="title">Composants</span> 
-            </li>
-            <li>
+			</div>
+        </div>
+        <div class="col-md-4">
+        	<div class="yolo">
 				<a href=" <%= family_components_path %>"><img src="http://s28.postimg.org/ma9mhuywt/new_post.png"></a>
 				<span class="title">Famille Composant</span> 
-            </li>
-            <li>
+			</div>
+        </div>
+        <div class="col-md-4">
+        	<div class="yolo">
 				<a href=" <%= scale_modular_houses_path %>"><img src="http://s28.postimg.org/ma9mhuywt/new_post.png"></a>
 				<span class="title">Gamme</span> 
-            </li>
-		</ul>
+			</div>
+        </div>
 	</div>
+</div>
 <% end %>
