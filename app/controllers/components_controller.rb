@@ -1,6 +1,6 @@
 class ComponentsController < ApplicationController
   def index
-    @components = Component.includes(:provider, :unite_use).all
+    @components = Component.includes(:provider, :unite_use, :family_components).all
   end
 
   def show
@@ -35,6 +35,6 @@ class ComponentsController < ApplicationController
   
   private
   def component_params
-    params.require(:component).permit(:componentName, :componentNature, :componentSection, :componentThickness, :componentLength, :componentWidth, :provider_id, :unitUse_id)
+    params.require(:component).permit(:componentName, :componentNature, :componentSection, :componentThickness, :componentLength, :componentWidth, :family_component_id, :provider_id, :unitUse_id)
   end
 end

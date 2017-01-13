@@ -12,8 +12,13 @@
 </div>
 
 <div class="form-group">
-    <%= f.label :user_id, 'Commercial :'%><br />
+    <%= f.label :user_id, 'Commercial en charge du projet :'%><br />
     <%= f.collection_select :user_id, User.all, :id, :lastname%>
+</div>
+
+<div class="form-group">
+    <%= f.label :scale_modular_house_id, 'Gamme : '%><br />
+    <%= f.collection_select :scale_modular_house_id, ScaleModularHouse.all, :id, :scaleName%>
 </div>
 
 <div class="form-group">

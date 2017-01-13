@@ -16,6 +16,7 @@
             <td><%= client.firstNameClient %></td>
             <td><%= client.clientName %></td>
             <td>
+                <a href="<%= clients_path(client.id) %>" class="btn btn-info">Détails</a>
                 <a href="<%= edit_client_path(client.id) %>" class="btn btn-primary">Editer</a>
                 <a href="<%= client_path(client.id) %>" class="btn btn-danger" data-confirm="Etes sur sûr ?" data-method="delete">Supprimer</a>
             
