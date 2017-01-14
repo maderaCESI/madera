@@ -1,5 +1,6 @@
 class ProjectModularHousesController < ApplicationController
   
+  before_action :set_project, only: [:update, :show, :edit, :destroy]
   authorize_resource
   
   def index
@@ -7,18 +8,14 @@ class ProjectModularHousesController < ApplicationController
   end
 
   def show
-    @projet = ProjectModularHouse.find(params[:id])
   end
 
   def update
-    @projet = ProjectModularHouse.find(params[:id])
     @projet.update(projet_params)
-        
     redirect_to project_modular_houses_path, success: 'Le projet a bien été modifié'
   end
   
   def destroy
-    @projet = ProjectModularHouse.find(params[:id])
     @projet.destroy
     redirect_to project_modular_houses_path, success: 'Le projet a bien été supprimé'
   end
@@ -28,7 +25,6 @@ class ProjectModularHousesController < ApplicationController
   end
 
   def edit
-    @projet = ProjectModularHouse.find(params[:id])
   end
 
   def create
@@ -40,6 +36,10 @@ class ProjectModularHousesController < ApplicationController
   
   def projet_params
     params.require(:project_modular_house).permit(:projectName, :client_id, :user_id, :scale_modular_house_id)
-    
   end
+  
+  def set_project
+    @projet = ProjectModularHouse.find(params[:id])
+  end
+  
 end

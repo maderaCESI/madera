@@ -1,28 +1,3 @@
 <h1>Nouveau projet</h1>
 
-<%= form_for @projet do |f| %>
-<div class="form-group">
-    <%= f.label :projectName, 'Nom du projet :' %><br />
-    <%= f.text_field :projectName, class: 'form-control' %>
-</div>
-
-<div class="form-group">
-    <%= f.label :client_id, 'Client : ' %><br />
-    <%= f.collection_select :client_id, Client.all, :id, :clientName%>
-</div>
-
-<div class="form-group">
-    <%= f.label :user_id, 'Commercial en charge du projet :'%><br />
-    <%= f.collection_select :user_id, User.where(role: 'commercial'), :id, :lastname%>
-</div>
-
-<div class="form-group">
-    <%= f.label :scale_modular_house_id, 'Gamme : '%><br />
-    <%= f.collection_select :scale_modular_house_id, ScaleModularHouse.all, :id, :scaleName%>
-</div>
-
-<div class="form-group">
-    <button class="btn btn-primary", type="submit">Créer le projet</button>
-</div>
-
-<% end %>
+<%= render partial: 'form' %>

@@ -1,21 +1,23 @@
 class ComponentsController < ApplicationController
+  
+  before_action :set_component, only: [:update, :show, :edit, :destroy]
+  authorize_resource
+  
+  
   def index
     @components = Component.all
   end
 
   def show
-    @component = Component.find(params[:id])
   end
 
   def update
-    @component = Component.find(params[:id])
     @component.update(component_params)
         
     redirect_to components_path, success: 'Le composant a bien été modifié'
   end
 
   def destroy
-    @component = Component.find(params[:id])
     @component.destroy
     redirect_to components_path, success: 'Le composant a bien été supprimé'
   end
@@ -25,7 +27,6 @@ class ComponentsController < ApplicationController
   end
 
   def edit
-    @component = Component.find(params[:id])
   end
 
   def create
@@ -36,5 +37,9 @@ class ComponentsController < ApplicationController
   private
   def component_params
     params.require(:component).permit(:componentName, :componentNature, :componentSection, :componentThickness, :componentLength, :componentWidth, :family_component_id, :provider_id, :unitUse_id)
+  end
+  
+  def set_component
+    @component = Component.find(params[:id])
   end
 end

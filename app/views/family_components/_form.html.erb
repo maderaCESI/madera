@@ -1,0 +1,11 @@
+<%= form_for @family_component do |f| %>
+<div class="form-group">
+    <%= f.label :familyComponentName, 'Nom de la famille :' %><br />
+    <%= f.text_field :familyComponentName, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <button class="btn btn-primary", type="submit">Valider</button>
+</div>
+
+<% end %>

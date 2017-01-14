@@ -5,9 +5,9 @@
   <div class="text-center"><%= image_tag("logo_simple.jpg", :alt => "logo simple madera", height:"280px") %></div>
   <h1 class="text-center">Connexion</h1>
   <div class="row">
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= form_for(resource, as: resource_name, :html => {:class => 'form-signin'}, url: session_path(resource_name)) do |f| %>
       <div class="form-group">
-        <%= f.label :login, 'Nom utilisateur ou email :' %><br />
+        <%= f.label :login, 'Nom utilisateur ou email :', class: "control-label" %><br />
         <%= f.text_field :login, autofocus: true, class: "form-control" %>
       </div>
       <div class="form-group">

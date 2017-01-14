@@ -1,5 +1,6 @@
 class ClientsController < ApplicationController
     
+    before_action :set_client, only: [:update, :show, :edit, :destroy]
     authorize_resource
     
     def index
@@ -7,18 +8,14 @@ class ClientsController < ApplicationController
     end
     
     def show
-        @client = Client.find(params[:id])
     end
     
     def update
-        @client = Client.find(params[:id])
         @client.update(client_params)
-        
-        redirect_to clients_path, success: 'Le client a bien été modifier'
+        redirect_to clients_path, success: 'Le client a bien été modifié'
     end
     
     def destroy
-        @client = Client.find(params[:id])
         @client.destroy
         redirect_to clients_path, success: 'Le client a bien été supprimé'
     end
@@ -28,7 +25,6 @@ class ClientsController < ApplicationController
     end
     
     def edit
-        @client = Client.find(params[:id])
     end
     
     def create
@@ -42,5 +38,8 @@ class ClientsController < ApplicationController
          params.require(:client).permit(:clientName, :firstNameClient, :streetNumber, :streetName, :pc, :cityName, :phonenumber, :email)
      end
     
+    def set_client
+        @client = Client.find(params[:id])
+    end
     
 end

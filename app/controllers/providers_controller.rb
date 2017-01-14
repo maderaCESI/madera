@@ -1,21 +1,21 @@
 class ProvidersController < ApplicationController
+  
+  before_action :set_provider, only: [:update, :show, :edit, :destroy]
+  authorize_resource
+  
   def index
     @providers = Provider.all
   end
 
   def show
-    @provider = Provider.find(params[:id])
   end
 
   def update
-    @provider = Provider.find(params[:id])
     @provider.update(provider_params)
-        
     redirect_to providers_path, success: 'Le fournisseur a bien été modifié'
   end
 
   def destroy
-    @provider = Provider.find(params[:id])
     @provider.destroy
     redirect_to providers_path, success: 'Le fournisseur a bien été supprimé'
   end
@@ -25,7 +25,6 @@ class ProvidersController < ApplicationController
   end
 
   def edit
-    @provider = Provider.find(params[:id])
   end
 
   def create
@@ -36,5 +35,9 @@ class ProvidersController < ApplicationController
   private
   def provider_params
     params.require(:provider).permit(:providerName, :streetNumber, :streetName, :pc, :cityName, :phonenumber, :email)
+  end
+  
+  def set_provider
+    @provider = Provider.find(params[:id])
   end
 end

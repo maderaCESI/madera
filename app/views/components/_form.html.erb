@@ -1,0 +1,51 @@
+<%= form_for @component do |f| %>
+<div class="form-group">
+    <%= f.label :componentName, 'Nom du composant :' %><br />
+    <%= f.text_field :componentName, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :componentNature, 'Nature du composant :' %><br />
+    <%= f.text_field :componentNature, class: 'form-control'%>
+</div>
+
+<div class="form-group">
+    <%= f.label :componentSection, 'Section du composant :' %><br />
+    <%= f.text_field :componentSection, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :componentThickness, 'Epaisseur du composant :' %><br />
+    <%= f.text_field :componentThickness, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :componentLength, 'Longueur du composant(cm) :' %><br />
+    <%= f.text_field :componentLength, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :componentWidth, 'Largeur du composant(cm) :' %><br />
+    <%= f.text_field :componentWidth, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :family_component_id, 'Famille du composant : '%><br />
+    <%= f.collection_select :family_component_id, FamilyComponent.all, :id, :familyComponentName, class: 'form-control'%>
+</div>
+
+<div class="form-group">
+    <%= f.label :provider_id, 'Fournisseur : '%><br />
+    <%= f.collection_select :provider_id, Provider.all, :id, :providerName%>
+</div>
+
+<div class="form-group">
+    <%= f.label :unitUse_id, 'Unité usage: '%><br />
+    <%= f.collection_select :unitUse_id, UniteUse.all, :id, :unitUseName%>
+</div>
+
+<div class="form-group">
+    <button class="btn btn-primary", type="submit">Valider</button>
+</div>
+
+<% end %>

@@ -1,21 +1,21 @@
 class ScaleModularHousesController < ApplicationController
+  
+  before_action :set_scale, only: [:update, :show, :edit, :destroy]
+  authorize_resource
+  
   def index
     @scaleModularHouses = ScaleModularHouse.all
   end
 
   def show
-     @scaleModularHouse = ScaleModularHouse.find(params[:id])
   end
 
   def update
-    @scaleModularHouse = ScaleModularHouse.find(params[:id])
     @scaleModularHouse.ScaleModularHouse(scaleModularHouse_params)
-        
     redirect_to scale_modular_houses_path, success: 'La gamme a bien été modifiée'
   end
 
   def destroy
-    @scaleModularHouse = ScaleModularHouse.find(params[:id])
     @scaleModularHouse.destroy
     redirect_to scale_modular_houses_path, success: 'La gamme a bien été supprimée'
   end
@@ -25,7 +25,6 @@ class ScaleModularHousesController < ApplicationController
   end
 
   def edit
-    @scaleModularHouse = ScaleModularHouse.find(params[:id])
   end
 
   def create
@@ -37,5 +36,9 @@ class ScaleModularHousesController < ApplicationController
     
   def scaleModularHouse_params
     params.require(:scale_modular_house).permit(:scaleName, :exteriorFinish, :coverType, :woodWorkingQuality)
+  end
+  
+  def set_scale
+    @scaleModularHouse = ScaleModularHouse.find(params[:id])
   end
 end
