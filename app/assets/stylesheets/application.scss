@@ -9,11 +9,14 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree
- *= require font-awesome
  */
+ 
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+@import "home.css";
+ 
+
 
 .footer {position: absolute; bottom: 0; left: 0; right: 0; margin-bottom: 0; padding-bottom: 0;}
 .html {min-height: 100%;}

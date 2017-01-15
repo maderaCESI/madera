@@ -39,8 +39,8 @@ gem 'rails_admin_rollincode', '~> 1.0'
 gem 'rails_admin', git: 'https://github.com/sferik/rails_admin.git'
 #Font Awesome
 gem "font-awesome-rails"
-
-gem "bootstrap"
+#boostrap
+gem 'bootstrap-sass'
 # Use Capistrano for deployment
 gem 'capistrano-rails', group: :development
 
