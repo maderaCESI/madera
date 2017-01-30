@@ -1,0 +1,17 @@
+<%= form_for @insulating do |f| %>
+
+<div class="form-group">
+    <%= f.label :insulatingName, 'nom isolant :' %><br />
+    <%= f.text_field :insulatingName, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :insulatingThickness, 'épaisseur isolant:' %><br />
+    <%= f.text_field :insulatingThickness, class: 'form-control'%>
+</div>
+
+<div class="form-group">
+    <button class="btn btn-primary", type="submit">Valider</button>
+</div>
+
+<% end %>

@@ -1,0 +1,11 @@
+<%= form_for @cladding do |f| %>
+<div class="form-group">
+    <%= f.label :thicknessCladdings, 'Epaisseur du bardage :' %><br />
+    <%= f.text_field :thicknessCladdings, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <button class="btn btn-primary", type="submit">Valider</button>
+</div>
+
+<% end %>

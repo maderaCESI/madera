@@ -1,0 +1,2 @@
+module CladdingsHelper
+end

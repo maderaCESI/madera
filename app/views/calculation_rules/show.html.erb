@@ -1,0 +1,13 @@
+<h1>Aperçu régle de calcul</h1>
+
+<%= form_for @calculation_rule do |f| %>
+<div class="form-group">
+    <%= f.label :woodFrameConception, 'Ossature bois :' %><br />
+    <%= f.text_field :woodFrameConception, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <button class="btn btn-primary", type="submit">Valider</button>
+</div>
+
+<% end %>

@@ -35,7 +35,7 @@ class ScaleModularHousesController < ApplicationController
   private
     
   def scaleModularHouse_params
-    params.require(:scale_modular_house).permit(:scaleName, :exteriorFinish, :coverType, :woodWorkingQuality)
+    params.require(:scale_modular_house).permit(:scaleName, :exteriorFinish, :coverType, :woodWorkingQualityn, :cctp_id, :calculation_rule_id)
   end
   
   def set_scale

@@ -20,6 +20,11 @@
 </div>
 
 <div class="form-group">
+    <%= f.label :cctp_id, 'CCTP : '%><br />
+    <%= f.collection_select :cctp_id, ScaleModularHouse.all, :id, :scaleName%>
+</div>
+
+<div class="form-group">
     <button class="btn btn-primary", type="submit">Valider</button>
 </div>
 

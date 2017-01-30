@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  
-    #Les ressources
+
+  #Les ressources
   resources :clients
   resources :project_modular_houses
   resources :providers
@@ -9,7 +9,12 @@ Rails.application.routes.draw do
   resources :scale_modular_houses
   resources :order_quote_clients
   resources :family_components
-  
+  resources :cctps
+  resources :insulatings
+  resources :unite_uses
+  resources :payments
+  resources :claddings
+  resources :calculation_rules
   
   #Rails_Admin
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'

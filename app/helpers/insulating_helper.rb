@@ -1,0 +1,2 @@
+module InsulatingHelper
+end

@@ -1,0 +1,11 @@
+<%= form_for @unite do |f| %>
+<div class="form-group">
+    <%= f.label :unitUseName, 'Unité de mesure :' %><br />
+    <%= f.text_field :unitUseName, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <button class="btn btn-primary", type="submit">Valider</button>
+</div>
+
+<% end %>

@@ -1,0 +1,33 @@
+<h1>Liste des paiements</h1>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <td>#</td>
+            <td>Etape de paiement</td>
+            <td>Somme à débloquer</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        <% @payments.each do |payment| %>
+        <tr>
+            <td><%= payment.id %></td>
+            <td><%= payment.paymentStep %></td>
+            <td><%= payment.sumToUnlock %></td>
+            <td>
+                <a href="<%= payments_path(payment.id) %>" class="fa fa-eye fa-2x"></a>
+                <a href="<%= edit_payment_path(payment.id) %>" class="fa fa-pencil fa-2x"></a>
+                <a href="<%= payment_path(payment.id) %>" class="fa fa-trash fa-2x" data-confirm="Etes sur sûr ?" data-method="delete"></a>
+            
+            </td>
+            
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<p>
+    <a href="<%= new_payment_path %>" class="btn btn-success fa fa-plus-circle"> Ajouter un nouveau paiement</a>
+</p>
+

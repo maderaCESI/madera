@@ -8,6 +8,8 @@
             <td>Finition extérieur</td>
             <td>Surface</td>
             <td>Qualité</td>
+            <td>CCTP</td>
+            <td>Calculation rules</td>
             <td>Action</td>
         </tr>
     </thead>
@@ -19,6 +21,8 @@
             <td><%= scaleModularHouse.exteriorFinish %></td>
             <td><%= scaleModularHouse.coverType %></td>
             <td><%= scaleModularHouse.woodWorkingQuality %></td>
+            <td><%= scaleModularHouse.cctp.cctpcharacteristics %></td>
+            <td><%= scaleModularHouse.calculation_rule.woodFrameConception %></td>
             <td>
                 <a href="<%= scale_modular_house_path(scaleModularHouse.id) %>" class="fa fa-eye fa-2x"></a>
                 <a href="<%= edit_scale_modular_house_path(scaleModularHouse.id) %>" class="fa fa-pencil fa-2x"></a>
