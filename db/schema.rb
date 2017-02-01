@@ -44,10 +44,10 @@ ActiveRecord::Schema.define(version: 20170201075548) do
     t.float   "componentWidth"
     t.integer "family_component_id"
     t.integer "provider_id"
-    t.integer "unitUse_id"
+    t.integer "unite_use_id"
     t.index ["family_component_id"], name: "index_components_on_family_component_id"
     t.index ["provider_id"], name: "index_components_on_provider_id"
-    t.index ["unitUse_id"], name: "index_components_on_unitUse_id"
+    t.index ["unite_use_id"], name: "index_components_on_unite_use_id"
   end
 
   create_table "components_modulus", id: false, force: :cascade do |t|
@@ -83,10 +83,10 @@ ActiveRecord::Schema.define(version: 20170201075548) do
     t.float   "masLength"
     t.integer "insulating_id"
     t.integer "cladding_id"
-    t.integer "unitUse_id"
+    t.integer "unite_use_id"
     t.index ["cladding_id"], name: "index_modulus_on_cladding_id"
     t.index ["insulating_id"], name: "index_modulus_on_insulating_id"
-    t.index ["unitUse_id"], name: "index_modulus_on_unitUse_id"
+    t.index ["unite_use_id"], name: "index_modulus_on_unite_use_id"
   end
 
   create_table "modulus_components", force: :cascade do |t|
@@ -105,10 +105,10 @@ ActiveRecord::Schema.define(version: 20170201075548) do
     t.string  "stateOrder"
     t.float   "priceTotal"
     t.string  "stateExpedition"
-    t.integer "payments_id"
-    t.integer "project_modular_houses_id"
-    t.index ["payments_id"], name: "index_order_quote_clients_on_payments_id"
-    t.index ["project_modular_houses_id"], name: "index_order_quote_clients_on_project_modular_houses_id"
+    t.integer "payment_id"
+    t.integer "project_modular_house_id"
+    t.index ["payment_id"], name: "index_order_quote_clients_on_payment_id"
+    t.index ["project_modular_house_id"], name: "index_order_quote_clients_on_project_modular_house_id"
   end
 
   create_table "payments", force: :cascade do |t|

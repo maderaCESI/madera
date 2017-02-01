@@ -1,0 +1,102 @@
+<%= form_for @modulu do |f| %>
+<div class="form-group">
+    <%= f.label :modulusName, 'Nom du module :' %><br />
+    <%= f.text_field :modulusName, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :modulusNature, 'Nature du module :' %><br />
+    <%= f.text_field :modulusNature, class: 'form-control'%>
+</div>
+
+<div class="form-group">
+    <%= f.label :modulusHeight, 'Hauteur du module :' %><br />
+    <%= f.text_field :modulusHeight, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :modulusLength, 'Longueur du module :' %><br />
+    <%= f.text_field :modulusLength, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :mdSection, 'Section mur droit :' %><br />
+    <%= f.text_field :mdSection, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :mdHeight, 'Hauteur mur droit :' %><br />
+    <%= f.text_field :mdHeight, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :mdLength, 'Longueur mur droit : ' %><br />
+    <%= f.text_field :mdLength, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :maSection, 'Section mur angle :'%><br />
+    <%= f.text_field :maSection, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :maHeight, 'Hauteur mur angle :'%><br />
+    <%= f.text_field :maHeight, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :maLength, 'Longueur mur angle :'%><br />
+    <%= f.text_field :maLength, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :maeSection, 'Section mur angle entrant :'%><br />
+    <%= f.text_field :maeSection, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :maeHeight, 'Hauteur mur angle entrant :'%><br />
+    <%= f.text_field :maeHeight, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :maeLength, 'Longueur mur angle entrant :'%><br />
+    <%= f.text_field :maeLength, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :masSection, 'Section mur angle sortant :'%><br />
+    <%= f.text_field :masSection, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :masHeight, 'Hauteur mur angle sortant :'%><br />
+    <%= f.text_field :masHeight, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :masLength, 'Longueur mur angle sortant :'%><br />
+    <%= f.text_field :masLength, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :insulating_id, 'Type isolant : '%><br />
+    <%= f.collection_select :insulating_id, Insulating.all, :id, :insulatingName%>
+</div>
+
+<div class="form-group">
+    <%= f.label :cladding_id, 'Type bardage : '%><br />
+    <%= f.collection_select :cladding_id, Cladding.all, :id, :thicknessCladdings%>
+</div>
+
+<div class="form-group">
+    <%= f.label :unitUse_id, 'Unité de mesure : '%><br />
+    <%= f.collection_select :unitUse_id, UniteUse.all, :id, :unitUseName%>
+</div>
+
+
+<div class="form-group">
+    <button class="btn btn-primary", type="submit">Valider</button>
+</div>
+
+<% end %>

@@ -21,7 +21,12 @@
 
 <div class="form-group">
     <%= f.label :cctp_id, 'CCTP : '%><br />
-    <%= f.collection_select :cctp_id, ScaleModularHouse.all, :id, :scaleName%>
+    <%= f.collection_select :cctp_id, Cctp.all, :id, :cctpcharacteristics%>
+</div>
+
+<div class="form-group">
+    <%= f.label :calculation_rule_id, 'Règle de calcul : '%><br />
+    <%= f.collection_select :calculation_rule_id, CalculationRule.all, :id, :woodFrameConception%>
 </div>
 
 <div class="form-group">

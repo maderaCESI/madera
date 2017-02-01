@@ -10,6 +10,8 @@ end
 gem 'rails', '~> 5.0.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+#MySQL
+#gem 'mysql'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -40,7 +42,7 @@ gem 'rails_admin', git: 'https://github.com/sferik/rails_admin.git'
 #Font Awesome
 gem "font-awesome-rails"
 #boostrap
-gem 'bootstrap-sass'
+#gem 'bootstrap-sass'
 # Use Capistrano for deployment
 gem 'capistrano-rails', group: :development
 
