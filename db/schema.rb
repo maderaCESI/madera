@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170113081817) do
+ActiveRecord::Schema.define(version: 20170201075548) do
 
   create_table "calculation_rules", force: :cascade do |t|
     t.string "woodFrameConception"
@@ -106,12 +106,9 @@ ActiveRecord::Schema.define(version: 20170113081817) do
     t.float   "priceTotal"
     t.string  "stateExpedition"
     t.integer "payments_id"
+    t.integer "project_modular_houses_id"
     t.index ["payments_id"], name: "index_order_quote_clients_on_payments_id"
-  end
-
-  create_table "order_quote_clients_project_modular_houses", id: false, force: :cascade do |t|
-    t.integer "order_quote_client_id",    null: false
-    t.integer "project_modular_house_id", null: false
+    t.index ["project_modular_houses_id"], name: "index_order_quote_clients_on_project_modular_houses_id"
   end
 
   create_table "payments", force: :cascade do |t|
