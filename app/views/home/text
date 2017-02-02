@@ -1,0 +1,139 @@
+<% if current_user.role == 'admin' %>
+
+<% else %>
+<!--
+<div class="container">
+   <div class="row">
+		<div class="col-md-4">
+			<div class="yolo">
+				<a href=" <%= project_modular_houses_path %>"><img src="http://s8.postimg.org/chqdmmoo5/all_posts.png"></a>
+				<span class="title">Projets</span>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="yolo">
+				<a href=" <%= clients_path %>"><img src="http://s28.postimg.org/ma9mhuywt/new_post.png"></a>
+				<span class="title">Clients</span> 
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="yolo">
+				<a href=" <%= providers_path %>"><img src="http://s28.postimg.org/ma9mhuywt/new_post.png"></a>
+				<span class="title">Fournisseurs</span>
+			</div>
+        </div>
+    </div>
+    <div class="row">       
+        <div class="col-md-4">
+        	<div class="yolo">
+				<a href=" <%= components_path %>"><img src="http://s28.postimg.org/ma9mhuywt/new_post.png"></a>
+				<span class="title">Composants</span> 
+			</div>
+        </div>
+        <div class="col-md-4">
+        	<div class="yolo">
+				<a href=" <%= family_components_path %>"><img src="http://s28.postimg.org/ma9mhuywt/new_post.png"></a>
+				<span class="title">Famille Composant</span> 
+			</div>
+        </div>
+        <div class="col-md-4">
+        	<div class="yolo">
+				<a href=" <%= scale_modular_houses_path %>"><img src="http://s28.postimg.org/ma9mhuywt/new_post.png"></a>
+				<span class="title">Gamme</span> 
+			</div>
+        </div>
+	</div>
+	 		
+	 -->	
+            
+            <div class="tile-group double">
+               	<div class="tile-container">
+               		
+               		<h1>Menu Principal</h1>
+               		
+                    <div class="tile fg-black">
+                    	<div class="tile-content slide-up">
+        					<div class="slide">
+        						<div class="image-containeer image-format-fill" style="width; 100%; height: 100%">
+        							<div class="frame">
+        								<%= image_tag("edit_home.png", :alt => "edit") %>
+        							</div>
+        						</div>
+        					</div>
+        					<div class="slide-over bg-white padding10">
+            					Nouveau devis
+        					</div>
+   						 </div>
+                    </div>
+                    
+                    <div class="tile fg-black">
+                    	<div class="tile-content slide-up">
+        					<div class="slide">
+        						<div class="image-containeer image-format-fill" style="width; 100%; height: 100%">
+        							<div class="frame">
+        								<%= image_tag("devis.png", :alt => "devis") %>
+        							</div>
+        						</div>
+        					</div>
+        					<div class="slide-over bg-white padding10">
+            					Modifier un devis
+        					</div>
+   						 </div>
+                    </div>
+                    
+                    <div class="tile fg-black">
+                    	<div class="tile-content slide-up">
+        					<div class="slide">
+        						<div class="image-containeer image-format-fill" style="width; 100%; height: 100%">
+        							<div class="frame">
+        								<%= image_tag("dossier.png", :alt => "dossier") %>
+        							</div>
+        						</div>
+        					</div>
+        					<div class="slide-over bg-white padding10">
+            					Projet en cours
+        					</div>
+   						 </div>
+                    </div>
+                    
+                    <div class="tile-small fg-black">
+                    	<div class="tile-content slide-up">
+        					<div class="slide">
+        						<div class="image-containeer image-format-fill" style="width; 100%; height: 100%">
+        							<div class="frame">
+        								<%= image_tag("param.png", :alt => "param") %>
+        							</div>
+        						</div>
+        					</div>
+        					<div class="slide-over bg-white padding10">
+            					Modifier d'information
+        					</div>
+   						 </div>
+                    </div>
+                    
+                    <div class="tile-small fg-black">
+                    	<div class="tile-content slide-up">
+        					<div class="slide">
+        						<div class="image-containeer image-format-fill" style="width; 100%; height: 100%">
+        							<div class="frame">
+        								<%= image_tag("log_off.png", :alt => "logoff") %>
+        							</div>
+        						</div>
+        					</div>
+        					<div class="slide-over bg-white padding10">
+            					Déconnection
+   						 	</div>
+   						 </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tile-group double">
+            	<span class="tile-group-title">Images</span>
+            	<div class="tile-container">
+                	<h1>Existant</h1>
+                	<div class="tile-wide" data-role="tile"></div>
+                	
+                </div>
+</div>
+<% end %>

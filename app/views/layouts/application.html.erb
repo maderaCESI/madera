@@ -10,7 +10,8 @@
   </head>
   
   <body>
-      <div class="app-bar green">
+    <% if !current_page?(authenticated_root_path) %>
+      <div class="app-bar">
         <a class="app-bar-element" href="..."><%= image_tag("logo.jpg", :alt => "logo madera", height:"60px", width: "150px") %></a>
         <span class="app-bar-divider"></span>
 
@@ -29,6 +30,7 @@
           <% end %>
         </ul>
       </div>
+    <% end %>
   
   <section>
     <%= yield %>
