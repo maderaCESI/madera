@@ -42,6 +42,7 @@ gem 'rails_admin', git: 'https://github.com/sferik/rails_admin.git'
 #Font Awesome
 gem "font-awesome-rails"
 #boostrap
+gem 'faker'
 #gem 'bootstrap-sass'
 # Use Capistrano for deployment
 gem 'capistrano-rails', group: :development

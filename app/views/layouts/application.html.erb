@@ -10,54 +10,52 @@
   </head>
   
   <body>
-    <% if !current_page?(authenticated_root_path) %>
-      <div class="app-bar">
-        <a class="app-bar-element" href="..."><%= image_tag("logo.jpg", :alt => "logo madera", height:"60px", width: "150px") %></a>
-        <span class="app-bar-divider"></span>
-
-        <ul class="app-bar-menu place-right">
-          <% if user_signed_in? %>
-              <% if current_user.role =='admin' %>
-                  <li><a href="/admin">Administration</a></li>
-              <% end %>
-              <% if !current_page?(authenticated_root_path) %>
-                  <li><a href="<%= authenticated_root_path %> ">Menu</a></li>
-              <% end %>
-              <% if user_signed_in? %>
-                  <li><%= current_user.firstname %></li>
-                  <li><%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete %></li>
-              <% end %>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-  
+    
   <section>
     <%= yield %>
   </section>
-    
-    <div class="footer">
+  
       <% if flash[:success] %>
-        <div class="alert alert-success">
-          <p class="success"><%= success %></p>
-        </div>
+        <script>
+            $.Notify({
+              caption: 'Succès',
+              content: '<%= success %>',
+              type: 'success',
+              timeout: '5000'
+            });
+          </script>
       <% end %>
       <% if flash[:danger] %>
-        <div class="alert alert-danger">
-          <p class="danger"><%= danger %></p>
-        </div>
+        <script>
+            $.Notify({
+              caption: 'Attention',
+              content: '<%= danger %>',
+              type: 'warning',
+              timeout: '5000'
+            });
+          </script>
       <% end %>
       
       <% if flash[:notice] %>
-        <div class="alert alert-info">
-          <p class="notice"><%= notice %></p>
-        </div>
+          <script>
+            $.Notify({
+              caption: 'Notification',
+              content: '<%= notice %>',
+              type: 'info',
+              timeout: '5000'
+            });
+          </script>
       <% end %>
       <% if flash[:alert] %>
-        <div class="alert alert-danger">
-          <p class="alert"><%= alert %></p>
-        </div>
+        <script>
+            $.Notify({
+              caption: 'Alerte',
+              content: '<%= alert %>',
+              type: 'alert',
+              timeout: '5000'
+            });
+          </script>
       <% end %>
-    </div>
+      
   </body>
 </html>

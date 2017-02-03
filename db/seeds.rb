@@ -1,4 +1,4 @@
-e# This file should contain all the record creation needed to seed the database with its default values.
+# This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
@@ -8,11 +8,18 @@ e# This file should contain all the record creation needed to seed the database 
 
 10.times do
 # Customers
+clientName = Faker::Name.clientName,
+firstNameClient = Faker::FirstName.firstNameClient,
+streetNumber = Faker::StreetNumber.streetNumber,
+streetName = Faker::StreetName.streetName,
+pc = Faker::Pc.pc,
+cityName = Faker::CityName.cityName,
 Client.create!(
-firstname: Faker::Name.first_name,
-lastname: Faker::Name.last_name,
-address: "#{Faker::Address.street_address},
-#{Faker::Address.postcode} #{Faker::Address.city}",
-phone_number: "0#{Faker::Number.number(9)}"
+    clientName: Name,
+    firstNameClient: FirstName,
+    streetNumber: StreetNumber,
+    streetName: StreetName,
+    pc: Pc,
+    cityName: CityName
 )
 end

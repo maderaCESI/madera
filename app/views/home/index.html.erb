@@ -288,5 +288,49 @@
 				</div>
 			</div>
 		</div>
+		
+		<% if current_user.role == 'admin' %>
+		<div class="tile-group double">
+	            <div class="tile-container">
+	                <div class="tile bg-teal fg-white" data-role="tile" data-on-click="document.location.href='<%= rails_admin_path %>'">
+	                    <div class="tile-content iconic">
+	                        <%= image_tag("param.png", :alt => "dossier") %>
+	                    </div>
+	                    <span class="tile-label">Administration</span>
+	                </div>
+	            </div>
+	        </div>
+		<% end %>
+		
+		<% if current_user.role == 'commercial' %>
+			<div class="tile-group double">
+	            <div class="tile-container">
+	                <div class="tile bg-teal fg-white" data-role="tile" data-on-click="document.location.href='<%= clients_path %>'">
+	                    <div class="tile-content iconic">
+	                        <span class="icon mif-pencil"></span>
+	                    </div>
+	                    <span class="tile-label">Client</span>
+	                </div>
+	                <div class="tile bg-darkGreen fg-white" data-role="tile" data-on-click="document.location.href='<%= project_modular_houses_path %>'">
+	                    <div class="tile-content iconic">
+	                        <%= image_tag("dossier.png", :alt => "dossier") %>
+	                    </div>
+	                    <span class="tile-label">Projets</span>
+	                </div>
+	                <div class="tile bg-cyan fg-white" data-role="tile" data-on-click="document.location.href='<%= order_quote_clients_path %>'">
+	                    <div class="tile-content iconic">
+	                        <%= image_tag("edit_home.png", :alt => "edit") %>
+	                    </div>
+	                    <div class="tile-label">Nouveau devis</div>
+	                </div>
+	                <div class="tile bg-darkBlue fg-white" data-role="tile">
+	                    <div class="tile-content iconic">
+	                        <span class="icon mif-cloud"></span>
+	                    </div>
+	                    <span class="tile-label">OneDrive</span>
+	                </div>
+	            </div>
+	        </div>
+	     <% end %>
 	</div>
 </html>

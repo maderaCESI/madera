@@ -30,15 +30,15 @@ class OrderQuoteClientsController < ApplicationController
   def create
     @order = OrderQuoteClient.create(order_params)
     redirect_to order_quote_clients_path, success: 'Le devis client a bien été créé'
+  end
   
   
   private
-    
-    def client_params
+    def order_params
       params.require(:order_quote_client).permit(:stateOrder, :priceTotal, :stateExpedition)
     end
     
-    def set_client
+    def set_order
       @order = OrderQuoteClient.find(params[:id])
     end
 end
