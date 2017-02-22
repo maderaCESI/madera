@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170201075548) do
+ActiveRecord::Schema.define(version: 20170222172207) do
 
   create_table "calculation_rules", force: :cascade do |t|
     t.string "woodFrameConception"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20170201075548) do
 
   create_table "claddings", force: :cascade do |t|
     t.integer "thicknessCladdings"
+    t.decimal "priceCladdings"
   end
 
   create_table "clients", force: :cascade do |t|
@@ -45,6 +46,7 @@ ActiveRecord::Schema.define(version: 20170201075548) do
     t.integer "family_component_id"
     t.integer "provider_id"
     t.integer "unite_use_id"
+    t.decimal "priceComponent"
     t.index ["family_component_id"], name: "index_components_on_family_component_id"
     t.index ["provider_id"], name: "index_components_on_provider_id"
     t.index ["unite_use_id"], name: "index_components_on_unite_use_id"
@@ -60,8 +62,9 @@ ActiveRecord::Schema.define(version: 20170201075548) do
   end
 
   create_table "insulatings", force: :cascade do |t|
-    t.string "insulatingName"
-    t.float  "insulatingThickness"
+    t.string  "insulatingName"
+    t.float   "insulatingThickness"
+    t.decimal "priceInsulating"
   end
 
   create_table "modulus", force: :cascade do |t|
@@ -84,6 +87,7 @@ ActiveRecord::Schema.define(version: 20170201075548) do
     t.integer "insulating_id"
     t.integer "cladding_id"
     t.integer "unite_use_id"
+    t.decimal "priceTotal"
     t.index ["cladding_id"], name: "index_modulus_on_cladding_id"
     t.index ["insulating_id"], name: "index_modulus_on_insulating_id"
     t.index ["unite_use_id"], name: "index_modulus_on_unite_use_id"
@@ -148,6 +152,7 @@ ActiveRecord::Schema.define(version: 20170201075548) do
     t.string  "woodWorkingQuality"
     t.integer "cctp_id"
     t.integer "calculation_rule_id"
+    t.decimal "price"
     t.index ["calculation_rule_id"], name: "index_scale_modular_houses_on_calculation_rule_id"
     t.index ["cctp_id"], name: "index_scale_modular_houses_on_cctp_id"
   end

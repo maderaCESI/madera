@@ -6,20 +6,17 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-10.times do
+20.times do
 # Customers
-clientName = Faker::Name.clientName,
-firstNameClient = Faker::FirstName.firstNameClient,
-streetNumber = Faker::StreetNumber.streetNumber,
-streetName = Faker::StreetName.streetName,
-pc = Faker::Pc.pc,
-cityName = Faker::CityName.cityName,
+
 Client.create!(
-    clientName: Name,
-    firstNameClient: FirstName,
-    streetNumber: StreetNumber,
-    streetName: StreetName,
-    pc: Pc,
-    cityName: CityName
+    clientName: Faker::Name.name,
+    firstNameClient: Faker::Name.first_name,
+    streetNumber: Faker::Address.building_number,
+    streetName: Faker::Address.street_name,
+    pc: Faker::Address.zip,
+    cityName: Faker::Address.city,
+    phonenumber: Faker::PhoneNumber.phone_number,
+    email: Faker::Internet.email
 )
 end

@@ -8,6 +8,7 @@
             <td>Nature du composant</td>
             <td>Famille</td>
             <td>Fournisseur</td>
+            <td>Prix</td>
             <td>Action</td>
         </tr>
     </thead>
@@ -19,6 +20,7 @@
             <td><%= component.componentNature %></td>
             <td><%= component.family_component.familyComponentName %></td>
             <td><%= component.provider.providerName %></td>
+            <td><%= component.priceComponent %></td>
             <td>
                 <a href="<%= component_path(component.id) %>" class="fa fa-eye fa-2x"></a>
                 <a href="<%= edit_component_path(component.id) %>" class="fa fa-pencil fa-2x"></a>
