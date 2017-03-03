@@ -1,2 +1,335 @@
-<h1>OrderQuoteClients#index</h1>
-<p>Find me in app/views/order_quote_clients/index.html.erb</p>
+<!DOCTYPE html>
+	<titre><% provide(:title, 'Devis') %></titre>
+	<head lang="en">
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<%= stylesheet_link_tag    'metro', media: 'all' %>
+		<%= stylesheet_link_tag    'metro-icons', media: 'all' %>
+		<%= stylesheet_link_tag    'metro-responsive', media: 'all' %>
+
+		<%= javascript_include_tag 'jquery-2.1.3.min' %>
+		<%= javascript_include_tag 'metro' %>
+
+		<script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+		<style>
+			.tile-area-controls {
+				position: fixed;
+				right: 40px;
+				top: 40px;
+			}
+
+			.tile-group {
+				left: 100px;
+			}
+
+			.tile, .tile-small, .tile-sqaure, .tile-wide, .tile-large, .tile-big, .tile-super {
+				opacity: 0;
+				-webkit-transform: scale(.8);
+				transform: scale(.8);
+			}
+
+			#charmSettings .button {
+				margin: 5px;
+			}
+
+			.schemeButtons {
+				/*width: 300px;*/
+			}
+
+			@media screen and (max-width: 640px) {
+				.tile-area {
+					overflow-y: scroll;
+				}
+				.tile-area-controls {
+					display: none;
+				}
+			}
+
+			@media screen and (max-width: 320px) {
+				.tile-area {
+					overflow-y: scroll;
+				}
+
+				.tile-area-controls {
+					display: none;
+				}
+
+			}
+		</style>
+		<script>
+				(function($) {
+						$.StartScreen = function(){
+								var plugin = this;
+								var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+
+								plugin.init = function(){
+										setTilesAreaSize();
+										if (width > 640) addMouseWheel();
+								};
+
+								var setTilesAreaSize = function(){
+										var groups = $(".tile-group");
+										var tileAreaWidth = 80;
+										$.each(groups, function(i, t){
+												if (width <= 640) {
+														tileAreaWidth = width;
+												} else {
+														tileAreaWidth += $(t).outerWidth() + 80;
+												}
+										});
+										$(".tile-area").css({
+												width: tileAreaWidth
+										});
+								};
+
+								var addMouseWheel = function (){
+										$("body").mousewheel(function(event, delta, deltaX, deltaY){
+												var page = $(document);
+												var scroll_value = delta * 50;
+												page.scrollLeft(page.scrollLeft() - scroll_value);
+												return false;
+										});
+								};
+
+								plugin.init();
+						}
+				})(jQuery);
+
+				$(function(){
+						$.StartScreen();
+
+						var tiles = $(".tile, .tile-small, .tile-sqaure, .tile-wide, .tile-large, .tile-big, .tile-super");
+
+						$.each(tiles, function(){
+								var tile = $(this);
+								setTimeout(function(){
+										tile.css({
+												opacity: 1,
+												"-webkit-transform": "scale(1)",
+												"transform": "scale(1)",
+												"-webkit-transition": ".3s",
+												"transition": ".3s"
+										});
+								}, Math.floor(Math.random()*500));
+						});
+
+						$(".tile-group").animate({
+								left: 0
+						});
+				});
+
+				function showCharms(id){
+						var  charm = $(id).data("charm");
+						if (charm.element.data("opened") === true) {
+								charm.close();
+						} else {
+								charm.open();
+						}
+				}
+
+				function setSearchPlace(el){
+						var a = $(el);
+						var text = a.text();
+						var toggle = a.parents('label').children('.dropdown-toggle');
+
+						toggle.text(text);
+				}
+
+				$(function(){
+						var current_tile_area_scheme = localStorage.getItem('tile-area-scheme') || "tile-area-scheme-dark";
+						$(".tile-area").removeClass (function (index, css) {
+								return (css.match (/(^|\s)tile-area-scheme-\S+/g) || []).join(' ');
+						}).addClass(current_tile_area_scheme);
+
+						$(".schemeButtons .button").hover(
+								function(){
+										var b = $(this);
+										var scheme = "tile-area-scheme-" +  b.data('scheme');
+										$(".tile-area").removeClass (function (index, css) {
+												return (css.match (/(^|\s)tile-area-scheme-\S+/g) || []).join(' ');
+										}).addClass(scheme);
+								},
+								function(){
+										$(".tile-area").removeClass (function (index, css) {
+												return (css.match (/(^|\s)tile-area-scheme-\S+/g) || []).join(' ');
+										}).addClass(current_tile_area_scheme);
+								}
+						);
+
+						$(".schemeButtons .button").on("click", function(){
+								var b = $(this);
+								var scheme = "tile-area-scheme-" +  b.data('scheme');
+
+								$(".tile-area").removeClass (function (index, css) {
+										return (css.match (/(^|\s)tile-area-scheme-\S+/g) || []).join(' ');
+								}).addClass(scheme);
+
+								current_tile_area_scheme = scheme;
+								localStorage.setItem('tile-area-scheme', scheme);
+
+								showSettings();
+						});
+				});
+
+				var weather_icons = {
+						'clear-day': 'mif-sun',
+						'clear-night': 'mif-moon2',
+						'rain': 'mif-rainy',
+						'snow': 'mif-snowy3',
+						'sleet': 'mif-weather4',
+						'wind': 'mif-wind',
+						'fog': 'mif-cloudy2',
+						'cloudy': 'mif-cloudy',
+						'partly-cloudy-day': 'mif-cloudy3',
+						'partly-cloudy-night': 'mif-cloud5'
+				};
+
+				var api_key = '909d14af918a94e166edfed227da1416';
+
+				$(function(){
+						if (navigator.geolocation) {
+								navigator.geolocation.getCurrentPosition(function(position){
+										var lat = position.coords.latitude, lon = position.coords.longitude;
+										var pos = lat+','+lon;
+										var latlng = new google.maps.LatLng(lat, lon);
+										var geocoder = new google.maps.Geocoder();
+										$.ajax({
+												url: 'https://api.darksky.net/forecast/909d14af918a94e166edfed227da1416/'+ pos,
+												dataType: 'jsonp',
+												success: function(data){
+														//do whatever you want with the data here
+														geocoder.geocode({latLng: latlng}, function(result, status){
+																console.log(result[3]);
+																$("#city_name").html(result[1].formatted_address);
+														});
+														var current = data.currently;
+														$("#city_temp").html(Math.round((current.temperature - 32) * 5/9)+" &deg;C");
+														$("#city_weather").html(current.summary);
+														$("#weather_icon").addClass(weather_icons[current.icon]);
+														$("#pressure").html(current.pressure);
+														$("#wind_speed").html(current.windSpeed);
+														$("#weather_bg").css({
+																'background-image': 'url(../images/'+current.icon+'.jpg'+')'
+														});
+												}
+										});
+								});
+						}
+				});
+		</script>
+
+	</head>
+
+	<div data-role="charm" id="charmSettings" data-position="top">
+		<h1 class="text-light">Réglages</h1>
+		<hr class="thin"/>
+		<br />
+		<div class="schemeButtons">
+			<div class="button square-button tile-area-scheme-dark" data-scheme="dark"></div>
+			<div class="button square-button tile-area-scheme-darkBrown" data-scheme="darkBrown"></div>
+			<div class="button square-button tile-area-scheme-darkCrimson" data-scheme="darkCrimson"></div>
+			<div class="button square-button tile-area-scheme-darkViolet" data-scheme="darkViolet"></div>
+			<div class="button square-button tile-area-scheme-darkMagenta" data-scheme="darkMagenta"></div>
+			<div class="button square-button tile-area-scheme-darkCyan" data-scheme="darkCyan"></div>
+			<div class="button square-button tile-area-scheme-darkCobalt" data-scheme="darkCobalt"></div>
+			<div class="button square-button tile-area-scheme-darkTeal" data-scheme="darkTeal"></div>
+			<div class="button square-button tile-area-scheme-darkEmerald" data-scheme="darkEmerald"></div>
+			<div class="button square-button tile-area-scheme-darkGreen" data-scheme="darkGreen"></div>
+			<div class="button square-button tile-area-scheme-darkOrange" data-scheme="darkOrange"></div>
+			<div class="button square-button tile-area-scheme-darkRed" data-scheme="darkRed"></div>
+			<div class="button square-button tile-area-scheme-darkPink" data-scheme="darkPink"></div>
+			<div class="button square-button tile-area-scheme-darkIndigo" data-scheme="darkIndigo"></div>
+			<div class="button square-button tile-area-scheme-darkBlue" data-scheme="darkBlue"></div>
+			<div class="button square-button tile-area-scheme-lightBlue" data-scheme="lightBlue"></div>
+			<div class="button square-button tile-area-scheme-lightTeal" data-scheme="lightTeal"></div>
+			<div class="button square-button tile-area-scheme-lightOlive" data-scheme="lightOlive"></div>
+			<div class="button square-button tile-area-scheme-lightOrange" data-scheme="lightOrange"></div>
+			<div class="button square-button tile-area-scheme-lightPink" data-scheme="lightPink"></div>
+			<div class="button square-button tile-area-scheme-grayed" data-scheme="grayed"></div>
+		</div>
+	</div>
+
+	<div class="tile-area tile-area-scheme-dark fg-white" style="height: 100%; max-height: 100% !important;">
+		<h1 class="tile-area-title">DEVIS</h1>
+		<div class="tile-area-controls">
+			<button class="image-button icon-right no-border"><span class="sub-header no-margin text-light"><%= current_user.firstname %> <%= current_user.lastname %></span> <span class="icon mif-user"></span></button>
+			<button class="square-button bg-transparent bg-hover-white no-border"><a href="<%= destroy_user_session_path %>" data-method="delete"><span class="mif-exit"></span></a></button>
+			<button class="square-button bg-transparent bg-hover-white no-border" onclick="showCharms('#charmSettings')"><span class="mif-cog"></span></button>
+		</div>
+		
+		<div class="tile-group double">
+      <h3>Information Client</h3>
+      <div class="tile-container">
+        <span class="v-align-bottom">Prénom</span>
+        <br>
+        <div class="input-control text">
+          <input type="text" placeholder="Prénom">
+        </div>
+        <br>
+        <span class="v-align-bottom">Nom</span>
+        <br>
+        <div class="input-control text">
+          <input type="text" placeholder="Nom">
+        </div>
+        <br>
+        <span class="v-align-bottom">Adresse</span>
+        <br>
+        <div class="input-control text">
+          <input type="text" placeholder="Adresse">
+        </div>
+      </div>
+    </div>
+		
+	  <div class="tile-group double">
+	    <h3>Information Projet</h3>
+	    <div class="tile-container">
+	      <span class="v-align-bottom">Nom du projet<span>
+	      <br>
+        <div class="input-control text">
+          <input type="text" placeholder="Nom du projet">
+        </div>
+        <br>
+      	<span class="v-align-bottom">Référence du projet</span>
+      	<br>
+        <div class="input-control text">
+          <input type="text" placeholder="Référence du projet">
+        </div>
+      </div>
+    </div>
+    
+    <div class="tile-group double">
+      <h3>Information Maison</h3>
+      <div class="tile-container">
+        <span class="v-align-bottom">Choix d'une gamme</span>
+        <br>
+        <div class="input-control select">
+          <select>
+            <option>bas de gamme</option>
+            <option>moyen de gamme</option>
+            <option>haut de gamme</option>
+          </select>
+        </div>
+        <br>
+        <span class="v-align-bottom">Choix d'un model de gamme</span>
+        <br>
+        <div class="input-control select">
+          <select>
+            <option>bas de gamme</option>
+            <option>moyen de gamme</option>
+            <option>haut de gamme</option>
+          </select>
+        </div>
+        <br>
+        <span class="v-align-bottom">Adresse</span>
+        <br>
+        <div class="input-control text">
+          <input type="text" placeholder="Adresse">
+        </div>
+      </div>
+    </div>
+    
+	</div>
+</html>

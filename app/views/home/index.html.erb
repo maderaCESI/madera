@@ -306,7 +306,7 @@
 	                    <span class="tile-label">Administration</span>
 	                </div>
 	            </div>
-	        </div>
+	        </div>f
 		<% end %>
 		
 		<% if current_user.role == 'commercial' %>
@@ -320,13 +320,13 @@
 	                </div>
 	                <div class="tile bg-darkGreen fg-white" data-role="tile" data-on-click="document.location.href='<%= project_modular_houses_path %>'">
 	                    <div class="tile-content iconic">
-	                        <%= image_tag("dossier.png", :alt => "dossier") %>
+	                        <span class="icon mif-clipboard"></span>
 	                    </div>
 	                    <span class="tile-label">Projets</span>
 	                </div>
 	                <div class="tile bg-cyan fg-white" data-role="tile" data-on-click="document.location.href='<%= order_quote_clients_path %>'">
 	                    <div class="tile-content iconic">
-	                        <%= image_tag("edit_home.png", :alt => "edit") %>
+	                        <span class="icon mif-home"></span>
 	                    </div>
 	                    <div class="tile-label">Nouveau devis</div>
 	                </div>
