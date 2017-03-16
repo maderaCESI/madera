@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  
+
   #Les ressources
   resources :clients
   resources :project_modular_houses
@@ -15,6 +17,8 @@ Rails.application.routes.draw do
   resources :payments
   resources :claddings
   resources :calculation_rules
+  
+  get 'gallery/index'
   
   #Rails_Admin
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'

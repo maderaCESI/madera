@@ -293,6 +293,12 @@
 					</div>
 					<span class="tile-label">Méteo</span>
 				</div>
+				<div class="tile bg-magenta fg-white" data-role="tile" data-on-click="document.location.href='<%= gallery_index_path %>'">
+	                    <div class="tile-content iconic">
+	                        <span class="icon mif-images"></span>
+	                    </div>
+	                    <span class="tile-label">Gallerie</span>
+	                </div>
 			</div>
 		</div>
 		
@@ -306,7 +312,7 @@
 	                    <span class="tile-label">Administration</span>
 	                </div>
 	            </div>
-	        </div>f
+	        </div>
 		<% end %>
 		
 		<% if current_user.role == 'commercial' %>
@@ -330,11 +336,29 @@
 	                    </div>
 	                    <div class="tile-label">Nouveau devis</div>
 	                </div>
-	                <div class="tile bg-darkBlue fg-white" data-role="tile">
+	                <div class="tile bg-cyan fg-white" data-role="tile" data-on-click="document.location.href='<%= insulatings_path %>'">
 	                    <div class="tile-content iconic">
-	                        <span class="icon mif-cloud"></span>
+	                        <span class="icon mif-home"></span>
 	                    </div>
-	                    <span class="tile-label">OneDrive</span>
+	                    <div class="tile-label">Isolation</div>
+	                </div>
+	                <div class="tile bg-red fg-white" data-role="tile" data-on-click="document.location.href='<%= claddings_path %>'">
+	                    <div class="tile-content iconic">
+	                        <span class="icon mif-home"></span>
+	                    </div>
+	                    <div class="tile-label">Bardages</div>
+	                </div>
+	                 <div class="tile bg-violet fg-white" data-role="tile" data-on-click="document.location.href='<%= cctps_path %>'">
+	                    <div class="tile-content iconic">
+	                        <span class="icon mif-home"></span>
+	                    </div>
+	                    <div class="tile-label">CCTPS</div>
+	                </div>
+	                <div class="tile bg-lightRed fg-white" data-role="tile" data-on-click="document.location.href='<%= calculation_rules_path %>'">
+	                    <div class="tile-content iconic">
+	                        <span class="icon mif-home"></span>
+	                    </div>
+	                    <div class="tile-label">Calculation</div>
 	                </div>
 	            </div>
 	        </div>

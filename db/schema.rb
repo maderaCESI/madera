@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170222172207) do
+ActiveRecord::Schema.define(version: 20170312181826) do
 
   create_table "calculation_rules", force: :cascade do |t|
     t.string "woodFrameConception"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20170222172207) do
   create_table "claddings", force: :cascade do |t|
     t.integer "thicknessCladdings"
     t.decimal "priceCladdings"
+    t.integer "claddingStock"
   end
 
   create_table "clients", force: :cascade do |t|
@@ -47,6 +48,7 @@ ActiveRecord::Schema.define(version: 20170222172207) do
     t.integer "provider_id"
     t.integer "unite_use_id"
     t.decimal "priceComponent"
+    t.integer "componentStock"
     t.index ["family_component_id"], name: "index_components_on_family_component_id"
     t.index ["provider_id"], name: "index_components_on_provider_id"
     t.index ["unite_use_id"], name: "index_components_on_unite_use_id"
@@ -65,6 +67,7 @@ ActiveRecord::Schema.define(version: 20170222172207) do
     t.string  "insulatingName"
     t.float   "insulatingThickness"
     t.decimal "priceInsulating"
+    t.integer "insulatingStock"
   end
 
   create_table "modulus", force: :cascade do |t|
@@ -88,6 +91,7 @@ ActiveRecord::Schema.define(version: 20170222172207) do
     t.integer "cladding_id"
     t.integer "unite_use_id"
     t.decimal "priceTotal"
+    t.integer "moduluStock"
     t.index ["cladding_id"], name: "index_modulus_on_cladding_id"
     t.index ["insulating_id"], name: "index_modulus_on_insulating_id"
     t.index ["unite_use_id"], name: "index_modulus_on_unite_use_id"

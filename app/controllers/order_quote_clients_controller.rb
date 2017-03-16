@@ -4,6 +4,7 @@ class OrderQuoteClientsController < ApplicationController
   
   def index
     @orders = OrderQuoteClient.all
+    @projet_params = OrderQuoteClient.group('project_modular_house_id')
   end
 
   def show

@@ -1,0 +1,5 @@
+class AddModuluStockToModulu < ActiveRecord::Migration[5.0]
+  def change
+    add_column :modulus, :moduluStock, :integer
+  end
+end

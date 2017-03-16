@@ -1,16 +1,86 @@
-<h1>Liste des isolants</h1>
+<!DOCTYPE html>
+<titre><% provide(:title, 'Clients') %></titre>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<table class="table table-hover">
-    <thead>
-        <tr>
-            <td>#</td>
-            <td>Nom</td>
-            <td>Epaisseur</td>
-            <td>Prix</td>
-            <td>Action</td>
+  <%= stylesheet_link_tag    'metro', media: 'all', 'data-turbolinks-track'=> 'reload' %>
+  <%= stylesheet_link_tag    'metro-icons', media: 'all', 'data-turbolinks-track'=> 'reload' %>
+  <%= stylesheet_link_tag    'metro-responsive', media: 'all', 'data-turbolinks-track'=> 'reload' %>
+
+  <%= javascript_include_tag 'jquery-2.1.3.min', 'data-turbolinks-track'=> 'reload' %>
+  <%= javascript_include_tag 'jquery.dataTables.min', 'data-turbolinks-track'=> 'reload' %>
+
+  <link rel='shortcut icon' type='image/x-icon' href='../favicon.ico' />
+  <style>
+    html, body {
+      height: 100%;
+    }
+    body {
+    }
+    .page-content {
+      padding-top: 3.125rem;
+      min-height: 100%;
+      height: 100%;
+    }
+    .table .input-control.checkbox {
+      line-height: 1;
+      min-height: 0;
+      height: auto;
+    }
+
+    @media screen and (max-width: 800px){
+      #cell-sidebar {
+        flex-basis: 52px;
+      }
+      #cell-content {
+        flex-basis: calc(100% - 52px);
+      }
+    }
+  </style>
+</head>
+
+<div class="app-bar fixed-top" data-role="appbar">
+  <a class="app-bar-element branding">Madera</a>
+  <span class="app-bar-divider"></span>
+
+
+  <div class="app-bar-element place-right">
+    <span class="mif-cog"></span> <%= current_user.firstname %> <%= current_user.lastname %>
+  </div>
+
+  <div class="app-bar-pullbutton automatic" style="display: none;"></div>
+  <div class="clearfix" style="width: 0;"></div>
+
+  <nav class="app-bar-pullmenu hidden flexstyle-app-bar-menu" style="display: none;">
+      <ul class="app-bar-pullmenubar hidden app-bar-menu"></ul>
+  </nav>
+</div>
+
+<br>
+<br>
+
+<div class="cell auto-size padding20 bg-white" id="cell-content">
+  <h1 class="text-light">Liste des isolations<span class="mif-users place-right"></span></h1>
+  <hr class="thin bg-grayLighter">
+    <button class="button primary"><a href="<%= new_insulating_path %>"><span class="mif-plus"></span> Ajouter</a></button>
+  <hr class="thin bg-grayLighter">
+  <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper no-footer">
+
+ 
+
+    <table class="dataTable border bordered no-footer" data-role="datatable" data-auto-width="false" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+      <thead>
+        <tr role="row">
+          <td class="sortable-column sort-asc sorting" style="width: 100px" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="ID: activate to sort column ascending">#</td>
+          <td class="sortable-column sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Machine name: activate to sort column ascending">Nom</td>
+          <td class="sortable-column sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Address: activate to sort column ascending">Epaisseur</td>
+          <td class="sortable-column sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Address: activate to sort column ascending">Prix</td>
+          <td class="sortable-column sorting" style="width: 20px" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending">Action</td>
         </tr>
-    </thead>
-    <tbody>
+      </thead>
+      <tbody>
         <% @insulatings.each do |insulating| %>
         <tr>
             <td><%= insulating.id %></td>
@@ -22,13 +92,10 @@
                 <a href="<%= edit_insulating_path(insulating.id) %>" class="fa fa-pencil fa-2x"></a>
                 <a href="<%= insulating_path(insulating.id) %>" class="fa fa-trash fa-2x" data-confirm="Etes sur sûr ?" data-method="delete"></a>
             </td>
-            
         </tr>
         <% end %>
     </tbody>
-</table>
-
-<p>
-    <a href="<%= new_insulating_path %>" class="btn btn-success fa fa-plus-circle"> Ajouter un nouvel isolant</a>
-</p>
+    </table>
+  </div>
+</div>
 
