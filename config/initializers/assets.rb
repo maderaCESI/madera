@@ -14,6 +14,7 @@ Rails.application.config.assets.precompile += %w( metro.css )
 Rails.application.config.assets.precompile += %w( metro-icons.css )
 Rails.application.config.assets.precompile += %w( metro-responsive.css )
 Rails.application.config.assets.precompile += %w( gallery.scss )
+Rails.application.config.assets.precompile += %w( client.scss )
 
 
 #JS

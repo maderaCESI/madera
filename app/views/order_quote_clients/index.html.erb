@@ -121,15 +121,6 @@
 						});
 				});
 
-				function showCharms(id){
-						var  charm = $(id).data("charm");
-						if (charm.element.data("opened") === true) {
-								charm.close();
-						} else {
-								charm.open();
-						}
-				}
-
 				function setSearchPlace(el){
 						var a = $(el);
 						var text = a.text();
@@ -174,153 +165,48 @@
 						});
 				});
 
-				var weather_icons = {
-						'clear-day': 'mif-sun',
-						'clear-night': 'mif-moon2',
-						'rain': 'mif-rainy',
-						'snow': 'mif-snowy3',
-						'sleet': 'mif-weather4',
-						'wind': 'mif-wind',
-						'fog': 'mif-cloudy2',
-						'cloudy': 'mif-cloudy',
-						'partly-cloudy-day': 'mif-cloudy3',
-						'partly-cloudy-night': 'mif-cloud5'
-				};
-
-				var api_key = '909d14af918a94e166edfed227da1416';
-
-				$(function(){
-						if (navigator.geolocation) {
-								navigator.geolocation.getCurrentPosition(function(position){
-										var lat = position.coords.latitude, lon = position.coords.longitude;
-										var pos = lat+','+lon;
-										var latlng = new google.maps.LatLng(lat, lon);
-										var geocoder = new google.maps.Geocoder();
-										$.ajax({
-												url: 'https://api.darksky.net/forecast/909d14af918a94e166edfed227da1416/'+ pos,
-												dataType: 'jsonp',
-												success: function(data){
-														//do whatever you want with the data here
-														geocoder.geocode({latLng: latlng}, function(result, status){
-																console.log(result[3]);
-																$("#city_name").html(result[1].formatted_address);
-														});
-														var current = data.currently;
-														$("#city_temp").html(Math.round((current.temperature - 32) * 5/9)+" &deg;C");
-														$("#city_weather").html(current.summary);
-														$("#weather_icon").addClass(weather_icons[current.icon]);
-														$("#pressure").html(current.pressure);
-														$("#wind_speed").html(current.windSpeed);
-														$("#weather_bg").css({
-																'background-image': 'url(../images/'+current.icon+'.jpg'+')'
-														});
-												}
-										});
-								});
-						}
-				});
 		</script>
 
 	</head>
-
-	<div data-role="charm" id="charmSettings" data-position="top">
-		<h1 class="text-light">Réglages</h1>
-		<hr class="thin"/>
-		<br />
-		<div class="schemeButtons">
-			<div class="button square-button tile-area-scheme-dark" data-scheme="dark"></div>
-			<div class="button square-button tile-area-scheme-darkBrown" data-scheme="darkBrown"></div>
-			<div class="button square-button tile-area-scheme-darkCrimson" data-scheme="darkCrimson"></div>
-			<div class="button square-button tile-area-scheme-darkViolet" data-scheme="darkViolet"></div>
-			<div class="button square-button tile-area-scheme-darkMagenta" data-scheme="darkMagenta"></div>
-			<div class="button square-button tile-area-scheme-darkCyan" data-scheme="darkCyan"></div>
-			<div class="button square-button tile-area-scheme-darkCobalt" data-scheme="darkCobalt"></div>
-			<div class="button square-button tile-area-scheme-darkTeal" data-scheme="darkTeal"></div>
-			<div class="button square-button tile-area-scheme-darkEmerald" data-scheme="darkEmerald"></div>
-			<div class="button square-button tile-area-scheme-darkGreen" data-scheme="darkGreen"></div>
-			<div class="button square-button tile-area-scheme-darkOrange" data-scheme="darkOrange"></div>
-			<div class="button square-button tile-area-scheme-darkRed" data-scheme="darkRed"></div>
-			<div class="button square-button tile-area-scheme-darkPink" data-scheme="darkPink"></div>
-			<div class="button square-button tile-area-scheme-darkIndigo" data-scheme="darkIndigo"></div>
-			<div class="button square-button tile-area-scheme-darkBlue" data-scheme="darkBlue"></div>
-			<div class="button square-button tile-area-scheme-lightBlue" data-scheme="lightBlue"></div>
-			<div class="button square-button tile-area-scheme-lightTeal" data-scheme="lightTeal"></div>
-			<div class="button square-button tile-area-scheme-lightOlive" data-scheme="lightOlive"></div>
-			<div class="button square-button tile-area-scheme-lightOrange" data-scheme="lightOrange"></div>
-			<div class="button square-button tile-area-scheme-lightPink" data-scheme="lightPink"></div>
-			<div class="button square-button tile-area-scheme-grayed" data-scheme="grayed"></div>
-		</div>
-	</div>
 
 	<div class="tile-area tile-area-scheme-dark fg-white" style="height: 100%; max-height: 100% !important;">
 		<h1 class="tile-area-title">DEVIS</h1>
 		<div class="tile-area-controls">
 			<button class="image-button icon-right no-border"><span class="sub-header no-margin text-light"><%= current_user.firstname %> <%= current_user.lastname %></span> <span class="icon mif-user"></span></button>
-			<button class="square-button bg-transparent bg-hover-white no-border"><a href="<%= destroy_user_session_path %>" data-method="delete"><span class="mif-exit"></span></a></button>
-			<button class="square-button bg-transparent bg-hover-white no-border" onclick="showCharms('#charmSettings')"><span class="mif-cog"></span></button>
 		</div>
 		<div class="tile-group double">
-      <h3>Information Client</h3>
+      <h3>Information Devis</h3>
       <div class="tile-container">
-        <span class="v-align-bottom">Prénom</span>
         <br>
-        <div class="input-control text">
-          <input type="text" placeholder="Prénom">
+        <div class="input-control select">
+			<%= simple_form_for @order do |f| %>
+  				<%= f.input :orderName, label: 'Nom du devis :' %>
+  				<%= f.association :project_modular_house, label_method: :client_id, label: 'Nom du client :' %>
+  				<%= f.select :project_modular_house, label_method: :client_id, label: 'Nom du client :' %>
+  				
+  				
+  				<%= f.button :submit, "Ajouter" %>
+			<% end %>
         </div>
-        <br>
-        <span class="v-align-bottom">Nom</span>
-        <br>
-        <div class="input-control text">
-          <input type="text" placeholder="Nom">
-        </div>
-        <br>
-        <span class="v-align-bottom">Adresse</span>
-        <br>
-        <div class="input-control text">
-          <input type="text" placeholder="Adresse">
-        </div>
+       
       </div>
     </div>
-	  <div class="tile-group double">
+	<div class="tile-group double">
 	    <h3>Information Projet</h3>
 	    <div class="tile-container">
-	      <span class="v-align-bottom">Nom du projet<span>
-	      <br>
-        <div class="input-control text">
-          <input type="text" placeholder="Nom du projet">
-        </div>
-        <br>
-      	<span class="v-align-bottom">Référence du projet</span>
-      	<br>
-        <div class="input-control text">
-          <input type="text" placeholder="Référence du projet">
-        </div>
-      </div>
+	      
+	  	</div>
     </div>
     
     <div class="tile-group double">
       <h3>Information Maison</h3>
       <div class="tile-container">
-        <span class="v-align-bottom">Choix d'une gamme</span>
-        <br>
+        
         <div class="input-control select">
-        	<% @projets.each do |p| %>
-						<%= p.collection_select :project_modular_house_id, @projets, :id, :projectName%>
-          <% end %>
-        </div>
-        <br>
-        <span class="v-align-bottom">Choix d'un model de gamme</span>
-        <br>
-        <div class="input-control select">
-        	<% @orders.each do |order| %>
-						<%= collection_select :order_id, :payment, @ProjectModularHouses.map(&:OrderQuoteClient), :id, :projectName %>
-          <% end %>
-        </div>
-        <br>
-        <span class="v-align-bottom">Adresse</span>
-        <br>
-        <div class="input-control text">
-          <input type="text" placeholder="Adresse">
+			<%= simple_form_for @order do |f| %>
+  				<%= f.input :priceTotal %>
+  				<%= f.button :submit %>
+			<% end %>
         </div>
       </div>
     </div>

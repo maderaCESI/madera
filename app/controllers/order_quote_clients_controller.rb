@@ -3,8 +3,8 @@ class OrderQuoteClientsController < ApplicationController
   authorize_resource
   
   def index
-    @orders = OrderQuoteClient.all
-    @projet_params = OrderQuoteClient.group('project_modular_house_id')
+    @order = OrderQuoteClient.all
+    @order = OrderQuoteClient.new
   end
 
   def show

@@ -9,9 +9,19 @@
 20.times do
 # Customers
 
-Client.create!(
-    clientName: Faker::Name.name,
-    firstNameClient: Faker::Name.first_name,
+#Client.create!(
+    #clientName: Faker::Name.name,
+    #firstNameClient: Faker::Name.first_name,
+    #streetNumber: Faker::Address.building_number,
+    #streetName: Faker::Address.street_name,
+    #pc: Faker::Address.zip,
+    #cityName: Faker::Address.city,
+    #phonenumber: Faker::PhoneNumber.phone_number,
+    #email: Faker::Internet.email
+#)
+
+Provider.create!(
+    providerName: Faker::Company.name,
     streetNumber: Faker::Address.building_number,
     streetName: Faker::Address.street_name,
     pc: Faker::Address.zip,

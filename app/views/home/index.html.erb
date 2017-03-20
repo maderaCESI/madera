@@ -10,7 +10,7 @@
 		<%= stylesheet_link_tag    'metro-responsive', media: 'all' %>
 
 		<%= javascript_include_tag 'jquery-2.1.3.min' %>
-		<%= javascript_include_tag 'metro' %>
+		<%= javascript_include_tag 'metro', "data-turbolinks-track" => false  %>
 
 		<script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
 
@@ -60,7 +60,9 @@
 			}
 		</style>
 		<script>
-				(function($) {
+				//(function($) {
+					
+				document.addEventListener("turbolinks:load", function() {
 						$.StartScreen = function(){
 								var plugin = this;
 								var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
@@ -86,20 +88,18 @@
 								};
 
 								var addMouseWheel = function (){
-										$("body").mousewheel(function(event, delta, deltaX, deltaY){
+										/*$("body").mousewheel(function(event, delta, deltaX, deltaY){
 												var page = $(document);
 												var scroll_value = delta * 50;
 												page.scrollLeft(page.scrollLeft() - scroll_value);
 												return false;
-										});
+										});*/
 								};
 
 								plugin.init();
 						}
-				})(jQuery);
-
-				$(function(){
-						$.StartScreen();
+						
+												$.StartScreen();
 
 						var tiles = $(".tile, .tile-small, .tile-sqaure, .tile-wide, .tile-large, .tile-big, .tile-super");
 
@@ -119,27 +119,8 @@
 						$(".tile-group").animate({
 								left: 0
 						});
-				});
-
-				function showCharms(id){
-						var  charm = $(id).data("charm");
-						if (charm.element.data("opened") === true) {
-								charm.close();
-						} else {
-								charm.open();
-						}
-				}
-
-				function setSearchPlace(el){
-						var a = $(el);
-						var text = a.text();
-						var toggle = a.parents('label').children('.dropdown-toggle');
-
-						toggle.text(text);
-				}
-
-				$(function(){
-						var current_tile_area_scheme = localStorage.getItem('tile-area-scheme') || "tile-area-scheme-dark";
+						
+							var current_tile_area_scheme = localStorage.getItem('tile-area-scheme') || "tile-area-scheme-dark";
 						$(".tile-area").removeClass (function (index, css) {
 								return (css.match (/(^|\s)tile-area-scheme-\S+/g) || []).join(' ');
 						}).addClass(current_tile_area_scheme);
@@ -172,25 +153,8 @@
 
 								showSettings();
 						});
-				});
-
-				var weather_icons = {
-						'clear-day': 'mif-sun',
-						'clear-night': 'mif-moon2',
-						'rain': 'mif-rainy',
-						'snow': 'mif-snowy3',
-						'sleet': 'mif-weather4',
-						'wind': 'mif-wind',
-						'fog': 'mif-cloudy2',
-						'cloudy': 'mif-cloudy',
-						'partly-cloudy-day': 'mif-cloudy3',
-						'partly-cloudy-night': 'mif-cloud5'
-				};
-
-				var api_key = '909d14af918a94e166edfed227da1416';
-
-				$(function(){
-						if (navigator.geolocation) {
+						
+							if (navigator.geolocation) {
 								navigator.geolocation.getCurrentPosition(function(position){
 										var lat = position.coords.latitude, lon = position.coords.longitude;
 										var pos = lat+','+lon;
@@ -219,6 +183,43 @@
 								});
 						}
 				});
+
+
+
+				function showCharms(id){
+						var  charm = $(id).data("charm");
+						if (charm.element.data("opened") === true) {
+								charm.close();
+						} else {
+								charm.open();
+						}
+				}
+
+				function setSearchPlace(el){
+						var a = $(el);
+						var text = a.text();
+						var toggle = a.parents('label').children('.dropdown-toggle');
+
+						toggle.text(text);
+				}
+
+
+
+				var weather_icons = {
+						'clear-day': 'mif-sun',
+						'clear-night': 'mif-moon2',
+						'rain': 'mif-rainy',
+						'snow': 'mif-snowy3',
+						'sleet': 'mif-weather4',
+						'wind': 'mif-wind',
+						'fog': 'mif-cloudy2',
+						'cloudy': 'mif-cloudy',
+						'partly-cloudy-day': 'mif-cloudy3',
+						'partly-cloudy-night': 'mif-cloud5'
+				};
+
+				var api_key = '909d14af918a94e166edfed227da1416';
+
 		</script>
 
 	</head>
@@ -293,14 +294,18 @@
 					</div>
 					<span class="tile-label">Méteo</span>
 				</div>
-				<div class="tile bg-magenta fg-white" data-role="tile" data-on-click="document.location.href='<%= gallery_index_path %>'">
-	                    <div class="tile-content iconic">
-	                        <span class="icon mif-images"></span>
-	                    </div>
-	                    <span class="tile-label">Gallerie</span>
-	                </div>
 			</div>
 		</div>
+		<div class="tile-group double">
+			<div class="tile-container">
+				<div class="tile bg-magenta fg-white" data-role="tile" data-on-click="document.location.href='<%= gallery_index_path %>'">
+                    <div class="tile-content iconic">
+                        <span class="icon mif-images"></span>
+                    </div>
+                    <span class="tile-label">Gallerie</span>
+	            </div>
+		    </div>
+	    </div>
 		
 		<% if current_user.role == 'admin' %>
 		<div class="tile-group double">
@@ -322,7 +327,13 @@
 	                    <div class="tile-content iconic">
 	                        <span class="icon mif-users"></span>
 	                    </div>
-	                    <span class="tile-label">Client</span>
+	                    <span class="tile-label">Clients</span>
+	                </div>
+	                <div class="tile bg-mauve fg-white" data-role="tile" data-on-click="document.location.href='<%= providers_path %>'">
+	                    <div class="tile-content iconic">
+	                        <span class="icon mif-flow-parallel"></span>
+	                    </div>
+	                    <span class="tile-label">Fournisseurs</span>
 	                </div>
 	                <div class="tile bg-darkGreen fg-white" data-role="tile" data-on-click="document.location.href='<%= project_modular_houses_path %>'">
 	                    <div class="tile-content iconic">
@@ -334,8 +345,24 @@
 	                    <div class="tile-content iconic">
 	                        <span class="icon mif-home"></span>
 	                    </div>
-	                    <div class="tile-label">Nouveau devis</div>
+	                    <div class="tile-label">Nouveaux devis</div>
 	                </div>
+	                
+	            </div>
+	        </div>
+	     <% end %>
+	     
+	     <% if current_user.role == 'etude' %>
+			<div class="tile-group double">
+	            <div class="tile-container">
+	                
+	                <div class="tile bg-mauve fg-white" data-role="tile" data-on-click="document.location.href='<%= providers_path %>'">
+	                    <div class="tile-content iconic">
+	                        <span class="icon mif-flow-parallel"></span>
+	                    </div>
+	                    <span class="tile-label">Fournisseurs</span>
+	                </div>
+	                
 	                <div class="tile bg-cyan fg-white" data-role="tile" data-on-click="document.location.href='<%= insulatings_path %>'">
 	                    <div class="tile-content iconic">
 	                        <span class="icon mif-home"></span>
