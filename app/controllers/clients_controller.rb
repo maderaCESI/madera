@@ -4,7 +4,7 @@ class ClientsController < ApplicationController
     authorize_resource
     
     def index
-        @clients = Client.all
+        @client = Client.all
     end
     
     def show

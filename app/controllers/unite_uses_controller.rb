@@ -39,7 +39,7 @@ class UniteUsesController < ApplicationController
       params.require(:unite_use).permit(:unitUseName)
     end
     
-    def set_client
+    def set_unite
       @unite = UniteUse.find(params[:id])
     end
 end

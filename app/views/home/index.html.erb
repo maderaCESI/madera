@@ -320,7 +320,7 @@
 	        </div>
 		<% end %>
 		
-		<% if current_user.role == 'commercial' %>
+		<% if current_user.role == 'commercial' || current_user.role == 'admin'%>
 			<div class="tile-group double">
 	            <div class="tile-container">
 	                <div class="tile bg-teal fg-white" data-role="tile" data-on-click="document.location.href='<%= clients_path %>'">
@@ -352,10 +352,9 @@
 	        </div>
 	     <% end %>
 	     
-	     <% if current_user.role == 'etude' %>
+	     <% if current_user.role == 'etude' || current_user.role == 'admin'%>
 			<div class="tile-group double">
 	            <div class="tile-container">
-	                
 	                <div class="tile bg-mauve fg-white" data-role="tile" data-on-click="document.location.href='<%= providers_path %>'">
 	                    <div class="tile-content iconic">
 	                        <span class="icon mif-flow-parallel"></span>
@@ -365,27 +364,65 @@
 	                
 	                <div class="tile bg-cyan fg-white" data-role="tile" data-on-click="document.location.href='<%= insulatings_path %>'">
 	                    <div class="tile-content iconic">
-	                        <span class="icon mif-home"></span>
+	                        <span class="icon mif-map"></span>
 	                    </div>
-	                    <div class="tile-label">Isolation</div>
+	                    <div class="tile-label">Isolations</div>
 	                </div>
+	                <div class="tile bg-crimson fg-white" data-role="tile" data-on-click="document.location.href='<%= components_path %>'">
+	                    <div class="tile-content iconic">
+	                        <span class="icon mif-widgets"></span>
+	                    </div>
+	                    <div class="tile-label">Composants</div>
+	                </div>
+	                <div class="tile bg-grayDark fg-white" data-role="tile" data-on-click="document.location.href='<%= family_components_path %>'">
+	                    <div class="tile-content iconic">
+	                        <span class="icon mif-palette"></span>
+	                    </div>
+	                    <div class="tile-label">Famille de composants</div>
+	                </div>
+	                
 	                <div class="tile bg-red fg-white" data-role="tile" data-on-click="document.location.href='<%= claddings_path %>'">
 	                    <div class="tile-content iconic">
-	                        <span class="icon mif-home"></span>
+	                        <span class="icon mif-map"></span>
 	                    </div>
 	                    <div class="tile-label">Bardages</div>
 	                </div>
+	                
+	                <div class="tile bg-darkCobalt fg-white" data-role="tile" data-on-click="document.location.href='<%= scale_modular_houses_path %>'">
+	                    <div class="tile-content iconic">
+	                        <span class="icon mif-multitrack-audio"></span>
+	                    </div>
+	                    <div class="tile-label">Gammes</div>
+	                </div>
 	                 <div class="tile bg-violet fg-white" data-role="tile" data-on-click="document.location.href='<%= cctps_path %>'">
 	                    <div class="tile-content iconic">
-	                        <span class="icon mif-home"></span>
+	                        <span class="icon mif-tags"></span>
 	                    </div>
 	                    <div class="tile-label">CCTPS</div>
 	                </div>
 	                <div class="tile bg-lightRed fg-white" data-role="tile" data-on-click="document.location.href='<%= calculation_rules_path %>'">
 	                    <div class="tile-content iconic">
-	                        <span class="icon mif-home"></span>
+	                        <span class="icon mif-calculator"></span>
 	                    </div>
-	                    <div class="tile-label">Calculation</div>
+	                    <div class="tile-label">régle de calculs</div>
+	                </div>
+	            </div>
+	        </div>
+	        
+	        <div class="tile-group double">
+	            <div class="tile-container">
+	                <div class="tile bg-darkOrange fg-white" data-role="tile" data-on-click="document.location.href='<%= unite_uses_path %>'">
+	                    <div class="tile-content iconic">
+	                        <span class="icon mif-enlarge"></span>
+	                    </div>
+	                    <div class="tile-label">Unité de mesures</div>
+	                </div>
+	                
+	                <div class="tile bg-yellow fg-white" data-role="tile" data-on-click="document.location.href='<%= modulus_path %>'">
+	                    <div class="tile-content iconic">
+	                        <span class="icon mif-stack"></span>
+	                    </div>
+	                    <div class="tile-label">Modules</div>
 	                </div>
 	            </div>
 	        </div>

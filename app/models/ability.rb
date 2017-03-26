@@ -10,10 +10,10 @@ class Ability
         can :access, :rails_admin   # grant access to rails_admin
         can :dashboard 
        elsif user.is_commercial? 
-          can :manage, [Client, ProjectModularHouse, OrderQuoteClient, Provider, Payment, UniteUse]
+          can :manage, [Client, ProjectModularHouse, OrderQuoteClient, Provider, Payment, UniteUse, Modulu]
           #can :manage, :all
         else
-          can :manage, [Cladding, Modulu, Component, Provider, Cctp, Insulating, UniteUse, ScaleModularHouse]
+          can :manage, [Cladding, Modulu, Component, Provider, Cctp, Insulating, UniteUse, ScaleModularHouse, FamilyComponent]
           #can :read, :all
        end
     

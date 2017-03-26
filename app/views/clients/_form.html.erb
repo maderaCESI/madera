@@ -24,6 +24,91 @@
       </div>
       
     </div>
+    <div class="cell auto-size padding20 bg-white" id="cell-content">
+      <h1 class="text-light">Ajouter un client<span class="mif-users place-right"></span></h1>
+        <hr class="thin bg-grayLighter">
+            <button class="button primary"><a href="<%= authenticated_root_path %>"><span class="mif-plus"></span> Retour</a></button>
+        <hr class="thin bg-grayLighter">
+    </div>
+        
+    <%= form_for @client, :html => {:class => 'align-center'} do |f| %>
+        <div class="form-group">
+            <%= f.label :firstNameClient, 'Prénom :' %><br />
+            <%= f.text_field :firstNameClient, class: 'form-control' %>
+        </div>
+    
+        <div class="form-group">
+            <%= f.label :clientName, 'Nom :' %><br />
+            <%= f.text_field :clientName, class: 'form-control'%>
+        </div>
+        
+        <div class="form-group">
+            <%= f.label :phonenumber, 'Téléphone :' %><br />
+            <%= f.text_field :phonenumber, class: 'form-control' %>
+        </div>
+        
+        <div class="form-group">
+            <%= f.label :email, 'Email :' %><br />
+            <%= f.text_field :email, class: 'form-control' %>
+        </div>
+        
+        <div class="form-group">
+            <%= f.label :streetNumber, 'Numéro de rue :' %><br />
+            <%= f.text_field :streetNumber, class: 'form-control' %>
+        </div>
+        
+        <div class="form-group">
+            <%= f.label :streetName, 'Nom de la rue :' %><br />
+            <%= f.text_field :streetName, class: 'form-control' %>
+        </div>
+        
+        <div class="form-group">
+            <%= f.label :pc, 'Code postal : ' %><br />
+            <%= f.text_field :pc, class: 'form-control' %>
+        </div>
+        
+        <div class="form-group">
+            <%= f.label :cityName, 'Ville :'%><br />
+            <%= f.text_field :cityName, class: 'form-control' %>
+        </div>
+        
+        <div class="form-group">
+            <button class="button loading-pulse lighten primary", type="submit">Valider</button>
+        </div>
+    <% end %>
+</html><!DOCTYPE html>
+<html>
+    <titre><% provide(:title, "Ajout d'un client") %></titre>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        
+        <%= stylesheet_link_tag    'metro', media: 'all', 'data-turbolinks-track'=> 'reload' %>
+        <%= stylesheet_link_tag    'metro-icons', media: 'all', 'data-turbolinks-track'=> 'reload' %>
+        <%= stylesheet_link_tag    'metro-responsive', media: 'all', 'data-turbolinks-track'=> 'reload' %>
+        <%= javascript_include_tag 'jquery-2.1.3.min', 'data-turbolinks-track'=> 'reload' %>
+        <%= javascript_include_tag 'metro', 'data-turbolinks-track'=> 'reload' %>
+        
+        <link rel='shortcut icon' type='image/x-icon' href='../favicon.ico' />
+    </head>
+    
+    <div class="app-bar fixed-top" data-role="appbar">
+      <a href="<%= authenticated_root_path %>" class="app-bar-element branding">Madera</a>
+    
+      <div class="app-bar-element place-right">
+        <span class="mif-cog"></span> <%= current_user.firstname %> <%= current_user.lastname %>
+      </div>
+      
+    </div>
+    <div class="cell auto-size padding20 bg-white" id="cell-content">
+      <h1 class="text-light">Ajouter un client<span class="mif-users place-right"></span></h1>
+        <hr class="thin bg-grayLighter">
+            <button class="button primary"><a href="<%= authenticated_root_path %>"><span class="mif-plus"></span> Retour</a></button>
+        <hr class="thin bg-grayLighter">
+    </div>
+        
     <%= form_for @client, :html => {:class => 'align-center'} do |f| %>
         <div class="form-group">
             <%= f.label :firstNameClient, 'Prénom :' %><br />

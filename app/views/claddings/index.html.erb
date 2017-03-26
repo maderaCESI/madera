@@ -42,7 +42,7 @@
 </head>
 
 <div class="app-bar fixed-top" data-role="appbar">
-  <a class="app-bar-element branding">Madera</a>
+  <a href="<%= authenticated_root_path %>" class="app-bar-element branding">Retour</a>
   <span class="app-bar-divider"></span>
   <ul class="app-bar-menu">
     <li><a href="<%= authenticated_root_path %>">Menu</a></li>
@@ -64,7 +64,7 @@
 <br>
 
 <div class="cell auto-size padding20 bg-white" id="cell-content">
-  <h1 class="text-light">Liste des bardages<span class="mif-users place-right"></span></h1>
+  <h1 class="text-light">Liste des bardages<span class="mif-map place-right"></span></h1>
   <hr class="thin bg-grayLighter">
     <button class="button primary"><a href="<%= new_cladding_path %>"><span class="mif-plus"></span> Ajouter</a></button>
   <hr class="thin bg-grayLighter">

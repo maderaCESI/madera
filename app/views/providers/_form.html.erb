@@ -24,6 +24,14 @@
       </div>
       
     </div>
+    
+    <div class="cell auto-size padding20 bg-white" id="cell-content">
+      <h1 class="text-light">Ajouter un fournisseur<span class="mif-users place-right"></span></h1>
+        <hr class="thin bg-grayLighter">
+            <button class="button primary"><a href="<%= authenticated_root_path %>"><span class="mif-plus"></span> Retour</a></button>
+        <hr class="thin bg-grayLighter">
+    </div>
+    
     <%= form_for @provider, :html => {:class => 'align-center'} do |f| %>
     <div class="form-group">
         <%= f.label :providerName, 'Nom du fournisseur :' %><br />

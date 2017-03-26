@@ -174,27 +174,48 @@
 		<div class="tile-area-controls">
 			<button class="image-button icon-right no-border"><span class="sub-header no-margin text-light"><%= current_user.firstname %> <%= current_user.lastname %></span> <span class="icon mif-user"></span></button>
 		</div>
+		  <hr class="thin bg-grayLighter">
+            <button class="button primary"><a href="<%= authenticated_root_path %>"><span class="mif-plus"></span> Retour</a></button>
+          <hr class="thin bg-grayLighter">
 		<div class="tile-group double">
       <h3>Information Devis</h3>
       <div class="tile-container">
         <br>
         <div class="input-control select">
 			<%= simple_form_for @order do |f| %>
-  				<%= f.input :orderName, label: 'Nom du devis :' %>
-  				<%= f.association :project_modular_house, label_method: :client_id, label: 'Nom du client :' %>
-  				<%= f.select :project_modular_house, label_method: :client_id, label: 'Nom du client :' %>
-  				
-  				
-  				<%= f.button :submit, "Ajouter" %>
+    			<%= f.label :orderName, 'Nom du devis : '%>
+    			<%= f.text_field :orderName, class: 'form-control' %></br>
+    			<%= f.label :clientName, 'Nom du client : '%>
+    			<%= f.collection_select :client_id, Client.all, :id, :clientName%></br>
+    			<%= f.label :modulusName, 'Nom du module : '%>
+    			<%= f.collection_select :modulu_id, Modulu.all, :id, :modulusName%></br>
+    		
+    
+    
+    
+  				<%= f.input :orderName %></br>
+  				<%= f.association :client, label_method: :firstNameClient %></br>
+  				<%= f.association :scale_modular_house, label_method: :scaleName %></br>
+  				<%= f.button :submit %>
 			<% end %>
         </div>
        
       </div>
     </div>
 	<div class="tile-group double">
-	    <h3>Information Projet</h3>
+	    <h3>Ajout d'un client</h3>
 	    <div class="tile-container">
-	      
+	    	<br>
+		  <hr class="thin bg-grayLighter">
+            <button class="button primary"><a href="<%= new_client_path %>"><span class="mif-plus"></span> Ajouter un client</a></button>
+          <hr class="thin bg-grayLighter">
+	  	</div>
+	  	 <h3>Vue des modules</h3>
+	    <div class="tile-container">
+	    	<br>
+		  <hr class="thin bg-grayLighter">
+            <button class="button primary"><a href="<%=  new_modulu_path %>"><span class="mif-plus"></span> Ajouter un client</a></button>
+          <hr class="thin bg-grayLighter">
 	  	</div>
     </div>
     
