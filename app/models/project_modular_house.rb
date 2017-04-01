@@ -7,17 +7,5 @@ class ProjectModularHouse < ActiveRecord::Base
     validates :projectName, presence: true, 
                        uniqueness: {case_sensitive: false}, 
                        format: {with: /\A[a-zA-Z0-9 _\.]*\z/}
-    
-    validates :client_id, presence: true, 
-                       uniqueness: {case_sensitive: false}, 
-                       format: {with: /\A[a-zA-Z0-9 _\.]*\z/}
-                       
-    validates :user_id, presence: true, 
-                       uniqueness: {case_sensitive: false}, 
-                       format: {with: /\A[a-zA-Z0-9 _\.]*\z/}                     
-  
-    validates :scale_modular_house_id, presence: true, 
-                       uniqueness: {case_sensitive: false}, 
-                       format: {with: /\A[a-zA-Z0-9 _\.]*\z/}
                       
 end

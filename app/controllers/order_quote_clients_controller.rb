@@ -3,8 +3,8 @@ class OrderQuoteClientsController < ApplicationController
   authorize_resource
   
   def index
-    @order = OrderQuoteClient.all
-    @order = OrderQuoteClient.new
+    @orders = OrderQuoteClient.includes(:client, :modulus, :scale_modular_house).all
+    
   end
 
   def show
@@ -36,7 +36,7 @@ class OrderQuoteClientsController < ApplicationController
   
   private
     def order_params
-      params.require(:order_quote_client).permit(:stateOrder, :priceTotal, :stateExpedition)
+      params.require(:order_quote_client).permit(:orderName, :stateOrder, :priceTotal, :stateExpedition, :client_id, :modulu_id, :scale_modular_house_id, :project_modular_house_id)
     end
     
     def set_order

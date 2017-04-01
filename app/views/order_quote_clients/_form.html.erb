@@ -1,0 +1,52 @@
+<h3>Information Devis</h3>
+    <div class="tile-container">
+        <br>
+        <div class="input-control select">
+            	<%= form_for @order do |f| %>
+            	<div class="form-group">
+    			<%= f.label :orderName, 'Nom du devis : '%>
+    			<%= f.text_field :orderName, class: 'form-control' %></br></br>
+    			</div>
+    			
+    			<div class="form-group">
+    			<%= f.label :stateOrder, 'Etat du devis : '%>
+    			<%= f.text_field :stateOrder, class: 'form-control' %></br></br>
+    			</div>
+    			
+    			<div class="form-group">
+    			<%= f.label :priceTotal, 'prix du devis : '%>
+    			<%= f.text_field :priceTotal, class: 'form-control' %></br></br>
+    			</div>
+    			
+    			<div class="form-group">
+    			<%= f.label :stateExpedition, 'Expedition : '%>
+    			<%= f.text_field :stateExpedition, class: 'form-control' %></br></br>
+    			</div>
+    			
+    			<div class="form-group">
+    			<%= f.label :project_modular_house_id, 'Nom du projet concerné : '%>
+    			<%= f.collection_select :project_modular_house_id, ProjectModularHouse.all, :id, :projectName%></br></br>
+    			</div>
+    			
+    			<div class="form-group">
+    			<%= f.label :client_id, 'Nom du client : '%>
+    			<%= f.collection_select :client_id, Client.all, :id, :clientName%></br></br>
+    			</div>
+    			
+    			<div class="form-group">
+    			<%= f.label :scale_modular_house_id, 'Nom de la gamme choisie : '%>
+    			<%= f.collection_select :scale_modular_house_id, ScaleModularHouse.all, :id, :scaleName%></br></br>
+    			</div>
+    			
+    			<div class="form-group">
+    			<%= f.label :modulu_id, 'Nom du module : '%>
+    			<%= f.collection_select :modulu_id, Modulu.all, :id, :modulusName%></br></br>
+    			</div>
+    		
+  				<div class="form-group">
+    <button class="btn btn-primary", type="submit">Valider</button>
+</div>
+			    <% end %>
+		</div>
+       
+    </div>

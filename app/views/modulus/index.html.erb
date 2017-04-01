@@ -44,8 +44,6 @@
     <hr class="thin bg-grayLighter">
     <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper no-footer">
   
-   
-  
       <table class="dataTable border bordered no-footer" data-role="datatable" data-auto-width="false" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
         <thead>
           <tr role="row">
@@ -67,15 +65,15 @@
               <td><%= m.id %></td>
               <td><%= m.modulusName %></td>
               <td><%= m.modulusNature %></td>
-              <td><a href="<%= insulating_path(m.insulating_id) %>"><%= m.insulating.insulatingName %></td>
-              <td><a href="<%= cladding_path(m.cladding_id) %>"><%= m.cladding_id %></td>
-              <td><a href="<%= unite_use_path(m.unite_use_id) %>"><%= m.unite_use.unitUseName %></td>
+              <td><%= m.insulating.insulatingName %></td>
+              <td><%= m.cladding_id %></td>
+              <td><%= m.unite_use.unitUseName %></td>
               <td><%= m.priceTotal %></td>
               <td><%= m.moduluStock %></td>
               <td>
                 <a href="<%= modulu_path(m.id) %>" class="fa fa-eye fa-2x"></a>
                 <a href="<%= edit_modulu_path(m.id) %>" class="fa fa-pencil fa-2x"></a>
-                <a href="<%= modulu_path(m.id) %>" class="fa fa-trash fa-2x" data-confirm="Etes sur sûr ?" data-method="delete"></a>
+                <a href="<%= modulu_path(m.id) %>" class="fa fa-trash fa-2x" data-confirm="Etes vous sûr ?" data-method="delete"></a>
               </td>
             </tr>
           <% end %>

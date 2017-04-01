@@ -87,12 +87,9 @@
               <td><%= calculation_rule.id %></td>
               <td><%= calculation_rule.woodFrameConception %></td>
               <td>
-                  <a href="<%= calculation_rules_path(calculation_rule.id) %>" class="fa fa-eye fa-2x"></a>
                   <a href="<%= edit_calculation_rule_path(calculation_rule.id) %>" class="fa fa-pencil fa-2x"></a>
                   <a href="<%= calculation_rule_path(calculation_rule.id) %>" class="fa fa-trash fa-2x" data-confirm="Etes sur sûr ?" data-method="delete"></a>
-              
               </td>
-              
           </tr>
           <% end %>
       </tbody>

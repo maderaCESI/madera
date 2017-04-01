@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<titre><% provide(:title, 'Clients') %></titre>
+<titre><% provide(:title, 'Isolations') %></titre>
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -77,6 +77,7 @@
           <td class="sortable-column sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Machine name: activate to sort column ascending">Nom</td>
           <td class="sortable-column sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Address: activate to sort column ascending">Epaisseur</td>
           <td class="sortable-column sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Address: activate to sort column ascending">Prix</td>
+          <td class="sortable-column sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Address: activate to sort column ascending">Stock</td>
           <td class="sortable-column sorting" style="width: 20px" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending">Action</td>
         </tr>
       </thead>
@@ -87,8 +88,8 @@
             <td><%= insulating.insulatingName %></td>
             <td><%= insulating.insulatingThickness %></td>
             <td><%= insulating.priceInsulating %></td>
+            <td><%= insulating.insulatingStock %></td>
             <td>
-                <a href="<%= insulatings_path(insulating.id) %>" class="fa fa-eye fa-2x"></a>
                 <a href="<%= edit_insulating_path(insulating.id) %>" class="fa fa-pencil fa-2x"></a>
                 <a href="<%= insulating_path(insulating.id) %>" class="fa fa-trash fa-2x" data-confirm="Etes sur sûr ?" data-method="delete"></a>
             </td>
