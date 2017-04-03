@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-20.times do
+    #20.times do
 # Customers
 
 #Client.create!(
@@ -20,15 +20,15 @@
     #email: Faker::Internet.email
 #)
 
-Provider.create!(
-    providerName: Faker::Company.name,
-    streetNumber: Faker::Address.building_number,
-    streetName: Faker::Address.street_name,
-    pc: Faker::Address.zip,
-    cityName: Faker::Address.city,
-    phonenumber: Faker::PhoneNumber.phone_number,
-    email: Faker::Internet.email
-)
-end
+#Provider.create!(
+    #providerName: Faker::Company.name,
+    #streetNumber: Faker::Address.building_number,
+        #streetName: Faker::Address.street_name,
+        #pc: Faker::Address.zip,
+        #cityName: Faker::Address.city,
+        #phonenumber: Faker::PhoneNumber.phone_number,
+        #email: Faker::Internet.email
+    #)
+    #end
 
 
