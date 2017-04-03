@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170327121231) do
+ActiveRecord::Schema.define(version: 20170403203319) do
 
   create_table "calculation_rules", force: :cascade do |t|
     t.string "woodFrameConception"
@@ -105,8 +105,8 @@ ActiveRecord::Schema.define(version: 20170327121231) do
   end
 
   create_table "modulus_order_quote_clients", id: false, force: :cascade do |t|
-    t.integer "modulu_id",             null: false
     t.integer "order_quote_client_id", null: false
+    t.integer "modulu_id",             null: false
   end
 
   create_table "modulus_scale_modular_houses", id: false, force: :cascade do |t|
@@ -125,19 +125,10 @@ ActiveRecord::Schema.define(version: 20170327121231) do
     t.string  "orderName"
     t.integer "client_id"
     t.integer "scale_modular_house_id"
-    t.integer "modulu_id"
     t.index ["client_id"], name: "index_order_quote_clients_on_client_id"
-    t.index ["modulu_id"], name: "index_order_quote_clients_on_modulu_id"
     t.index ["payment_id"], name: "index_order_quote_clients_on_payment_id"
     t.index ["project_modular_house_id"], name: "index_order_quote_clients_on_project_modular_house_id"
     t.index ["scale_modular_house_id"], name: "index_order_quote_clients_on_scale_modular_house_id"
-  end
-
-  create_table "order_quote_clients_modulus", id: false, force: :cascade do |t|
-    t.integer "order_quote_client_id"
-    t.integer "modulu_id"
-    t.index ["modulu_id"], name: "index_order_quote_clients_modulus_on_modulu_id"
-    t.index ["order_quote_client_id"], name: "index_order_quote_clients_modulus_on_order_quote_client_id"
   end
 
   create_table "payments", force: :cascade do |t|
