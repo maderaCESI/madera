@@ -11,17 +11,18 @@
         <%= stylesheet_link_tag    'metro-icons', media: 'all', 'data-turbolinks-track'=> 'reload' %>
         <%= stylesheet_link_tag    'metro-responsive', media: 'all', 'data-turbolinks-track'=> 'reload' %>
         <%= javascript_include_tag 'jquery-2.1.3.min', 'data-turbolinks-track'=> 'reload' %>
+        <%= javascript_include_tag 'metro', 'data-turbolinks-track'=> 'reload' %>
         
         <link rel='shortcut icon' type='image/x-icon' href='../favicon.ico' />
     </head>
     
     <div class="app-bar fixed-top" data-role="appbar">
       <a href="<%= clients_path %>" class="app-bar-element branding">Retour</a>
+    
       <div class="app-bar-element place-right">
         <span class="mif-cog"></span> <%= current_user.firstname %> <%= current_user.lastname %>
       </div>
     </div>
-    
     <%= form_for @client, :html => {:class => 'align-center'} do |f| %>
         <div class="form-group">
             <%= f.label :firstNameClient, 'Prénom :' %><br />

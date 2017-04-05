@@ -4731,9 +4731,9 @@ $.widget( "metro.datatable" , {
             } catch (e) {
 
             }
-        } else {
+        } /*else {
             alert('dataTable plugin required');
-        }
+        }*/
 
         element.data('datatable', this);
 
