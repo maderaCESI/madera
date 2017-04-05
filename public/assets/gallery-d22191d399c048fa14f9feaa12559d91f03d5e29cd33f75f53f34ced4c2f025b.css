@@ -1,0 +1,45 @@
+/* line 1, /home/ubuntu/workspace/app/assets/stylesheets/gallery.scss */
+body {
+  margin: 0;
+  background: #333;
+}
+
+/* line 2, /home/ubuntu/workspace/app/assets/stylesheets/gallery.scss */
+header {
+  padding: .5vw;
+  font-size: 0;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  display: -webkit-box;
+  display: flex;
+}
+
+/* line 13, /home/ubuntu/workspace/app/assets/stylesheets/gallery.scss */
+header div {
+  -webkit-box-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  width: 200px;
+  margin: .5vw;
+}
+
+/* line 20, /home/ubuntu/workspace/app/assets/stylesheets/gallery.scss */
+header div img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 400px) {
+  /* line 25, /home/ubuntu/workspace/app/assets/stylesheets/gallery.scss */
+  header div {
+    margin: 0;
+  }
+
+  /* line 26, /home/ubuntu/workspace/app/assets/stylesheets/gallery.scss */
+  header {
+    padding: 0;
+  }
+}

@@ -1,36 +1,60 @@
-<%= form_for @scaleModularHouse do |f| %>
-<div class="form-group">
-    <%= f.label :scaleName, 'Nom de la gamme :' %><br />
-    <%= f.text_field :scaleName, class: 'form-control' %>
-</div>
+<!DOCTYPE html>
+<html>
+    <titre><% provide(:title, "Ajout d'une gamme") %></titre>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        
+        <%= stylesheet_link_tag    'metro', media: 'all', 'data-turbolinks-track'=> 'reload' %>
+        <%= stylesheet_link_tag    'metro-icons', media: 'all', 'data-turbolinks-track'=> 'reload' %>
+        <%= stylesheet_link_tag    'metro-responsive', media: 'all', 'data-turbolinks-track'=> 'reload' %>
+        <%= javascript_include_tag 'jquery-2.1.3.min', 'data-turbolinks-track'=> 'reload' %>
+        <%= javascript_include_tag 'metro', 'data-turbolinks-track'=> 'reload' %>
+        
+        <link rel='shortcut icon' type='image/x-icon' href='../favicon.ico' />
+    </head>
+    
+    <div class="app-bar fixed-top" data-role="appbar">
+      <a href="<%= scale_modular_houses_path %>" class="app-bar-element branding">Retour</a>
+      <div class="app-bar-element place-right">
+        <span class="mif-cog"></span> <%= current_user.firstname %> <%= current_user.lastname %>
+      </div>
+    </div>
+    <%= form_for @scaleModularHouse do |f| %>
+        <div class="form-group">
+            <%= f.label :scaleName, 'Nom de la gamme :' %><br />
+            <%= f.text_field :scaleName, class: 'form-control' %>
+        </div>
 
-<div class="form-group">
-    <%= f.label :exteriorFinish, 'Finition extérieur :' %><br />
-    <%= f.text_field :exteriorFinish, class: 'form-control' %>
-</div>
-
-<div class="form-group">
-    <%= f.label :coverType, 'Surface :' %><br />
-    <%= f.text_field :coverType, class: 'form-control' %>
-</div>
-
-<div class="form-group">
-    <%= f.label :woodWorkingQuality, 'Qualité :' %><br />
-    <%= f.text_field :woodWorkingQuality, class: 'form-control' %>
-</div>
-
-<div class="form-group">
-    <%= f.label :cctp_id, 'CCTP : '%><br />
-    <%= f.collection_select :cctp_id, Cctp.all, :id, :cctpcharacteristics%>
-</div>
-
-<div class="form-group">
-    <%= f.label :calculation_rule_id, 'Règle de calcul : '%><br />
-    <%= f.collection_select :calculation_rule_id, CalculationRule.all, :id, :woodFrameConception%>
-</div>
-
-<div class="form-group">
-    <button class="btn btn-primary", type="submit">Valider</button>
-</div>
-
-<% end %>
+        <div class="form-group">
+            <%= f.label :exteriorFinish, 'Finition extérieur :' %><br />
+            <%= f.text_field :exteriorFinish, class: 'form-control' %>
+        </div>
+        
+        <div class="form-group">
+            <%= f.label :coverType, 'Surface :' %><br />
+            <%= f.text_field :coverType, class: 'form-control' %>
+        </div>
+        
+        <div class="form-group">
+            <%= f.label :woodWorkingQuality, 'Qualité :' %><br />
+            <%= f.text_field :woodWorkingQuality, class: 'form-control' %>
+        </div>
+        
+        <div class="form-group">
+            <%= f.label :cctp_id, 'CCTP : '%><br />
+            <%= f.collection_select :cctp_id, Cctp.all, :id, :cctpcharacteristics%>
+        </div>
+        
+        <div class="form-group">
+            <%= f.label :calculation_rule_id, 'Règle de calcul : '%><br />
+            <%= f.collection_select :calculation_rule_id, CalculationRule.all, :id, :woodFrameConception%>
+        </div>
+        
+        <div class="form-group">
+            <button class="btn btn-primary", type="submit">Valider</button>
+        </div>
+    <% end %>
+</html>

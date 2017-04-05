@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-	<titre><% provide(:title, 'Gallery') %></titre>
-	<head lang="en">
+	<titre><% provide(:title, 'Galerie') %></titre>
+	<head lang="fr">
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<%= stylesheet_link_tag    'metro', media: 'all', 'data-turbolinks-track'=> 'reload' %>
+		
+		
+				<%= stylesheet_link_tag    'metro', media: 'all', 'data-turbolinks-track'=> 'reload' %>
 		
         <%= stylesheet_link_tag    'metro-icons', media: 'all', 'data-turbolinks-track'=> 'reload' %>
         <%= stylesheet_link_tag    'metro-responsive', media: 'all', 'data-turbolinks-track'=> 'reload' %>
         <%= javascript_include_tag 'jquery-2.1.3.min', 'data-turbolinks-track'=> 'reload' %>
         <%= javascript_include_tag 'metro', 'data-turbolinks-track'=> 'reload' %>
-		<%= stylesheet_link_tag    'gallery', media: 'all', 'data-turbolinks-track'=> 'reload' %>
+				<%= stylesheet_link_tag    'gallery', media: 'all', 'data-turbolinks-track'=> 'reload' %>
 	</head>
 	
 	<div class="app-bar fixed-top" data-role="appbar">
-      <a href="<%= authenticated_root_path %>" class="app-bar-element branding">Madera</a>
-    
-      <div class="app-bar-element place-right">
-        <span class="mif-cog"></span> <%= current_user.firstname %> <%= current_user.lastname %>
-      </div>
+    <a href="<%= authenticated_root_path %>" class="app-bar-element branding">Menu</a>
+    <div class="app-bar-element place-right">
+      <span class="mif-cog"></span> <%= current_user.firstname %> <%= current_user.lastname %>
     </div>
+  </div>
     
     <br />
     <br />

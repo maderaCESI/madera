@@ -1,55 +1,73 @@
-<h3>Information Devis</h3>
-    <div class="tile-container">
-        <br>
-        <div class="input-control select">
-            
-            	<%= form_for @order do |f| %>
-            	<div class="form-group">
+<!DOCTYPE html>
+<html>
+    <titre><% provide(:title, "Ajout d'un module") %></titre>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        
+        <%= stylesheet_link_tag    'metro', media: 'all', 'data-turbolinks-track'=> 'reload' %>
+        <%= stylesheet_link_tag    'metro-icons', media: 'all', 'data-turbolinks-track'=> 'reload' %>
+        <%= stylesheet_link_tag    'metro-responsive', media: 'all', 'data-turbolinks-track'=> 'reload' %>
+        <%= javascript_include_tag 'jquery-2.1.3.min', 'data-turbolinks-track'=> 'reload' %>
+        <%= javascript_include_tag 'metro', 'data-turbolinks-track'=> 'reload' %>
+        
+        <link rel='shortcut icon' type='image/x-icon' href='../favicon.ico' />
+    </head>
+    
+    <div class="app-bar fixed-top" data-role="appbar">
+      <a href="<%= order_quote_clients_path %>" class="app-bar-element branding">Retour</a>
+    
+      <div class="app-bar-element place-right">
+        <span class="mif-cog"></span> <%= current_user.firstname %> <%= current_user.lastname %>
+      </div>
+    </div>
+    <%= form_for @order do |f| %>
+        <div class="form-group">
     			<%= f.label :orderName, 'Nom du devis : '%>
     			<%= f.text_field :orderName, class: 'form-control' %></br></br>
-    			</div>
+    		</div>
     			
-    			<div class="form-group">
+  			<div class="form-group">
     			<%= f.label :stateOrder, 'Etat du devis : '%>
     			<%= f.text_field :stateOrder, class: 'form-control' %></br></br>
-    			</div>
+  			</div>
     			
-    			<div class="form-group">
+  			<div class="form-group">
     			<%= f.label :priceTotal, 'prix du devis : '%>
     			<%= f.text_field :priceTotal, class: 'form-control' %></br></br>
-    			</div>
+  			</div>
     			
-    			<div class="form-group">
+  			<div class="form-group">
     			<%= f.label :stateExpedition, 'Expedition : '%>
     			<%= f.text_field :stateExpedition, class: 'form-control' %></br></br>
-    			</div>
+  			</div>
     			
-    			<div class="form-group">
+  			<div class="form-group">
     			<%= f.label :project_modular_house_id, 'Nom du projet concerné : '%>
     			<%= f.collection_select :project_modular_house_id, ProjectModularHouse.all, :id, :projectName%></br></br>
-    			</div>
+  			</div>
     			
-    			<div class="form-group">
+  			<div class="form-group">
     			<%= f.label :client_id, 'Nom du client : '%>
     			<%= f.collection_select :client_id, Client.all, :id, :clientName%></br></br>
-    			</div>
+  			</div>
     			
-    			<div class="form-group">
+  			<div class="form-group">
     			<%= f.label :scale_modular_house_id, 'Nom de la gamme choisie : '%>
     			<%= f.collection_select :scale_modular_house_id, ScaleModularHouse.all, :id, :scaleName%></br></br>
-    			</div>
+  			</div>
     			
-    			
-    			
-    			<div id="bloc-modulus">
-              <%= f.fields_for :modulus do |q| %>
-                  <%= render partial: "form_modulus", locals: { q: q, js: false } %>
-              <% end %>
-          </div>
-          <span class="btn btn-mini add_modulu">Ajouter</span>
-  				<div class="form-group">
-              <button class="btn btn-primary", type="submit">Valider</button>
-          </div>
+  			<div id="bloc-modulus">
+            <%= f.fields_for :modulus do |q| %>
+                <%= render partial: "form_modulus", locals: { q: q, js: false } %>
+            <% end %>
+        </div>
+        <span class="btn btn-mini add_modulu">Ajouter</span>
+				<div class="form-group">
+            <button class="btn btn-primary", type="submit">Valider</button>
+        </div>
           <script>
             $(function()
             {
@@ -105,4 +123,4 @@
           </script>
 			 <% end %>
 		</div>
-</div>
+</html>
