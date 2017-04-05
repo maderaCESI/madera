@@ -23,6 +23,7 @@ class OrderQuoteClientsController < ApplicationController
 
   def new
     @order = OrderQuoteClient.new
+    @order.modulus.build
   end
 
   def edit
@@ -36,7 +37,7 @@ class OrderQuoteClientsController < ApplicationController
   
   private
     def order_params
-      params.require(:order_quote_client).permit(:orderName, :stateOrder, :priceTotal, :stateExpedition, :client_id, :modulu_id, :scale_modular_house_id, :project_modular_house_id)
+      params.require(:order_quote_client).permit(:orderName, :stateOrder, :priceTotal, :stateExpedition, :client_id, :scale_modular_house_id, :project_modular_house_id, modulus_attributes: Modulu.attribute_names + ["_destroy"])
     end
     
     def set_order

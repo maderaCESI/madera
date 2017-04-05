@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170403203319) do
+ActiveRecord::Schema.define(version: 20170404204906) do
 
   create_table "calculation_rules", force: :cascade do |t|
     t.string "woodFrameConception"

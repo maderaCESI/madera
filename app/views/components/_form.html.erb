@@ -1,59 +1,84 @@
-<%= form_for @component do |f| %>
-<div class="form-group">
-    <%= f.label :componentName, 'Nom du composant :' %><br />
-    <%= f.text_field :componentName, class: 'form-control' %>
-</div>
+<!DOCTYPE html>
+<html>
+    <titre><% provide(:title, "Ajout d'un composant") %></titre>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        
+        <%= stylesheet_link_tag    'metro', media: 'all', 'data-turbolinks-track'=> 'reload' %>
+        <%= stylesheet_link_tag    'metro-icons', media: 'all', 'data-turbolinks-track'=> 'reload' %>
+        <%= stylesheet_link_tag    'metro-responsive', media: 'all', 'data-turbolinks-track'=> 'reload' %>
+        <%= javascript_include_tag 'jquery-2.1.3.min', 'data-turbolinks-track'=> 'reload' %>
+        <%= javascript_include_tag 'metro', 'data-turbolinks-track'=> 'reload' %>
+        
+        <link rel='shortcut icon' type='image/x-icon' href='../favicon.ico' />
+    </head>
+    
+    <div class="app-bar fixed-top" data-role="appbar">
+      <a href="<%= components_path %>" class="app-bar-element branding">Retour</a>
+    
+      <div class="app-bar-element place-right">
+        <span class="mif-cog"></span> <%= current_user.firstname %> <%= current_user.lastname %>
+      </div>
+    </div>
+    <%= form_for @component, :html => {:class => 'align-center'} do |f| %>
+    <div class="form-group">
+        <%= f.label :componentName, 'Nom du composant :' %><br />
+        <%= f.text_field :componentName, class: 'form-control' %>
+    </div>
+    
+    <div class="form-group">
+        <%= f.label :componentNature, 'Nature du composant :' %><br />
+        <%= f.text_field :componentNature, class: 'form-control'%>
+    </div>
+    
+    <div class="form-group">
+        <%= f.label :componentSection, 'Section du composant :' %><br />
+        <%= f.text_field :componentSection, class: 'form-control' %>
+    </div>
+    
+    <div class="form-group">
+        <%= f.label :componentThickness, 'Epaisseur du composant :' %><br />
+        <%= f.text_field :componentThickness, class: 'form-control' %>
+    </div>
+    
+    <div class="form-group">
+        <%= f.label :componentLength, 'Longueur du composant(cm) :' %><br />
+        <%= f.text_field :componentLength, class: 'form-control' %>
+    </div>
+    
+    <div class="form-group">
+        <%= f.label :componentWidth, 'Largeur du composant(cm) :' %><br />
+        <%= f.text_field :componentWidth, class: 'form-control' %>
+    </div>
+    
+    <div class="form-group">
+        <%= f.label :family_component_id, 'Famille du composant : '%><br />
+        <%= f.collection_select :family_component_id, FamilyComponent.all, :id, :familyComponentName, class: 'form-control'%>
+    </div>
+    
+    <div class="form-group">
+        <%= f.label :provider_id, 'Fournisseur : '%><br />
+        <%= f.collection_select :provider_id, Provider.all, :id, :providerName%>
+    </div>
+    
+    <div class="form-group">
+        <%= f.label :unitUse_id, 'Unité usage: '%><br />
+        <%= f.collection_select :unite_use_id, UniteUse.all, :id, :unitUseName%>
+    </div>
+    
+    <div class="form-group">
+        <%= f.label :priceComponent, 'Tarif du composant :' %><br />
+        <%= f.text_field :priceComponent, class: 'form-control' %>
+    </div>
+    
+    
+    <div class="form-group">
+        <button class="button loading-pulse lighten primary", type="submit">Valider</button>
+    </div>
+    
+    <% end %>
 
-<div class="form-group">
-    <%= f.label :componentNature, 'Nature du composant :' %><br />
-    <%= f.text_field :componentNature, class: 'form-control'%>
-</div>
-
-<div class="form-group">
-    <%= f.label :componentSection, 'Section du composant :' %><br />
-    <%= f.text_field :componentSection, class: 'form-control' %>
-</div>
-
-<div class="form-group">
-    <%= f.label :componentThickness, 'Epaisseur du composant :' %><br />
-    <%= f.text_field :componentThickness, class: 'form-control' %>
-</div>
-
-<div class="form-group">
-    <%= f.label :componentLength, 'Longueur du composant(cm) :' %><br />
-    <%= f.text_field :componentLength, class: 'form-control' %>
-</div>
-
-<div class="form-group">
-    <%= f.label :componentWidth, 'Largeur du composant(cm) :' %><br />
-    <%= f.text_field :componentWidth, class: 'form-control' %>
-</div>
-
-<div class="form-group">
-    <%= f.label :family_component_id, 'Famille du composant : '%><br />
-    <%= f.collection_select :family_component_id, FamilyComponent.all, :id, :familyComponentName, class: 'form-control'%>
-</div>
-
-<div class="form-group">
-    <%= f.label :provider_id, 'Fournisseur : '%><br />
-    <%= f.collection_select :provider_id, Provider.all, :id, :providerName%>
-</div>
-
-<div class="form-group">
-    <%= f.label :unitUse_id, 'Unité usage: '%><br />
-    <%= f.collection_select :unite_use_id, UniteUse.all, :id, :unitUseName%>
-</div>
-
-<div class="form-group">
-    <%= f.label :priceComponent, 'Tarif du composant :' %><br />
-    <%= f.text_field :priceComponent, class: 'form-control' %>
-</div>
-
-
-
-
-<div class="form-group">
-    <button class="btn btn-primary", type="submit">Valider</button>
-</div>
-
-<% end %>
+</html>

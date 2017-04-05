@@ -36,7 +36,7 @@ class ModulusController < ApplicationController
   def modulu_params
       params.require(:modulu).permit(:modulusName, :modulusNature, :modulusHeight, :modulusLength,
       :mdSection, :mdHeight, :mdLength, :maSection, :maHeight, :maLength, :maeSection, :maeHeight, :maeLength, :masSection,
-      :masHeight, :masLength, :insulating_id, :cladding_id, :unitUse_id)
+      :masHeight, :masLength, :insulating_id, :cladding_id, :unitUse_id,)
   end
     
   def set_modulu

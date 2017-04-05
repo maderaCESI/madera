@@ -2,6 +2,7 @@
     <div class="tile-container">
         <br>
         <div class="input-control select">
+            
             	<%= form_for @order do |f| %>
             	<div class="form-group">
     			<%= f.label :orderName, 'Nom du devis : '%>
@@ -38,15 +39,70 @@
     			<%= f.collection_select :scale_modular_house_id, ScaleModularHouse.all, :id, :scaleName%></br></br>
     			</div>
     			
-    			<div class="form-group">
-    			<%= f.label :modulu_id, 'Nom du module : '%>
-    			<%= f.collection_select :modulu_id, Modulu.all, :id, :modulusName%></br></br>
-    			</div>
-    		
+    			
+    			
+    			<div id="bloc-modulus">
+              <%= f.fields_for :modulus do |q| %>
+                  <%= render partial: "form_modulus", locals: { q: q, js: false } %>
+              <% end %>
+          </div>
+          <span class="btn btn-mini add_modulu">Ajouter</span>
   				<div class="form-group">
-    <button class="btn btn-primary", type="submit">Valider</button>
-</div>
-			    <% end %>
+              <button class="btn btn-primary", type="submit">Valider</button>
+          </div>
+          <script>
+            $(function()
+            {
+              // On clique sur le bouton ajouter (equipement) 
+              $(".add_modulu").click(function()
+              {
+                // On récupère le nombre d'équipements créés dans le DOM
+                index = $("#bloc-modulus > .modulus").length;
+                // On récupère le nombre d'équipements affichés à l'utilisateur
+                index2 = $("#bloc-modulus > .modulus").not(':hidden').length;
+         
+                // On créé en ruby une nouvelle instance vide d'équipement liée à notre objet voiture (f.object retourne notre @voiture)
+                <% new_option = f.object.modulus.build %>
+         
+                // on fait appel au fields_for en ruby en lui passant notre nouvelle instance d'équipement et en lui précisant le child_index
+                // On appelle ensuite notre partial en lui fournissant le "q" et le "js" à true (cf : cas d'utilisation dynamique du partial)  
+                // On stocke le résultat du partial dans la var html
+                html = "<%= escape_javascript (f.fields_for(:modulus, new_option, child_index: 'valeur_cherchee') { |q| render(partial: 'form_modulus', locals: { q: q, js: true }) }) %>"
+         
+                // On remplace valeur_cherchee2 par le numéro de l'équipement 
+                var regexp2 = new RegExp("valeur_cherchee2", "g");
+                html = html.replace(regexp2, (index2 + 1));
+         
+                // On remplace valeur_cherchee par le nouvel index ruby des inputs
+                var regexp = new RegExp("valeur_cherchee", "g");
+                html = html.replace(regexp, index);
+         
+                // On ajoute au DOM les champs de l'équipement ajouté
+                $("#bloc-modulus").append(html);
+                return false;
+              });
+         
+              // On clique sur le bouton supprimer (equipement)
+              $("#bloc-modulus").on("click", ".remove_modulu", function()
+              {
+                // On passe le champ caché _destroy à true 
+                $(this).next().val("true");
+         
+                // On cache l'affichage des champs de l'équipement à supprimer
+                $(this).parent().parent(".modulus").hide();
+         
+                // On récupère tous les équipements situés à la suite de l'équipement cliqué
+                liste_div_modulus = $(this).parent().parent().nextAll(".modulus");
+         
+                // Pour chaque equipement on réattribue un numéro pour les labels (ex : 1,2,3,4, on supprime 2, on renomme 3,4 en 2,3)
+                $.each(liste_div_modulus, function(index, div_modulus){
+                  span_numero = $(div_modulus).children(".modulu").children(".field").children("label").children("span.numero-modulu");
+                  span_numero.text(span_numero.text()-1);
+                });
+                return false;
+              });
+            });
+          </script>
+			 <% end %>
 		</div>
-       
-    </div>
+</div>
