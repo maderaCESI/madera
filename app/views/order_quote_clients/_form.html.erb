@@ -53,23 +53,23 @@
           <script>
             $(function()
             {
-              // On clique sur le bouton ajouter (equipement) 
+              // On clique sur le bouton ajouter (module) 
               $(".add_modulu").click(function()
               {
-                // On récupère le nombre d'équipements créés dans le DOM
+                // On récupère le nombre de modules créés dans le DOM
                 index = $("#bloc-modulus > .modulus").length;
-                // On récupère le nombre d'équipements affichés à l'utilisateur
+                // On récupère le nombre de modules affichés à l'utilisateur
                 index2 = $("#bloc-modulus > .modulus").not(':hidden').length;
          
-                // On créé en ruby une nouvelle instance vide d'équipement liée à notre objet voiture (f.object retourne notre @voiture)
+                // On créé en ruby une nouvelle instance vide de module liée à notre objet devis (f.object retourne notre @order)
                 <% new_option = f.object.modulus.build %>
          
-                // on fait appel au fields_for en ruby en lui passant notre nouvelle instance d'équipement et en lui précisant le child_index
+                // on fait appel au fields_for en ruby en lui passant notre nouvelle instance de module et en lui précisant le child_index
                 // On appelle ensuite notre partial en lui fournissant le "q" et le "js" à true (cf : cas d'utilisation dynamique du partial)  
                 // On stocke le résultat du partial dans la var html
                 html = "<%= escape_javascript (f.fields_for(:modulus, new_option, child_index: 'valeur_cherchee') { |q| render(partial: 'form_modulus', locals: { q: q, js: true }) }) %>"
          
-                // On remplace valeur_cherchee2 par le numéro de l'équipement 
+                // On remplace valeur_cherchee2 par le numéro du module 
                 var regexp2 = new RegExp("valeur_cherchee2", "g");
                 html = html.replace(regexp2, (index2 + 1));
          
@@ -77,24 +77,24 @@
                 var regexp = new RegExp("valeur_cherchee", "g");
                 html = html.replace(regexp, index);
          
-                // On ajoute au DOM les champs de l'équipement ajouté
+                // On ajoute au DOM les champs du module ajouté
                 $("#bloc-modulus").append(html);
                 return false;
               });
          
-              // On clique sur le bouton supprimer (equipement)
+              // On clique sur le bouton supprimer (module)
               $("#bloc-modulus").on("click", ".remove_modulu", function()
               {
                 // On passe le champ caché _destroy à true 
                 $(this).next().val("true");
          
-                // On cache l'affichage des champs de l'équipement à supprimer
+                // On cache l'affichage des champs du module à supprimer
                 $(this).parent().parent(".modulus").hide();
          
-                // On récupère tous les équipements situés à la suite de l'équipement cliqué
+                // On récupère tous les modules situés à la suite du module cliqué
                 liste_div_modulus = $(this).parent().parent().nextAll(".modulus");
          
-                // Pour chaque equipement on réattribue un numéro pour les labels (ex : 1,2,3,4, on supprime 2, on renomme 3,4 en 2,3)
+                // Pour chaque module on réattribue un numéro pour les labels (ex : 1,2,3,4, on supprime 2, on renomme 3,4 en 2,3)
                 $.each(liste_div_modulus, function(index, div_modulus){
                   span_numero = $(div_modulus).children(".modulu").children(".field").children("label").children("span.numero-modulu");
                   span_numero.text(span_numero.text()-1);
