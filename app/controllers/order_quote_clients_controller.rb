@@ -8,10 +8,14 @@ class OrderQuoteClientsController < ApplicationController
   end
 
   def show
-      respond_to do |format|
+    respond_to do |format|
       format.html
       format.pdf do
-      render pdf: "file_name"   # Excluding ".pdf" extension.
+          render pdf: "Devis_#{@order.id}",
+                 show_as_html: params.key?("debug"),
+                 template:  'order_quote_clients/show.pdf.erb'
+      end
+    end
   end
 
   def update

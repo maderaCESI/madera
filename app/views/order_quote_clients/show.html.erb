@@ -1,0 +1,10 @@
+
+<h1><%= @order.orderName %></h1>
+<%= @order.stateOrder %>
+<%= @order.client.clientName %>
+<%= @order.priceTotal %>
+<%= @order.stateExpedition %>
+<% @order.modulus.each do |m| %>
+ <%= m.modulusName %>
+<% end %> 
+
