@@ -6,28 +6,28 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-#20.times do
-#Client.create!(
-    #clientName: Faker::Name.name,
-    #firstNameClient: Faker::Name.first_name,
-    #streetNumber: Faker::Address.building_number,
-    #streetName: Faker::Address.street_name,
-    #pc: Faker::Address.zip,
-    #cityName: Faker::Address.city,
-    #phonenumber: Faker::PhoneNumber.phone_number,
-    #email: Faker::Internet.email
-#)
-#end
-20.times do
-Provider.create!(
-    providerName: Faker::Company.name,
-    streetNumber: Faker::Address.building_number,
-    streetName: Faker::Address.street_name,
-    pc: Faker::Address.zip,
-    cityName: Faker::Address.city,
-    phonenumber: Faker::PhoneNumber.phone_number,
-    email: Faker::Internet.email
-)
-end
+#   50.times do
+#   Client.create!(
+    #   clientName: Faker::Name.name,
+    #   firstNameClient: Faker::Name.first_name,
+    #   streetNumber: Faker::Address.building_number,
+    #   streetName: Faker::Address.street_name,
+    #   pc: Faker::Address.zip,
+    #   cityName: Faker::Address.city,
+    #   phonenumber: Faker::PhoneNumber.phone_number,
+    #   email: Faker::Internet.email
+#   )
+#   end
+#   50.times do
+#   Provider.create!(
+    #   providerName: Faker::Company.name,
+    #   streetNumber: Faker::Address.building_number,
+    #   streetName: Faker::Address.street_name,
+    #   pc: Faker::Address.zip,
+    #   cityName: Faker::Address.city,
+    #   phonenumber: Faker::PhoneNumber.phone_number,
+    #   email: Faker::Internet.email
+#   )
+#   end
 
 

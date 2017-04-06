@@ -16,22 +16,133 @@
         }
       }
     </script>
+    <style>
+    
+    .center_img{
+      margin-left: 37%;
+    }
+
+    .info_box{
+      border-style: solid;
+      border-radius: 5px;
+      border-color: green;
+      width : 30%;
+      padding: 10px;
+    }
+    
+    h3{
+      font-size: 30px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    
+    h4{
+      font-size: 20px;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 0.5;
+    }
+    
+    table, th, td {
+      border: 1px solid black;
+    }
+ 
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th {
+      height: 50px;
+      background-color: green;
+      color: white;
+    }
+    
+    td {
+      height: 30px;
+      vertical-align: bottom;
+    }
+    
+    tr:nth-child(even){background-color: #f2f2f2}
+  
+    </style>
   </head>
+  
+  
   <body onload='number_pages'>
-    <div id="header">
+    
+    <div class="center_img">
       <%= wicked_pdf_image_tag "images/logo_simple.jpg", height:"200px", width:"200px" %>
     </div>
+    
+    <br>
+    
+    <div class="info_box">
+      <h4>Madera</h4>
+        <address>
+          Adresse
+          <div>02 45 69 63 52</div>
+          <div>02 45 69 63 89</div>
+          <div>3546985633325</div>
+          <div>Serviceclient@madera.fr</div>
+        </address>
+    </div>
+    
+    <br>
+    
     <div id="content">
-      <h1><%= @order.orderName %></h1>
-        <%= @order.stateOrder %>
-        <%= @order.client.clientName %>
-        <%= @order.priceTotal %>
-        <%= @order.stateExpedition %>
-        <% @order.modulus.each do |m| %>
-           <%= m.modulusName %>
-        <% end %> 
-
-      test
+      <h3><%= @order.orderName %></h3>
+      
+      <table>
+        <tr>
+          <td>Nom du client</td>
+          <td><%= @order.client.clientName %></td>
+        </tr>
+        <tr>
+          <td>Etat du projet</td>
+          <td><%= @order.stateOrder %></td>
+        </tr>
+        <tr>
+          <td>Prix total</td>
+          <td><%= @order.priceTotal %></td>
+        </tr>
+        <tr>
+          <td>Etat de l'expedition</td>  
+          <td><%= @order.stateExpedition %></td>
+        </tr>
+      </table>
+      
+      <br>
+      
+      <table>
+        <thead>
+          <tr>
+            <th class="ref">Réf</th>
+            <th>Nom</th>
+            <th class="description">Description</th>
+            <th class="price">Prix</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @order.modulus.each do |m| %>
+            <tr>
+              <td>MDL<%= m.id %></td>
+              <td><%= m.modulusName %></td>
+              <td><%= m.modulusNature %></td>
+              <td><%= m.priceTotal %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      
+      <br>
+      <br>
+      
+      <div class="validation-box">
+          <label>Bon pour accord le </label>
+          <input type="text">
+          <label>Signature </label>
+      </div>
     </div>
   </body>
 </html>
