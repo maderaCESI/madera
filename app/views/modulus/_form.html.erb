@@ -105,6 +105,16 @@
     </div>
     
     <div class="form-group">
+        <%= f.label :priceTotal, 'Prix : '%><br />
+        <%= f.text_field :priceTotal, class: 'form-control' %>
+    </div>
+    
+    <div class="form-group">
+        <%= f.label :moduluStock, 'Unité de mesure : '%><br />
+        <%= f.text_field :moduluStock, class: 'form-control' %>
+    </div>
+    
+    <div class="form-group">
         <%= f.label :insulating_id, 'Type isolant : '%><br />
         <%= f.collection_select :insulating_id, Insulating.all, :id, :insulatingName%>
     </div>
