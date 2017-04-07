@@ -38,7 +38,7 @@ class CladdingsController < ApplicationController
       params.require(:cladding).permit(:thicknessCladdings, :priceCladdings, :claddingStock)
     end
     
-    def set_client
+    def set_cladding
       @cladding = Cladding.find(params[:id])
     end
 end

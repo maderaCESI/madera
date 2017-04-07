@@ -11,7 +11,7 @@ class InsulatingsController < ApplicationController
   end
 
   def update
-    @insulating.update(client_params)
+    @insulating.update(insulating_params)
     redirect_to insulatings_path, success: 'Cet isolant a bien été modifié'
   end
 
