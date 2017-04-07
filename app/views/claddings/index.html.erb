@@ -52,6 +52,7 @@
             <td class="sortable-column sort-asc sorting" style="width: 100px" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="ID: activate to sort column ascending">#</td>
             <td class="sortable-column sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Machine name: activate to sort column ascending">Epaisseur</td>
             <td class="sortable-column sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Address: activate to sort column ascending">Prix</td>
+            <td class="sortable-column sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Address: activate to sort column ascending">Stock</td>
             <td class="sortable-column sorting" style="width: 20px" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending">Action</td>
           </tr>
         </thead>
@@ -61,6 +62,7 @@
               <td><%= cladding.id %></td>
               <td><%= cladding.thicknessCladdings %></td>
               <td><%= cladding.priceCladdings %></td>
+              <td><%= cladding.claddingStock %></td>
               <td>
                   <a href="<%= claddings_path(cladding.id) %>" class="fa fa-eye fa-2x"></a>
                   <a href="<%= edit_cladding_path(cladding.id) %>" class="fa fa-pencil fa-2x"></a>

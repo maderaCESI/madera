@@ -35,7 +35,7 @@ class InsulatingsController < ApplicationController
   private
     
   def insulating_params
-    params.require(:insulating).permit(:insulatingName, :insulatingThickness)
+    params.require(:insulating).permit(:insulatingName, :insulatingThickness, :priceInsulating, :insulatingStock)
   end
     
   def set_insulating

@@ -5,19 +5,10 @@ class ScaleModularHouse < ActiveRecord::Base
     has_and_belongs_to_many :modulus
     has_many :order_quote_clients
     
-    validates :scaleName, presence: true, 
-                       uniqueness: {case_sensitive: false}, 
-                       format: {with: /\A[a-zA-Z0-9 _\.]*\z/}
+    validates :scaleName, presence: true
                        
-    validates :exteriorFinish, presence: true, 
-                       uniqueness: {case_sensitive: false}, 
-                       format: {with: /\A[a-zA-Z0-9 _\.]*\z/}                     
+    validates :exteriorFinish, presence: true                    
   
-    validates :coverType, presence: true, 
-                       uniqueness: {case_sensitive: false}, 
-                       format: {with: /\A[a-zA-Z0-9 _\.]*\z/}
+    validates :coverType, presence: true
                        
-    validates :price, presence: true, 
-                       uniqueness: {case_sensitive: false}, 
-                       format: {with: /\A[a-zA-Z0-9 _\.]*\z/}
 end

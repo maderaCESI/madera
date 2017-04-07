@@ -35,7 +35,7 @@ class CladdingsController < ApplicationController
   private
     
     def cladding_params
-      params.require(:cladding).permit(:thicknessCladdings)
+      params.require(:cladding).permit(:thicknessCladdings, :priceCladdings, :claddingStock)
     end
     
     def set_client

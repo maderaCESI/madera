@@ -62,7 +62,7 @@
               <td><%= order.stateOrder %></td>
               <td><%= order.priceTotal %></td>
               <td>
-                <a href="<%= order_quote_client_path(order.id) %>" class="fa fa-eye fa-2x"></a>
+                <a href="<%= order_quote_client_path(order.id) %>.pdf" class="fa fa-eye fa-2x"></a>
                 <a href="<%= edit_order_quote_client_path(order.id) %>" class="fa fa-pencil fa-2x"></a>
                 <a href="<%= order_quote_client_path(order.id) %>" class="fa fa-trash fa-2x" data-confirm="Etes sur sûr ?" data-method="delete"></a>
               </td>

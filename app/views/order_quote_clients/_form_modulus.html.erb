@@ -1,10 +1,10 @@
 <div class="modulus">
     <div class="modulus">
-        <span class="btn btn-mini remove_modulu">Supprimer</span>
+        <span class="button loading-cube remove_modulu">Supprimer</span>
         <%= q.hidden_field :_destroy %>
         <div class="field">
             <%= q.label :modulusName, "Module <span class='numero-modulu'>#{js ? "valeur_cherchee2" : (q.options[:child_index] + 1)}</span>".html_safe %>
-            <%= q.collection_select :modulusName, Modulu.all, :id, :modulusName %></br></br>
+            <%= q.collection_select :modulusName, Modulu.all, :modulusName, :modulusName %></br></br>
             <%= q.label :modulusNature, "Module nature " %>
             <%= q.text_field :modulusNature %>
             <%= q.label :priceTotal, "Prix" %>

@@ -54,6 +54,7 @@
         <%= f.text_field :componentWidth, class: 'form-control' %>
     </div>
     
+    
     <div class="form-group">
         <%= f.label :family_component_id, 'Famille du composant : '%><br />
         <%= f.collection_select :family_component_id, FamilyComponent.all, :id, :familyComponentName, class: 'form-control'%>
@@ -65,13 +66,18 @@
     </div>
     
     <div class="form-group">
-        <%= f.label :unitUse_id, 'Unité usage: '%><br />
+        <%= f.label :unite_use_id, 'Unité usage: '%><br />
         <%= f.collection_select :unite_use_id, UniteUse.all, :id, :unitUseName%>
     </div>
     
     <div class="form-group">
         <%= f.label :priceComponent, 'Tarif du composant :' %><br />
         <%= f.text_field :priceComponent, class: 'form-control' %>
+    </div>
+    
+     <div class="form-group">
+        <%= f.label :componentStock, 'Stock composant :' %><br />
+        <%= f.text_field :componentStock, class: 'form-control' %>
     </div>
     
     

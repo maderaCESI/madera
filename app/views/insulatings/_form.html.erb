@@ -41,6 +41,11 @@
         </div>
         
         <div class="form-group">
+            <%= f.label :insulatingStock, 'stock isolant:' %><br />
+            <%= f.text_field :insulatingStock, class: 'form-control'%>
+        </div>
+        
+        <div class="form-group">
             <button class="button loading-pulse lighten primary", type="submit">Valider</button>
         </div>
     <% end %>
